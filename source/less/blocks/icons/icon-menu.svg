@@ -1,0 +1,7 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="icon__color-element" d="M6.25 15H17.5" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path class="icon__color-element" d="M6.25 23.75H23.75" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path class="icon__color-element" d="M6.25 6.25H23.75" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path class="icon__color-element" d="M21.25 18.75L25 15" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path class="icon__color-element" d="M21.25 11.25L25 15" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+</svg>

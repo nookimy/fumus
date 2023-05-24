@@ -1,0 +1,54 @@
+.burger-button {
+  .btn-reset();
+  width: 30px;
+  height: 30px;
+  min-width: unset;
+  padding: 0;
+  border: none;
+  transition: @transition;
+
+  @media (min-width: @lg-width) {
+    width: 45px;
+    height: 45px;
+  }
+
+  &:hover,
+  &:focus {
+    & use.icon__symbol {
+      stroke: @main-dark;
+    }
+  }
+
+  &--down {
+    transform: rotate(90deg);
+  }
+
+  & .icon {
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: @lg-width) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  & use.icon__symbol {
+    stroke: @dark-gray;
+  }
+}
+
+.main-header--desktop.main-header--fixed {
+  & .burger-button {
+    @media (min-width: @lg-width) {
+      order: 1;
+      margin-right: 30px;
+    }
+  }
+}
+
+.main-header--static {
+  & .burger-button {
+    display: none;
+  }
+}
