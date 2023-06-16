@@ -389,7 +389,7 @@ img {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("../img/select/chevron-down-gray.svg");
+  background-image: url("../img/icons/chevron-down-gray.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px 20px;
@@ -400,7 +400,7 @@ img {
 .select:focus,
 .select:active {
   color: #000000;
-  background-image: url("../img/select/chevron-down-blue.svg");
+  background-image: url("../img/icons/chevron-down-blue.svg");
   border-color: #1175D0;
   outline: none;
   cursor: pointer;
@@ -481,7 +481,7 @@ img {
   padding: 5px 70px 5px 0;
   width: 190px;
   margin: 0 auto;
-  background: url("../img/link/link-arrow-mobile.svg") no-repeat center right 10px;
+  background: url("../img/icons/link-arrow-mobile.svg") no-repeat center right 10px;
   background-size: 52px 16px;
   transition: 0.4s;
 }
@@ -589,37 +589,53 @@ img {
   fill: #ffffff;
 }
 
-.img__wrap {
+.img {
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
-.img__wrap img {
+.img--empty {
+  background-image: url("../img/icons/noimage.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px 100px;
+}
+
+.img picture {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.img img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-position: center;
+     object-position: center;
 }
 
-.topical-links .img__wrap {
+.topical-links .img {
   width: 100%;
   padding-top: 30%;
 }
 
-.topical-links .img__wrap img {
+.topical-links .img img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
 
-.expositions .img__wrap {
+.expositions .img {
   width: 100%;
   padding-top: 100%;
 }
 
-.expositions .img__wrap img {
+.expositions .img img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1543,7 +1559,7 @@ img {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url("../img/expositions/map-pin-light.svg") no-repeat center;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
   background-size: contain;
   transform: translateY(-50%);
 }
@@ -1876,7 +1892,7 @@ img {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url("../img/events/map-pin-gray.svg") no-repeat center;
+  background: url("../img/icons/map-pin-gray.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -2091,7 +2107,7 @@ img {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url("../img/expositions/map-pin-light.svg") no-repeat center;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
   background-size: contain;
   transform: translateY(-50%);
 }
@@ -2836,7 +2852,7 @@ img {
 
   .link--more {
     width: 290px;
-    background: url("../img/link/link-arrow-desktop.svg") no-repeat center right 10px;
+    background: url("../img/icons/link-arrow-desktop.svg") no-repeat center right 10px;
     background-size: 105px 16px;
     padding: 0 130px 0 0;
   }
