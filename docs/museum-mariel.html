@@ -86,193 +86,207 @@
     </div>
     <!--<include src="./src/components/blocks/main-header/main-header.html"></include>-->
     <main>
-        <div class="breadcrumbs">
+        <div class="breadcrumbs breadcrumbs--hide-last">
             <ul>
                 <li>
                     <a href="./">Главная</a>
                 </li>
                 <li>
-                    Музеи Марий Эл
+                    <a href="./museum-areas.html">Музеи Марий Эл</a>
+                </li>
+                <li>
+                    Юринский историко-художественный музей им. Г.П. Лосева
                 </li>
             </ul>
         </div>
-        <section class="museums-mariel museums-mariel--page">
-            <div class="museums-mariel__head">
-                <div class="page__wrap">
-                    <h1 class="page__subtitle">Музеи Марий Эл</h1>
+        <section class="museum-mariel">
+            <div class="page__cover">
+                <div class="blur"></div>
+                <div class="img">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="
+                            ./img/museum-mariel/cover-1920.webp,
+                            ./img/museum-mariel/cover-1920@2x.webp 2x,
+                            ./img/museum-mariel/cover-1920@3x.webp 3x">
+                        <source type="image/webp" srcset="
+                            ./img/museum-mariel/cover-1023@1x.webp 1x,
+                            ./img/museum-mariel/cover-1023@2x.webp 2x,
+                            ./img/museum-mariel/cover-1023@3x.webp 3x">
+                        <source type="image/jpeg" media="(min-width: 1024px)" srcset="
+                            ./img/museum-mariel/cover-1920.jpg 1x,
+                            ./img/museum-mariel/cover-1920@2x.jpg 2x,
+                            ./img/museum-mariel/cover-1920@3x.jpg 3x">
+                        <source type="image/jpeg" srcset="
+                            ./img/museum-mariel/cover-1023@1x.jpg 1x,
+                            ./img/museum-mariel/cover-1023@2x.jpg 2x,
+                            ./img/museum-mariel/cover-1023@3x.jpg 3x">
+
+                        <img src="/./img/museum-mariel/cover.jpg" alt="Фото музея">
+                    </picture>
                 </div>
             </div>
-            <div class="museums-mariel__content">
-                <ul class="museums-mariel__list">
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel1-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel1-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel1-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel1-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel1-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel1-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel1.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Юринский историко-художественный музей им. Г.П. Лосева</h3>
-                                <p class="museum-mariel__about">Историко-художественный музей им. Г.П. Лосева МБУК «Районный социокультурный комплекс» Юринского муниципального района – музей в п. Юрино Юринского района Марий Эл.</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 9:00 до 16:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">пгт. Юрино, ул. Касаткина, 7</li>
-                                </ul>
-                            </div>
-                            <svg class="icon" width="20px" height="20px" fill="none">
-                                <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                            </svg>
-                        </a>
-
-                    </li>
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel2-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel2-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel2-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel2-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel2-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel2-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel2.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Музей истории города Йошкар-Олы</h3>
-                                <p class="museum-mariel__about">Музей истории города Йошкар-Олы был открыт 30 сентября 1996 года. Разместился музей в доме известного царевококшайского купца-лесопромышленника Т.В. Чулкова.</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 10:00 до 18:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">г. Йошкар-Ола, ул. Вознесенская, д. 39</li>
-                                </ul>
-
-                            </div>
-                            <svg class="icon" width="20px" height="20px" fill="none">
-                                <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                            </svg>
-                        </a>
-
-                    </li>
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel3-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel3-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel3-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel3-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel3-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel3-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel3.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Музей сатиры и юмора им. Остапа Бендера</h3>
-                                <p class="museum-mariel__about">Музей сатиры и юмора им. Остапа Бендера − музей в г. Козьмодемьянск Горномарийского района Марий Эл. Входит в состав Козьмодемьянского культурно-исторического музейного комплекса и является памятником архитектуры регионального значения.</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 8:30 до 17:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">г. Козьмодемьянск, ул. Советская, 7</li>
-                                </ul>
-
-                            </div>
-                            <svg class="icon" width="20px" height="20px" fill="none">
-                                <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel4-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel4-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel4-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel4-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel4-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel4-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel4.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Музей купеческого быта им. А.В. Муравьёва</h3>
-                                <p class="museum-mariel__about">Располагается музей в старинном купеческом особняке с цокольным этажом, антресолями и мезонином. Дом был построен в 1897 г., принадлежал купцу-лесопромышленнику Александру Ивановичу Шишокину.</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 8:30 до 17:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">г. Козьмодемьянск, ул. Советская, 58</li>
-                                </ul>
-
-                            </div>
-                            <svg class="icon" width="20px" height="20px" fill="none">
-                                <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                            </svg>
-                        </a>
-
-                    </li>
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel5-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel5-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel5-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel5-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel5-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel5-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel5.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Этнографический музей под открытым небом им. В.И. Романова</h3>
-                                <p class="museum-mariel__about">Этнографический музей под открытым небом был открыт летом 1983 г. Это событие было приурочено к 400-летию Козьмодемьянска.</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 8:30 до 17:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">г. Козьмодемьянск, ул. Промышленная, 2</li>
-                                </ul>
-
-                            </div>
-                        </a>
-                    </li>
-                    <li class="museums-mariel__item museum-area">
-                        <a href="./museum-mariel.html" class="museums-mariel__item-link">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/museums-mariel/museums-mariel6-767@1x.webp 1x,
-            ./img/museums-mariel/museums-mariel6-767@2x.webp 2x,
-            ./img/museums-mariel/museums-mariel6-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/museums-mariel/museums-mariel6-767@1x.jpg 1x,
-            ./img/museums-mariel/museums-mariel6-767@2x.jpg 2x,
-            ./img/museums-mariel/museums-mariel6-767@3x.jpg 3x">
-                                <img class="museum-mariel__img" src="./img/museums-mariel/museums-mariel6.jpg" alt="">
-                            </picture>
-                            <div class="museum-mariel__info">
-                                <h3 class="museum-mariel__title">Художественно-исторический музей им. А.В. Григорьева</h3>
-                                <p class="museum-mariel__about">Это одна из старейших картинных галерей на Волге, основанная в 1919 г., как её называют сами музейные работники — «Малая Третьяковка на Волге».</p>
-                                <ul class="museum-mariel__info-list">
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--time">Сегодня: открыто с 8:30 до 17:00 </li>
-                                    <li class="museum-mariel__info-item museum-mariel__info-item--address">г. Козьмодемьянск, ул. Лихачева, 10</li>
-                                </ul>
-
-                            </div>
-                            <svg class="icon" width="20px" height="20px" fill="none">
-                                <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-
-                <a class="link link--more" href="./excursions.html">Показать ещё</a>
+            <div class="page__head">
+                <div class="page__wrap">
+                    <h1 class="page__head-title">Национальный музей Республики Марий Эл имени Тимофея Евсеева</h1>
+                    <div class="page__head-info">
+                        <ul class="museum-mariel__info-list">
+                            <li class="museum-mariel__info-item"><span>Сегодня:</span> открыто с 10:00 до 18:00</li>
+                            <li class="museum-mariel__info-item">г. Йошкар-Ола, ул. Эшкинина, д. 10 А</li>
+                            <li class="museum-mariel__info-item"><a href="”tel:+78362347530”">(8362) 34-75-30</a>, <a href="”tel:+78362347532”">(8362) 34-75-32</a></li>
+                            <li class="museum-mariel__info-item"><a href="”mailto:evseev-museum@mail.ru”">evseev-museum@mail.ru</a></li>
+                        </ul>
+                        <div class="museum-mariel__btn-wrap">
+                            <a class="btn btn--main" href="#">Купить билет</a>
+                            <a class="btn btn--secondary" href="#">
+                                Выставки музея
+                                <svg class="icon" width="20px" height="20px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="page__link-list">
+                        <li><a href="#">Обзор</a></li>
+                        <li><a href="#">Фото</a></li>
+                        <li><a href="#">Выставки</a></li>
+                        <li><a href="#">Мы на карте</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="museums-mariel__map">
+            <div class="page__content">
+                <div class="page__wrap">
+                    <div class="page__text">
+                        <p>Национальный музей РМЭ им. Т. Евсеева создан 4 марта 1920 года, располагает уникальными коллекциями – более 228 тыс. единиц хранения. Самые ценные из них – Евсеевские коллекции (предметы марийского быта, костюмные комплексы, коллекции художественных произведений первых марийских художников 1920–1930-х годов), археологические коллекции по древнемарийской культуре VI−XIII вв.</p>
 
+                        <p>Коллекции представлены в экспозициях как богатейшее культурное наследие Марийского края. Сегодня об уникальной культуре народа мари рассказывает экспозиция «Обряды жизненного цикла. Традиционная культура народа мари XIX−XX веков» (календарные обряды, традиционные занятия мари, пчеловодство, охота, рыболовство, сельское хозяйство, ремесла, религиозные верования).</p>
+
+                        <p>Большой интерес представляет коллекция текстиля, включающая в себя национальные наряды марийцев, проживающих на территории Марийского края и соседних регионов, а также современные костюмы уральских, пермских, башкирских, кировских, свердловских марийцев.</p>
+
+                        <p>Многие посетители Национального музея наверняка помнят те красивые природные интерьеры, которые существовали в музее несколько десятков лет назад. На выставке «Тот самый музей» можно увидеть обновлённые завораживающие диорамы: «Лоси», «Поле», «Ельник», «Сосняк», «Река и её пойма», «Нагорная дубрава», рассмотреть типичных и редких животных и птиц. Также здесь вы можете увидеть открытые диорамы «Кабаны» и «Волки».</p>
+                    </div>
+                    <div class="page__slider">
+                        <div class="page__slider-wrap">
+                            <div class="museum-mariel__gallery-wrap swiper">
+                                <ul class="museum-mariel__gallery-list swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="./img/museum-mariel/photo1.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/museum-mariel/photo1-768@1x.webp 1x,
+                            ./img/museum-mariel/photo1-768@2x.webp 2x,
+                            ./img/museum-mariel/photo1-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/museum-mariel/photo1-768@1x.jpg 1x,
+                            ./img/museum-mariel/photo1-768@2x.jpg 2x,
+                            ./img/museum-mariel/photo1-768@3x.jpg 3x">
+                                                    <img src="./img/museum-mariel/photo1.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="./img/museum-mariel/photo2.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/museum-mariel/photo2-768@1x.webp 1x,
+                            ./img/museum-mariel/photo2-768@2x.webp 2x,
+                            ./img/museum-mariel/photo2-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/museum-mariel/photo2-768@1x.jpg 1x,
+                            ./img/museum-mariel/photo2-768@2x.jpg 2x,
+                            ./img/museum-mariel/photo2-768@3x.jpg 3x">
+                                                    <img src="./img/museum-mariel/photo2.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="./img/museum-mariel/photo3.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/museum-mariel/photo3-768@1x.webp 1x,
+                            ./img/museum-mariel/photo3-768@2x.webp 2x,
+                            ./img/museum-mariel/photo3-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/museum-mariel/photo3-768@1x.jpg 1x,
+                            ./img/museum-mariel/photo3-768@2x.jpg 2x,
+                            ./img/museum-mariel/photo3-768@3x.jpg 3x">
+                                                    <img src="./img/museum-mariel/photo3.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="page__slider-buttons">
+                            <button class="swiper-button-prev swiper-button-prev--mobile">
+                                <svg class="icon" width="32px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next swiper-button-next--mobile">
+                                <svg class="icon" width="32px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-right"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-prev swiper-button-prev--desktop">
+                                <svg class="icon" width="102px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-desktop-left"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next swiper-button-next--desktop">
+                                <svg class="icon" width="102px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-desktop-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="page__content-info">
+                        <div class="museum-mariel__working-mode">
+                            <h2 class="museum-mariel__subtitle">Режим работы музея</h2>
+                            <ul class="museum-mariel__working-list">
+                                <li><span>Пн</span> / Выходной</li>
+                                <li><span>Вт-Вс</span> / 10:00 - 18:00</li>
+                            </ul>
+                        </div>
+                        <div class="museum-mariel__price">
+                            <h2 class="museum-mariel__subtitle">Билеты</h2>
+                            <ul>
+                                <li><span>150 ₽</span> / Взрослые</li>
+                                <li><span>200 ₽</span> / С экскурсией</li>
+                                <li><span>0, 100</span> ₽ / Льготные</li>
+                                <li><span>150 ₽</span> / С экскурсией льготный</li>
+                            </ul>
+                        </div>
+                        <div class="museum-mariel__visiting-rules">
+                            <p class="museum-mariel__visiting-rules-title">
+                                <a href="#">
+                                    Правила посещения музея
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </p>
+                            <div class="museum-mariel__visiting-notes">
+                                <p><span>Эта, а также другие выставки музея доступны для</span>
+                                    <a href="#">
+                                        людей с ограниченными возможностями здоровья&nbsp; <svg class="icon" width="20px" height="20px" fill="none">
+                                            <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
+
     </main>
     <footer class="main-footer">
         <div class="main-footer__container">
@@ -541,6 +555,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/modal.js"></script>
+
 
 </body>
 
