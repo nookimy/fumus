@@ -4380,11 +4380,11 @@ select:active {
   padding-left: 15px;
 }
 
-museum-area .page__cover {
+.museum-area .page__cover {
   background-image: url("../img/museum-area/cover.jpg");
 }
 
-museum-area__info-list {
+.museum-area__info-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -4401,22 +4401,22 @@ museum-area__info-list {
   margin-bottom: 16px;
 }
 
-museum-area__info-item span {
+.museum-area__info-item span {
   font-weight: bold;
 }
 
-museum-area__info-item a {
+.museum-area__info-item a {
   color: inherit;
   text-decoration: none;
 }
 
-museum-area__info-item a:hover,
-museum-area__info-item a:focus {
+.museum-area__info-item a:hover,
+.museum-area__info-item a:focus {
   color: #EB3E2B;
   text-decoration: underline;
 }
 
-museum-area__btn-wrap {
+.museum-area__btn-wrap {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
@@ -4425,13 +4425,13 @@ museum-area__btn-wrap {
   justify-content: space-between;
 }
 
-museum-area__info {
+.museum-area__info {
   background-color: #ffffff;
   padding-top: 10px;
   padding-bottom: 30px;
 }
 
-museum-area__gallery-list {
+.museum-area__gallery-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -4439,27 +4439,27 @@ museum-area__gallery-list {
   padding: 0;
 }
 
-museum-area__gallery-list > li > a {
+.museum-area__gallery-list > li > a {
   position: relative;
 }
 
-museum-area__gallery-list > li > a::before {
+.museum-area__gallery-list > li > a::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
 }
 
-museum-area__gallery-list > li > a:hover .img::before,
-museum-area__gallery-list > li > a:focus .img::before {
+.museum-area__gallery-list > li > a:hover .img::before,
+.museum-area__gallery-list > li > a:focus .img::before {
   opacity: 1;
 }
 
-museum-area__gallery-list > li > a .img {
+.museum-area__gallery-list > li > a .img {
   position: relative;
 }
 
-museum-area__gallery-list > li > a .img::before {
+.museum-area__gallery-list > li > a .img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4476,7 +4476,7 @@ museum-area__gallery-list > li > a .img::before {
   opacity: 0;
 }
 
-museum-area__subtitle {
+.museum-area__subtitle {
   margin: 0;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -4487,12 +4487,12 @@ museum-area__subtitle {
   margin-bottom: 13px;
 }
 
-museum-area__working-mode,
-museum-area__price {
+.museum-area__working-mode,
+.museum-area__price {
   margin-bottom: 18px;
 }
 
-museum-area__working-list {
+.museum-area__working-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -4507,7 +4507,7 @@ museum-area__working-list {
   gap: 20px;
 }
 
-museum-area__working-list::before {
+.museum-area__working-list::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4521,7 +4521,7 @@ museum-area__working-list::before {
   transform: translateY(-50%);
 }
 
-museum-area__price ul {
+.museum-area__price ul {
   position: relative;
   margin: 0;
   padding: 0;
@@ -4537,7 +4537,7 @@ museum-area__price ul {
   color: #4E4E4E;
 }
 
-museum-area__price ul::before {
+.museum-area__price ul::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4550,11 +4550,11 @@ museum-area__price ul::before {
   background-size: contain;
 }
 
-museum-area__price li span {
+.museum-area__price li span {
   color: #000000;
 }
 
-museum-area__visiting-rules-title {
+.museum-area__visiting-rules-title {
   margin: 0;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -4565,33 +4565,33 @@ museum-area__visiting-rules-title {
   margin-bottom: 10px;
 }
 
-museum-area__visiting-rules-title a {
+.museum-area__visiting-rules-title a {
   color: inherit;
   text-decoration: none;
   transition: 0.4s;
 }
 
-museum-area__visiting-rules-title a:hover,
-museum-area__visiting-rules-title a:focus {
+.museum-area__visiting-rules-title a:hover,
+.museum-area__visiting-rules-title a:focus {
   color: #7B61FF;
 }
 
-museum-area__visiting-rules-title a:hover use.icon__symbol,
-museum-area__visiting-rules-title a:focus use.icon__symbol {
+.museum-area__visiting-rules-title a:hover use.icon__symbol,
+.museum-area__visiting-rules-title a:focus use.icon__symbol {
   stroke: #7B61FF;
 }
 
-museum-area__visiting-rules-title a .icon {
+.museum-area__visiting-rules-title a .icon {
   width: 14px;
   height: 14px;
   transform: translateY(2px);
 }
 
-museum-area__visiting-rules-title a use.icon__symbol {
+.museum-area__visiting-rules-title a use.icon__symbol {
   stroke: #000000;
 }
 
-museum-area__visiting-rules {
+.museum-area__visiting-rules {
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
@@ -4600,7 +4600,7 @@ museum-area__visiting-rules {
   padding: 0;
 }
 
-museum-area__visiting-notes {
+.museum-area__visiting-notes {
   position: relative;
   margin: 0;
   padding: 0;
@@ -4613,7 +4613,7 @@ museum-area__visiting-notes {
   color: #4E4E4E;
 }
 
-museum-area__visiting-notes::before {
+.museum-area__visiting-notes::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4626,7 +4626,7 @@ museum-area__visiting-notes::before {
   background-size: contain;
 }
 
-museum-area__visiting-notes p {
+.museum-area__visiting-notes p {
   font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
@@ -4634,11 +4634,11 @@ museum-area__visiting-notes p {
   font-style: normal;
 }
 
-museum-area__visiting-notes p span {
+.museum-area__visiting-notes p span {
   display: block;
 }
 
-museum-area__visiting-notes p a {
+.museum-area__visiting-notes p a {
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
@@ -4650,24 +4650,24 @@ museum-area__visiting-notes p a {
   transition: 0.4s;
 }
 
-museum-area__visiting-notes p a:hover,
-museum-area__visiting-notes p a:focus {
+.museum-area__visiting-notes p a:hover,
+.museum-area__visiting-notes p a:focus {
   color: #7B61FF;
 }
 
-museum-area__visiting-notes p a:hover use.icon__symbol,
-museum-area__visiting-notes p a:focus use.icon__symbol {
+.museum-area__visiting-notes p a:hover use.icon__symbol,
+.museum-area__visiting-notes p a:focus use.icon__symbol {
   stroke: #7B61FF;
 }
 
-museum-area__visiting-notes p a .icon {
+.museum-area__visiting-notes p a .icon {
   display: inline-block;
   width: 14px;
   height: 14px;
   transform: translateY(4px);
 }
 
-museum-area__visiting-notes p a use.icon__symbol {
+.museum-area__visiting-notes p a use.icon__symbol {
   stroke: #000000;
 }
 
@@ -9246,7 +9246,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     display: none;
   }
 
-  museum-area__info-list {
+  .museum-area__info-list {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -9255,29 +9255,29 @@ museum-area__visiting-notes p a use.icon__symbol {
     gap: 10px;
   }
 
-  museum-area__btn-wrap {
+  .museum-area__btn-wrap {
     margin: 0;
   }
 
-  museum-area__info {
+  .museum-area__info {
     padding-top: 30px;
     padding-bottom: 60px;
   }
 
-  museum-area__subtitle {
+  .museum-area__subtitle {
     font-size: 23px;
   }
 
-  museum-area__subtitle {
+  .museum-area__subtitle {
     margin-bottom: 22px;
   }
 
-  museum-area__working-mode,
-  museum-area__price {
+  .museum-area__working-mode,
+  .museum-area__price {
     margin-bottom: 60px;
   }
 
-  museum-area__working-list {
+  .museum-area__working-list {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -9285,7 +9285,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     font-style: normal;
   }
 
-  museum-area__price ul {
+  .museum-area__price ul {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -9294,31 +9294,31 @@ museum-area__visiting-notes p a use.icon__symbol {
     padding-left: 40px;
   }
 
-  museum-area__price ul::before {
+  .museum-area__price ul::before {
     width: 24px;
     height: 24px;
   }
 
-  museum-area__visiting-rules-title {
+  .museum-area__visiting-rules-title {
     font-size: 23px;
   }
 
-  museum-area__visiting-rules-title {
+  .museum-area__visiting-rules-title {
     margin-bottom: 25px;
   }
 
-  museum-area__visiting-rules-title a .icon {
+  .museum-area__visiting-rules-title a .icon {
     width: 20px;
     height: 20px;
     transform: translateY(5px);
   }
 
-  museum-area__visiting-rules {
+  .museum-area__visiting-rules {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  museum-area__visiting-notes {
+  .museum-area__visiting-notes {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -9327,12 +9327,12 @@ museum-area__visiting-notes p a use.icon__symbol {
     padding-left: 40px;
   }
 
-  museum-area__visiting-notes::before {
+  .museum-area__visiting-notes::before {
     width: 24px;
     height: 24px;
   }
 
-  museum-area__visiting-notes p {
+  .museum-area__visiting-notes p {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -9340,11 +9340,11 @@ museum-area__visiting-notes p a use.icon__symbol {
     font-style: normal;
   }
 
-  museum-area__visiting-notes p a {
+  .museum-area__visiting-notes p a {
     font-size: 20px;
   }
 
-  museum-area__visiting-notes p a .icon {
+  .museum-area__visiting-notes p a .icon {
     width: 20px;
     height: 20px;
     transform: translateY(5px);
@@ -10987,16 +10987,16 @@ museum-area__visiting-notes p a use.icon__symbol {
     padding: 0;
   }
 
-  museum-area__info-list {
+  .museum-area__info-list {
     margin-bottom: 40px;
     grid-area: contacts;
   }
 
-  museum-area__btn-wrap {
+  .museum-area__btn-wrap {
     gap: 30px;
   }
 
-  museum-area__info {
+  .museum-area__info {
     display: grid;
     grid-template-columns: 1fr 480px;
     -moz-column-gap: 50px;
@@ -11004,27 +11004,27 @@ museum-area__visiting-notes p a use.icon__symbol {
     grid-template-areas: "text detail" "gallery gallery";
   }
 
-  museum-area__working-list {
+  .museum-area__working-list {
     justify-content: space-between;
   }
 
-  museum-area__working-list li {
+  .museum-area__working-list li {
     width: 40%;
     flex-grow: 1;
   }
 
-  museum-area__price ul {
+  .museum-area__price ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  museum-area__price li {
+  .museum-area__price li {
     width: 40%;
     flex-grow: 1;
   }
 
-  museum-area__visiting-rules {
+  .museum-area__visiting-rules {
     grid-area: rules;
     padding-left: 0;
   }
@@ -11665,7 +11665,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     -ms-grid-column-span: 1;
   }
 
-  museum-area__info > .application__text {
+  .museum-area__info > .application__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -11723,7 +11723,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     -ms-grid-column-span: 1;
   }
 
-  museum-area__info > .news-detail__text {
+  .museum-area__info > .news-detail__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -11775,7 +11775,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     -ms-grid-column-span: 1;
   }
 
-  museum-area__info > .collection-exhibit__text {
+  .museum-area__info > .collection-exhibit__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -11969,7 +11969,7 @@ museum-area__visiting-notes p a use.icon__symbol {
     -ms-grid-column-span: 1;
   }
 
-  museum-area__info > .page__text {
+  .museum-area__info > .page__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -12149,11 +12149,11 @@ museum-area__visiting-notes p a use.icon__symbol {
     grid-column-gap: 50px;
   }
 
-  museum-area__info {
+  .museum-area__info {
     grid-template-columns: auto auto;
   }
 
-  museum-area__visiting-rules {
+  .museum-area__visiting-rules {
     margin: 0;
     padding-right: 0;
     width: 460px;
