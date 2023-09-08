@@ -174,7 +174,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
 }
 
 body {
@@ -450,7 +450,7 @@ img {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   width: 100%;
   background: unset;
   padding: 0;
@@ -461,7 +461,7 @@ img {
 
 .select--time-filter:hover,
 .select--time-filter:focus {
-  color: #1175D0;
+  color: #7B61FF;
   outline: none;
   background-image: none;
 }
@@ -596,11 +596,11 @@ body.lock {
 }
 
 .page__link-list li > a:hover {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .page__link-list li > a:hover::before {
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .page__content {
@@ -666,7 +666,7 @@ body.lock {
 
 .page__slider-buttons .swiper-button-next use.icon__symbol,
 .page__slider-buttons .swiper-button-prev use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .page__slider-buttons .swiper-button-prev {
@@ -689,7 +689,7 @@ body.lock {
 
 .link--more {
   display: block;
-  color: #1175D0;
+  color: #7B61FF;
   text-transform: uppercase;
   padding: 5px 70px 5px 0;
   width: 190px;
@@ -762,7 +762,7 @@ input[type=date]:hover,
 input[type=date]:focus,
 input[type=date]:active {
   color: #000000;
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
 }
 
@@ -777,7 +777,7 @@ input[type=date]:hover,
 input[type=date]:focus,
 input[type=date]:active {
   color: #000000;
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
   cursor: pointer;
 }
@@ -813,7 +813,7 @@ select:focus,
 select:active {
   color: #000000;
   background-image: url("../img/icons/chevron-down-blue.svg");
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
   cursor: pointer;
 }
@@ -833,7 +833,7 @@ select:active {
 
 .form--search input[type=search]:hover,
 .form--search input[type=search]:focus {
-  border-bottom: 1px solid #1175D0;
+  border-bottom: 1px solid #7B61FF;
 }
 
 .form--search button[type=submit] {
@@ -854,7 +854,7 @@ select:active {
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
 }
 
 .form--search button[type=submit] .icon {
@@ -868,7 +868,7 @@ select:active {
 
 .form--search button[type=submit]:hover use.icon__symbol,
 .form--search button[type=submit]:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .form--subscription {
@@ -934,13 +934,15 @@ select:active {
 }
 
 .filter--tabs-status,
-.filter--tabs-museum-tags {
+.filter--tabs-museum-tags,
+.filter--tabs-price-block {
   display: inline-flex;
   gap: 15px;
 }
 
 .filter--tabs-status input[type=radio],
-.filter--tabs-museum-tags input[type=radio] {
+.filter--tabs-museum-tags input[type=radio],
+.filter--tabs-price-block input[type=radio] {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -955,7 +957,8 @@ select:active {
 }
 
 .filter--tabs-status label,
-.filter--tabs-museum-tags label {
+.filter--tabs-museum-tags label,
+.filter--tabs-price-block label {
   display: inline-block;
   position: relative;
   font-size: 18px;
@@ -973,7 +976,8 @@ select:active {
 }
 
 .filter--tabs-status label:before,
-.filter--tabs-museum-tags label:before {
+.filter--tabs-museum-tags label:before,
+.filter--tabs-price-block label:before {
   display: none;
   content: "";
   position: absolute;
@@ -981,23 +985,27 @@ select:active {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .filter--tabs-status label:hover,
 .filter--tabs-status label:focus,
 .filter--tabs-museum-tags label:hover,
-.filter--tabs-museum-tags label:focus {
-  color: #1175D0;
+.filter--tabs-museum-tags label:focus,
+.filter--tabs-price-block label:hover,
+.filter--tabs-price-block label:focus {
+  color: #7B61FF;
 }
 
 .filter--tabs-status input[type=radio]:checked + label,
-.filter--tabs-museum-tags input[type=radio]:checked + label {
-  color: #1175D0;
+.filter--tabs-museum-tags input[type=radio]:checked + label,
+.filter--tabs-price-block input[type=radio]:checked + label {
+  color: #7B61FF;
 }
 
 .filter--tabs-status input[type=radio]:checked + label:before,
-.filter--tabs-museum-tags input[type=radio]:checked + label:before {
+.filter--tabs-museum-tags input[type=radio]:checked + label:before,
+.filter--tabs-price-block input[type=radio]:checked + label:before {
   display: block;
 }
 
@@ -1125,29 +1133,45 @@ select:active {
      object-fit: cover;
 }
 
+.event__gallery-list .img,
 .exposition__gallery-list .img,
 .museum-area__gallery-list .img {
   aspect-ratio: 28/20;
 }
 
+.event__gallery-list .img img,
+.exposition__gallery-list .img img,
+.museum-area__gallery-list .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.collection-exhibit .img,
 .news-detail__img .img {
   width: 100%;
   aspect-ratio: 32/20;
 }
 
+.collection-exhibit .img img,
 .news-detail__img .img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.useful-links .img,
+.season-ticket .img,
 .news__list .img,
-.tickets-and-benefits__list .img {
+.tickets-and-benefits__list .img,
+.collections .img {
   width: 100%;
   aspect-ratio: 2/1;
 }
 
+.useful-links .img img,
+.season-ticket .img img,
 .news__list .img img,
-.tickets-and-benefits__list .img img {
+.tickets-and-benefits__list .img img,
+.collections .img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1212,7 +1236,7 @@ select:active {
   position: absolute;
   bottom: -25px;
   left: 0;
-  background-color: #1175D0;
+  background-color: #7B61FF;
   width: 100vw;
   height: 1px;
 }
@@ -1221,7 +1245,7 @@ select:active {
   position: absolute;
   bottom: -25px;
   left: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
   width: 38px;
   height: 38px;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
@@ -1332,7 +1356,7 @@ select:active {
 
 .main-nav__search-btn:hover use.icon__symbol,
 .main-nav__search-btn:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .main-nav__search {
@@ -1374,7 +1398,7 @@ select:active {
 
 .burger-button:hover use.icon__symbol,
 .burger-button:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .burger-button .icon {
@@ -1410,7 +1434,7 @@ select:active {
 
 .logo__link:hover use.icon__symbol,
 .logo__link:focus use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .logo .icon {
@@ -1517,7 +1541,7 @@ select:active {
 
 .visually-impaired__btn:hover use.icon__symbol,
 .visually-impaired__btn:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .languages {
@@ -1570,7 +1594,7 @@ select:active {
 }
 
 .main-header__menu .site-nav__item > a {
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
   display: inline-block;
   width: 100%;
   padding: 12px 0;
@@ -1579,7 +1603,7 @@ select:active {
 
 .main-header__menu .site-nav__item > a:hover,
 .main-header__menu .site-nav__item > a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .main-header__menu .site-nav__submenu-list {
@@ -1641,7 +1665,7 @@ select:active {
 .main-header--mobile .site-nav .open-submenu:active::before,
 .main-header--mobile .site-nav .open-submenu:active::after {
   transition: 0.4s;
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .main-header--mobile .site-nav .open-submenu--in {
@@ -1804,7 +1828,7 @@ select:active {
 
 .topical-links__item a:hover,
 .topical-links__item a:focus {
-  border-color: #1175D0;
+  border-color: #7B61FF;
 }
 
 .topical-links .swiper-button-next,
@@ -1833,7 +1857,7 @@ select:active {
 
 .topical-links .swiper-button-next use.icon__symbol,
 .topical-links .swiper-button-prev use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .topical-links .swiper-button-prev {
@@ -2077,7 +2101,7 @@ select:active {
 }
 
 .expositions--page .expositions__filters-title--selected span {
-  color: #1175D0;
+  color: #7B61FF;
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -2108,7 +2132,7 @@ select:active {
 }
 
 .expositions--page .expositions__filters-title.active {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .expositions--page .expositions__filters-title.active::before {
@@ -2242,8 +2266,8 @@ select:active {
 }
 
 .expositions--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
-  border-color: #1175D0;
-  background-color: #1175D0;
+  border-color: #7B61FF;
+  background-color: #7B61FF;
   transform: translateX(19px) translateY(-50%);
 }
 
@@ -2282,7 +2306,7 @@ select:active {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   margin: 0;
   padding: 0;
   border: none;
@@ -2331,7 +2355,7 @@ select:active {
   font-style: normal;
   font-size: 20px;
   text-transform: none;
-  color: #1175D0;
+  color: #7B61FF;
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
@@ -2449,12 +2473,12 @@ select:active {
 
 .exposition__price-title a:hover,
 .exposition__price-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__price-title a:hover use.icon__symbol,
 .exposition__price-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__price-title a .icon {
@@ -2486,12 +2510,12 @@ select:active {
 
 .exposition__visiting-rules-title a:hover,
 .exposition__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__visiting-rules-title a:hover use.icon__symbol,
 .exposition__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__visiting-rules-title a .icon {
@@ -2556,12 +2580,12 @@ select:active {
 
 .exposition__visiting-notes p a:hover,
 .exposition__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__visiting-notes p a:hover use.icon__symbol,
 .exposition__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__visiting-notes p a .icon {
@@ -2812,6 +2836,21 @@ select:active {
   background-color: #EAEBEC;
 }
 
+.events--section .events__item .event__info::before,
+.events--section .events__item .event__info::after {
+  background-color: #EAEBEC;
+}
+
+.events--holidays {
+  background-color: #F9F9F9;
+}
+
+.events--holidays .events__item .event__info::before,
+.events--holidays .events__item .event__info::after {
+  background-color: #F9F9F9;
+}
+
+.events--holidays .events__head,
 .events--section .events__head {
   grid-template-areas: "title time-filter" "place-filter place-filter";
   width: 100%;
@@ -2826,10 +2865,12 @@ select:active {
   grid-gap: 25px;
 }
 
+.events--holidays .events__list,
 .events--section .events__list {
   margin-bottom: 30px;
 }
 
+.events--holidays .page__subtitle,
 .events--section .page__subtitle {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -2838,6 +2879,7 @@ select:active {
   margin-bottom: 0;
 }
 
+.events--holidays .filter--select-status,
 .events--section .filter--select-status {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -2846,6 +2888,7 @@ select:active {
   width: 100%;
 }
 
+.events--holidays .filter--select-status select,
 .events--section .filter--select-status select {
   width: 100%;
   font-size: 12px;
@@ -2855,7 +2898,7 @@ select:active {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   margin: 0;
   padding: 0;
   border: none;
@@ -2865,6 +2908,7 @@ select:active {
   text-align: right;
 }
 
+.events--holidays .filter--select-status legend,
 .events--section .filter--select-status legend {
   position: absolute;
   top: 50%;
@@ -2872,12 +2916,523 @@ select:active {
   transform: translateY(-50%);
 }
 
+.events--holidays .filter--select-place,
 .events--section .filter--select-place {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: place-filter;
   width: 100%;
+}
+
+.events--page {
+  background-color: #EAEBEC;
+}
+
+.events--page .events__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.events--page .events__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.events--page .events__filters {
+  border-bottom: 1px solid #EAEBEC;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.events--page .events__filters-title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  min-height: 30px;
+  transition: 0.4s;
+}
+
+.events--page .events__filters-title span {
+  display: none;
+}
+
+.events--page .events__filters-title--selected span {
+  color: #7B61FF;
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.events--page .events__filters-title::before,
+.events--page .events__filters-title::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  background-color: #4E4E4E;
+}
+
+.events--page .events__filters-title::before {
+  right: 0;
+  width: 18px;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 1;
+}
+
+.events--page .events__filters-title::after {
+  right: 8px;
+  width: 2px;
+  height: 18px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.events--page .events__filters-title.active {
+  color: #7B61FF;
+}
+
+.events--page .events__filters-title.active::before {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.events--page .events__filters-title.active::after {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.events--page .events__filters-block {
+  padding-top: 10px;
+  display: none;
+}
+
+.events--page .events__filters-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.events--page .events__filters-btn-wrap {
+  display: flex;
+  gap: 15px;
+}
+
+.events--page .events__filters-btn-wrap .btn {
+  min-height: 35px;
+  padding: 5px 18px;
+}
+
+.events--page .events__filters-btn-wrap .btn--main-invert {
+  background-color: transparent;
+}
+
+.events--page .events__filters-btn-wrap .btn--main-invert:hover,
+.events--page .events__filters-btn-wrap .btn--main-invert:focus {
+  background-color: #D13726;
+  border-color: #D13726;
+  color: #ffffff;
+}
+
+.events--page .events__status-filters {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.events--page .events__tabs-wrap {
+  position: relative;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.events--page .events__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.events--page .events__list {
+  margin-bottom: 30px;
+}
+
+.events--page > .page__wrap {
+  padding-bottom: 25px;
+}
+
+.events--page .filter--select-age {
+  display: none;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.events--page .filter--select-place,
+.events--page .filter--select-audience,
+.events--page .filter--select-date {
+  flex-grow: 1;
+  width: 200px;
+}
+
+.events--page .filter--check-pushkincard {
+  width: 50px;
+}
+
+.events--page .filter--check-pushkincard label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #D9D9D9;
+}
+
+.events--page .filter--check-pushkincard label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #C4C4C4;
+  transform: translateX(-1px) translateY(-50%);
+  transition: 0.4s;
+  background-image: url("../img/expositions/pushkin-card.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.events--page .filter--check-pushkincard input[type=checkbox] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.events--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
+  border-color: #7B61FF;
+  background-color: #7B61FF;
+  transform: translateX(19px) translateY(-50%);
+}
+
+.event .page__cover {
+  background-image: url("../img/event/cover.jpg");
+}
+
+.event__period {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: none;
+  color: #7B61FF;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  letter-spacing: unset;
+}
+
+.event__period time:last-child {
+  position: relative;
+}
+
+.event__period time:last-child::before {
+  position: absolute;
+  content: " — ";
+  left: -24px;
+}
+
+.event__gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event__gallery-list > li > a {
+  position: relative;
+}
+
+.event__gallery-list > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.event__gallery-list > li > a:hover .img::before,
+.event__gallery-list > li > a:focus .img::before {
+  opacity: 1;
+}
+
+.event__gallery-list > li > a .img {
+  position: relative;
+}
+
+.event__gallery-list > li > a .img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50 50;
+  z-index: 5;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.event__price {
+  margin-bottom: 15px;
+}
+
+.event__price ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.event__price ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/tabler-ticket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.event__price li span {
+  color: #000000;
+}
+
+.event__price span {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.event__price span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/tabler-ticket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.event__price span a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-weight: 700;
+}
+
+.event__price-title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.event__price-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.event__price-title a:hover,
+.event__price-title a:focus {
+  color: #7B61FF;
+}
+
+.event__price-title a:hover use.icon__symbol,
+.event__price-title a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.event__price-title a .icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+}
+
+.event__price-title a use.icon__symbol {
+  stroke: #000000;
+}
+
+.event__visiting-rules-title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.event__visiting-rules-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.event__visiting-rules-title a:hover,
+.event__visiting-rules-title a:focus {
+  color: #7B61FF;
+}
+
+.event__visiting-rules-title a:hover use.icon__symbol,
+.event__visiting-rules-title a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.event__visiting-rules-title a .icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+}
+
+.event__visiting-rules-title a use.icon__symbol {
+  stroke: #000000;
+}
+
+.event__visiting-notes {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.event__visiting-notes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/accessible.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.event__visiting-notes p {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.event__visiting-notes p span {
+  display: block;
+}
+
+.event__visiting-notes p a {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+  color: #000000;
+  display: inline;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.event__visiting-notes p a:hover,
+.event__visiting-notes p a:focus {
+  color: #7B61FF;
+}
+
+.event__visiting-notes p a:hover use.icon__symbol,
+.event__visiting-notes p a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.event__visiting-notes p a .icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(4px);
+}
+
+.event__visiting-notes p a use.icon__symbol {
+  stroke: #000000;
 }
 
 .excursions__list {
@@ -3104,6 +3659,214 @@ select:active {
   grid-area: type-filter;
 }
 
+.excursions--page .excursions__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.excursions--page .excursions__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.excursions--page .excursions__filters {
+  border-bottom: 1px solid #EAEBEC;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.excursions--page .excursions__filters-title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  min-height: 30px;
+  transition: 0.4s;
+}
+
+.excursions--page .excursions__filters-title span {
+  display: none;
+}
+
+.excursions--page .excursions__filters-title--selected span {
+  color: #7B61FF;
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.excursions--page .excursions__filters-title::before,
+.excursions--page .excursions__filters-title::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  background-color: #4E4E4E;
+}
+
+.excursions--page .excursions__filters-title::before {
+  right: 0;
+  width: 18px;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 1;
+}
+
+.excursions--page .excursions__filters-title::after {
+  right: 8px;
+  width: 2px;
+  height: 18px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.excursions--page .excursions__filters-title.active {
+  color: #7B61FF;
+}
+
+.excursions--page .excursions__filters-title.active::before {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.excursions--page .excursions__filters-title.active::after {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.excursions--page .excursions__filters-block {
+  padding-top: 10px;
+  display: none;
+}
+
+.excursions--page .excursions__filters-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.excursions--page .excursions__filters-btn-wrap {
+  display: flex;
+  gap: 15px;
+}
+
+.excursions--page .excursions__filters-btn-wrap .btn {
+  min-height: 35px;
+  padding: 5px 18px;
+}
+
+.excursions--page .excursions__filters-btn-wrap .btn--main-invert {
+  background-color: transparent;
+}
+
+.excursions--page .excursions__filters-btn-wrap .btn--main-invert:hover,
+.excursions--page .excursions__filters-btn-wrap .btn--main-invert:focus {
+  background-color: #D13726;
+  border-color: #D13726;
+  color: #ffffff;
+}
+
+.excursions--page .excursions__status-filters {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.excursions--page .excursions__tabs-wrap {
+  position: relative;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.excursions--page .excursions__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.excursions--page .excursions__list {
+  margin-bottom: 30px;
+}
+
+.excursions--page .filter--select-age {
+  display: none;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.excursions--page .filter--select-place,
+.excursions--page .filter--select-audience,
+.excursions--page .filter--select-date {
+  flex-grow: 1;
+  width: 200px;
+}
+
+.excursions--page .filter--check-pushkincard {
+  width: 50px;
+}
+
+.excursions--page .filter--check-pushkincard label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #D9D9D9;
+}
+
+.excursions--page .filter--check-pushkincard label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid #C4C4C4;
+  transform: translateX(-1px) translateY(-50%);
+  transition: 0.4s;
+  background-image: url("../img/expositions/pushkin-card.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.excursions--page .filter--check-pushkincard input[type=checkbox] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.excursions--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
+  border-color: #7B61FF;
+  background-color: #7B61FF;
+  transform: translateX(19px) translateY(-50%);
+}
+
 .application {
   padding-bottom: 40px;
 }
@@ -3134,8 +3897,8 @@ select:active {
 }
 
 .application .figure--cross-with-triangle use.icon__symbol {
-  stroke: #1175D0;
-  fill: #1175D0;
+  stroke: #7B61FF;
+  fill: #7B61FF;
 }
 
 .application .figure--triangle-big-gray {
@@ -3176,7 +3939,7 @@ select:active {
   -ms-grid-column-span: 1;
 }
 
-.events--section .events__head > .application__title {
+.events--holidays .events__head > .application__title, .events--section .events__head > .application__title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -3215,6 +3978,12 @@ select:active {
   -ms-grid-column-span: 1;
 }
 
+.collection-exhibit > .application__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
 .application__download-link {
   font-size: 12px;
   line-height: 1.25;
@@ -3241,6 +4010,11 @@ select:active {
 }
 
 .news-detail > .application__img-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.collection-exhibit > .application__img-wrap {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
 }
@@ -3365,7 +4139,7 @@ select:active {
 }
 
 .banner__line--blue {
-  background-color: #1175D0;
+  background-color: #7B61FF;
   width: 99%;
   max-width: 1287px;
   transform: translateX(-53%) translateY(33px);
@@ -3604,11 +4378,11 @@ select:active {
   padding-left: 15px;
 }
 
-.museum-area .page__cover {
-  background-image: url("../img/museum-area/cover.jpg");
+.museum-mariel .page__cover {
+  background-image: url("../img/museum-mariel/cover.jpg");
 }
 
-.museum-area__info-list {
+.museum-mariel__info-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3625,22 +4399,22 @@ select:active {
   margin-bottom: 16px;
 }
 
-.museum-area__info-item span {
+.museum-mariel__info-item span {
   font-weight: bold;
 }
 
-.museum-area__info-item a {
+.museum-mariel__info-item a {
   color: inherit;
   text-decoration: none;
 }
 
-.museum-area__info-item a:hover,
-.museum-area__info-item a:focus {
+.museum-mariel__info-item a:hover,
+.museum-mariel__info-item a:focus {
   color: #EB3E2B;
   text-decoration: underline;
 }
 
-.museum-area__btn-wrap {
+.museum-mariel__btn-wrap {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
@@ -3649,13 +4423,13 @@ select:active {
   justify-content: space-between;
 }
 
-.museum-area__info {
+.museum-mariel__info {
   background-color: #ffffff;
   padding-top: 10px;
   padding-bottom: 30px;
 }
 
-.museum-area__gallery-list {
+.museum-mariel__gallery-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3663,27 +4437,27 @@ select:active {
   padding: 0;
 }
 
-.museum-area__gallery-list > li > a {
+.museum-mariel__gallery-list > li > a {
   position: relative;
 }
 
-.museum-area__gallery-list > li > a::before {
+.museum-mariel__gallery-list > li > a::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.museum-area__gallery-list > li > a:hover .img::before,
-.museum-area__gallery-list > li > a:focus .img::before {
+.museum-mariel__gallery-list > li > a:hover .img::before,
+.museum-mariel__gallery-list > li > a:focus .img::before {
   opacity: 1;
 }
 
-.museum-area__gallery-list > li > a .img {
+.museum-mariel__gallery-list > li > a .img {
   position: relative;
 }
 
-.museum-area__gallery-list > li > a .img::before {
+.museum-mariel__gallery-list > li > a .img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3700,7 +4474,7 @@ select:active {
   opacity: 0;
 }
 
-.museum-area__subtitle {
+.museum-mariel__subtitle {
   margin: 0;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -3711,12 +4485,12 @@ select:active {
   margin-bottom: 13px;
 }
 
-.museum-area__working-mode,
-.museum-area__price {
+.museum-mariel__working-mode,
+.museum-mariel__price {
   margin-bottom: 18px;
 }
 
-.museum-area__working-list {
+.museum-mariel__working-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3731,7 +4505,7 @@ select:active {
   gap: 20px;
 }
 
-.museum-area__working-list::before {
+.museum-mariel__working-list::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -3745,7 +4519,7 @@ select:active {
   transform: translateY(-50%);
 }
 
-.museum-area__price ul {
+.museum-mariel__price ul {
   position: relative;
   margin: 0;
   padding: 0;
@@ -3761,7 +4535,7 @@ select:active {
   color: #4E4E4E;
 }
 
-.museum-area__price ul::before {
+.museum-mariel__price ul::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3774,11 +4548,11 @@ select:active {
   background-size: contain;
 }
 
-.museum-area__price li span {
+.museum-mariel__price li span {
   color: #000000;
 }
 
-.museum-area__visiting-rules-title {
+.museum-mariel__visiting-rules-title {
   margin: 0;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -3789,33 +4563,33 @@ select:active {
   margin-bottom: 10px;
 }
 
-.museum-area__visiting-rules-title a {
+.museum-mariel__visiting-rules-title a {
   color: inherit;
   text-decoration: none;
   transition: 0.4s;
 }
 
-.museum-area__visiting-rules-title a:hover,
-.museum-area__visiting-rules-title a:focus {
-  color: #1175D0;
+.museum-mariel__visiting-rules-title a:hover,
+.museum-mariel__visiting-rules-title a:focus {
+  color: #7B61FF;
 }
 
-.museum-area__visiting-rules-title a:hover use.icon__symbol,
-.museum-area__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+.museum-mariel__visiting-rules-title a:hover use.icon__symbol,
+.museum-mariel__visiting-rules-title a:focus use.icon__symbol {
+  stroke: #7B61FF;
 }
 
-.museum-area__visiting-rules-title a .icon {
+.museum-mariel__visiting-rules-title a .icon {
   width: 14px;
   height: 14px;
   transform: translateY(2px);
 }
 
-.museum-area__visiting-rules-title a use.icon__symbol {
+.museum-mariel__visiting-rules-title a use.icon__symbol {
   stroke: #000000;
 }
 
-.museum-area__visiting-rules {
+.museum-mariel__visiting-rules {
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
@@ -3824,7 +4598,7 @@ select:active {
   padding: 0;
 }
 
-.museum-area__visiting-notes {
+.museum-mariel__visiting-notes {
   position: relative;
   margin: 0;
   padding: 0;
@@ -3837,7 +4611,7 @@ select:active {
   color: #4E4E4E;
 }
 
-.museum-area__visiting-notes::before {
+.museum-mariel__visiting-notes::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3850,7 +4624,7 @@ select:active {
   background-size: contain;
 }
 
-.museum-area__visiting-notes p {
+.museum-mariel__visiting-notes p {
   font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
@@ -3858,11 +4632,11 @@ select:active {
   font-style: normal;
 }
 
-.museum-area__visiting-notes p span {
+.museum-mariel__visiting-notes p span {
   display: block;
 }
 
-.museum-area__visiting-notes p a {
+.museum-mariel__visiting-notes p a {
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
@@ -3874,28 +4648,28 @@ select:active {
   transition: 0.4s;
 }
 
-.museum-area__visiting-notes p a:hover,
-.museum-area__visiting-notes p a:focus {
-  color: #1175D0;
+.museum-mariel__visiting-notes p a:hover,
+.museum-mariel__visiting-notes p a:focus {
+  color: #7B61FF;
 }
 
-.museum-area__visiting-notes p a:hover use.icon__symbol,
-.museum-area__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+.museum-mariel__visiting-notes p a:hover use.icon__symbol,
+.museum-mariel__visiting-notes p a:focus use.icon__symbol {
+  stroke: #7B61FF;
 }
 
-.museum-area__visiting-notes p a .icon {
+.museum-mariel__visiting-notes p a .icon {
   display: inline-block;
   width: 14px;
   height: 14px;
   transform: translateY(4px);
 }
 
-.museum-area__visiting-notes p a use.icon__symbol {
+.museum-mariel__visiting-notes p a use.icon__symbol {
   stroke: #000000;
 }
 
-.page__head .museum-area__title {
+.page__head .museum-mariel__title {
   margin: 0 0 10px;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -3905,33 +4679,33 @@ select:active {
   font-style: normal;
 }
 
-.page__head .museum-area__title a {
+.page__head .museum-mariel__title a {
   color: inherit;
   text-decoration: none;
   transition: 0.4s;
 }
 
-.page__head .museum-area__title a:hover,
-.page__head .museum-area__title a:focus {
-  color: #1175D0;
+.page__head .museum-mariel__title a:hover,
+.page__head .museum-mariel__title a:focus {
+  color: #7B61FF;
 }
 
-.page__head .museum-area__title a:hover use.icon__symbol,
-.page__head .museum-area__title a:focus use.icon__symbol {
-  stroke: #1175D0;
+.page__head .museum-mariel__title a:hover use.icon__symbol,
+.page__head .museum-mariel__title a:focus use.icon__symbol {
+  stroke: #7B61FF;
 }
 
-.page__head .museum-area__title a .icon {
+.page__head .museum-mariel__title a .icon {
   width: 14px;
   height: 14px;
   transform: translateY(2px);
 }
 
-.page__head .museum-area__title a use.icon__symbol {
+.page__head .museum-mariel__title a use.icon__symbol {
   stroke: #000000;
 }
 
-.page__head .museum-area__info-list {
+.page__head .museum-mariel__info-list {
   font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
@@ -3943,34 +4717,34 @@ select:active {
   margin-bottom: 16px;
 }
 
-.page__head .museum-area__info-item--time a {
+.page__head .museum-mariel__info-item--time a {
   position: relative;
   display: inline-flex;
   align-items: center;
-  color: #1175D0;
+  color: #7B61FF;
   margin-left: 14px;
   text-decoration: none;
   min-height: 30px;
 }
 
-.page__head .museum-area__info-item--time a::before {
+.page__head .museum-mariel__info-item--time a::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
   bottom: 7px;
   left: 0;
   transition: 0.4s;
   opacity: 1;
 }
 
-.page__head .museum-area__info-item--time a:hover::before,
-.page__head .museum-area__info-item--time a:focus::before {
+.page__head .museum-mariel__info-item--time a:hover::before,
+.page__head .museum-mariel__info-item--time a:focus::before {
   opacity: 0;
 }
 
-.page__head .museum-area__btn-wrap {
+.page__head .museum-mariel__btn-wrap {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
@@ -4222,7 +4996,7 @@ select:active {
 
 .breadcrumbs li a:hover,
 .breadcrumbs li a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .modal {
@@ -4320,6 +5094,11 @@ select:active {
   padding-bottom: 20px;
 }
 
+.collection-exhibit > .news-detail__head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
 .news-detail__head::before {
   content: "";
   position: absolute;
@@ -4386,6 +5165,12 @@ select:active {
   -ms-grid-column-span: 1;
 }
 
+.collection-exhibit > .news-detail__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
 .news-detail__text p:first-child {
   margin-top: 0;
 }
@@ -4412,6 +5197,11 @@ select:active {
 }
 
 .news-detail > .news-detail__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.collection-exhibit > .news-detail__img {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
 }
@@ -4559,15 +5349,15 @@ select:active {
   stroke: #000000;
 }
 
-.accessible-museum .page__wrap {
+.accessibility .page__wrap {
   margin-bottom: 20px;
 }
 
-.accessible-museum__filter select {
+.accessibility__filter select {
   width: 100%;
 }
 
-.accessible-museum__filter ul.radio-buttons {
+.accessibility__filter ul.radio-buttons {
   color: #4E4E4E;
   width: 356px;
   display: none;
@@ -4577,16 +5367,16 @@ select:active {
   list-style: none;
 }
 
-.accessible-museum__filter ul.radio-buttons li {
+.accessibility__filter ul.radio-buttons li {
   padding: 20px 0;
   border-bottom: 1px solid #EAEBEC;
 }
 
-.accessible-museum__filter ul.radio-buttons li:last-child {
+.accessibility__filter ul.radio-buttons li:last-child {
   border-bottom: none;
 }
 
-.accessible-museum__filter ul.radio-buttons input[type=radio] {
+.accessibility__filter ul.radio-buttons input[type=radio] {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -4600,22 +5390,22 @@ select:active {
           clip-path: inset(100%);
 }
 
-.accessible-museum__filter ul.radio-buttons input[type=radio]:checked + label {
+.accessibility__filter ul.radio-buttons input[type=radio]:checked + label {
   color: #000000;
   font-weight: bold;
 }
 
-.accessible-museum__filter ul.radio-buttons input[type=radio]:hover:not(:checked) + label,
-.accessible-museum__filter ul.radio-buttons input[type=radio]:focus:not(:checked) + label {
+.accessibility__filter ul.radio-buttons input[type=radio]:hover:not(:checked) + label,
+.accessibility__filter ul.radio-buttons input[type=radio]:focus:not(:checked) + label {
   color: #EB3E2B;
 }
 
-.accessible-museum__filter ul.radio-buttons label {
+.accessibility__filter ul.radio-buttons label {
   cursor: pointer;
   transition: 0.4s;
 }
 
-.accessible-museum__text {
+.accessibility__text {
   width: 100%;
   font-size: 16px;
   line-height: 1.2;
@@ -4625,7 +5415,7 @@ select:active {
   color: #4E4E4E;
 }
 
-.accessible-museum__info {
+.accessibility__info {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -4634,7 +5424,7 @@ select:active {
   color: #4E4E4E;
 }
 
-.accessible-museum__subtitle {
+.accessibility__subtitle {
   margin: 0;
   padding: 0;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
@@ -4645,7 +5435,7 @@ select:active {
   margin-bottom: 20px;
 }
 
-.accessible-museum__phone-list {
+.accessibility__phone-list {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
@@ -4660,13 +5450,13 @@ select:active {
   margin-bottom: 20px;
 }
 
-.accessible-museum__phone-list > li {
+.accessibility__phone-list > li {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
 
-.accessible-museum__phone-list > li h4 {
+.accessibility__phone-list > li h4 {
   font-weight: 400;
   width: 45%;
   flex-grow: 1;
@@ -4674,7 +5464,7 @@ select:active {
   padding: 0;
 }
 
-.accessible-museum__phone-list > li a {
+.accessibility__phone-list > li a {
   width: 45%;
   flex-grow: 1;
   color: inherit;
@@ -4682,12 +5472,12 @@ select:active {
   transition: 0.4s;
 }
 
-.accessible-museum__phone-list > li a:hover,
-.accessible-museum__phone-list > li a:focus {
-  color: #1175D0;
+.accessibility__phone-list > li a:hover,
+.accessibility__phone-list > li a:focus {
+  color: #7B61FF;
 }
 
-.accessible-museum__note {
+.accessibility__note {
   padding: 20px 20px 20px 45px;
   border: 1px dashed #4E4E4E;
   font-size: 16px;
@@ -4698,6 +5488,21 @@ select:active {
   background-repeat: no-repeat;
   background-position: top 25px left 20px;
   background-size: 18px 18px;
+}
+
+.accessibility--page .accessibility__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  margin-bottom: -22px;
+}
+
+.accessibility--page .accessibility__head .page__subtitle {
+  margin-bottom: 0;
+}
+
+.accessibility--page .accessibility__head .page__wrap {
+  margin-bottom: 0;
 }
 
 .faq--section {
@@ -4738,6 +5543,10 @@ select:active {
   border-bottom: 1px solid #B5B5B5;
 }
 
+.faq__item:last-child {
+  margin-bottom: 0;
+}
+
 .faq__item .question {
   margin: 0;
   padding: 0;
@@ -4766,7 +5575,7 @@ select:active {
 }
 
 .faq__item .question:hover {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .faq__item .question:hover::before {
@@ -4785,6 +5594,2666 @@ select:active {
   font-weight: 400;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
+}
+
+.faq--page .faq__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.faq--page .faq__head .page__subtitle {
+  margin-bottom: 0;
+}
+
+.faq--page .faq__head .page__wrap {
+  margin-bottom: 0;
+}
+
+.faq--page .faq__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.faq--page .faq__note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 30px;
+  background-image: url("../img/icons/faq.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: top left;
+  margin-bottom: 20px;
+}
+
+.faq--page .faq__note a {
+  color: #EB3E2B;
+  text-decoration: none;
+}
+
+.faq--page .faq__note a:hover,
+.faq--page .faq__note a:focus {
+  color: #D13726;
+  text-decoration: underline;
+}
+
+.faq--page .faq__list {
+  margin-bottom: 30px;
+}
+
+.faq--page .faq__form .page__subtitle {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.price .page__cover {
+  background-image: url("../img/price/cover.jpg");
+}
+
+.price__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.price__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.price__subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 13px;
+  color: #000000;
+}
+
+.price .filter--select-price-block {
+  display: block;
+}
+
+.price .filter--tabs-price-block {
+  display: none;
+}
+
+.price .table--admission-in-museum thead,
+.price .table--excursion thead {
+  display: none;
+}
+
+.price .table--admission-in-museum tbody tr,
+.price .table--excursion tbody tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.price .table--admission-in-museum .block__item,
+.price .table--excursion .block__item {
+  margin-bottom: 15px;
+}
+
+.price .table--admission-in-museum .block__wrap,
+.price .table--excursion .block__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price .table--admission-in-museum .block__title,
+.price .table--excursion .block__title {
+  text-align: center;
+  background-color: #EAEBEC;
+  color: #4E4E4E;
+  transition: 0.4s;
+}
+
+.price .table--admission-in-museum .block__title.active,
+.price .table--excursion .block__title.active {
+  background-color: #7B61FF;
+  color: #F9F9F9;
+}
+
+.price .table--admission-in-museum .block__text,
+.price .table--excursion .block__text {
+  display: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.price .table--admission-in-museum .block__text p,
+.price .table--excursion .block__text p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.price .table--admission-in-museum .block__text p:first-child::before,
+.price .table--excursion .block__text p:first-child::before {
+  content: "Взрослые";
+}
+
+.price .table--admission-in-museum .block__text p:nth-child(2)::before,
+.price .table--excursion .block__text p:nth-child(2)::before {
+  content: "Школьники, пенсионеры, студенты";
+}
+
+.price .table--admission-in-museum .block__text p:nth-child(3)::before,
+.price .table--excursion .block__text p:nth-child(3)::before {
+  content: "Дошкольники (5+)";
+}
+
+.price .table--single thead {
+  display: none;
+}
+
+.price .table--single tbody tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.price .table--single tbody td {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.price .table--single tr {
+  margin-bottom: 15px;
+}
+
+.price .table--single div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price .table--single th,
+.price .table--single td {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.price .table--single th p,
+.price .table--single td p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.price .table--single th p:first-child::before,
+.price .table--single td p:first-child::before {
+  content: "Взрослые";
+}
+
+.price .table--single th p:nth-child(2)::before,
+.price .table--single td p:nth-child(2)::before {
+  content: "Школьники, пенсионеры, студенты";
+}
+
+.price .table--single th p:nth-child(3)::before,
+.price .table--single td p:nth-child(3)::before {
+  content: "Дошкольники (5+)";
+}
+
+.price .table {
+  width: 100%;
+  border-spacing: 0 14px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.price .table caption {
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+
+.price .table th {
+  font-weight: 400;
+}
+
+.price .table td,
+.price .table th {
+  padding: 14px 12px;
+}
+
+.price__block--privileges {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #4E4E4E;
+}
+
+.price .privileges {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.price .privileges__text {
+  margin-bottom: 10px;
+}
+
+.price .privileges__text ul {
+  padding-left: 30px;
+}
+
+.price .privileges__price {
+  margin-bottom: 18px;
+}
+
+.price .privileges__price p {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  color: #4E4E4E;
+}
+
+.price .privileges__price p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/tabler-ticket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.price .privileges__visiting-rules-title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.price .privileges__visiting-rules-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.price .privileges__visiting-rules-title a:hover,
+.price .privileges__visiting-rules-title a:focus {
+  color: #7B61FF;
+}
+
+.price .privileges__visiting-rules-title a:hover use.icon__symbol,
+.price .privileges__visiting-rules-title a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.price .privileges__visiting-rules-title a .icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+}
+
+.price .privileges__visiting-rules-title a use.icon__symbol {
+  stroke: #000000;
+}
+
+.price .privileges__visiting-rules {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.price .privileges__visiting-notes {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.price .privileges__visiting-notes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/accessible.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.price .privileges__visiting-notes p {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.price .privileges__visiting-notes p span {
+  display: block;
+}
+
+.price .privileges__visiting-notes p a {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+  color: #000000;
+  display: inline;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.price .privileges__visiting-notes p a:hover,
+.price .privileges__visiting-notes p a:focus {
+  color: #7B61FF;
+}
+
+.price .privileges__visiting-notes p a:hover use.icon__symbol,
+.price .privileges__visiting-notes p a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.price .privileges__visiting-notes p a .icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(4px);
+}
+
+.price .privileges__visiting-notes p a use.icon__symbol {
+  stroke: #000000;
+}
+
+.rules {
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.rules__content-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.rules__main-content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.rules__secondary-content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  background-color: #FFE69A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rules__video-content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.rules__video-content .video {
+  width: 100%;
+  aspect-ratio: 28/16;
+  background-color: #b5b5b5;
+  margin-bottom: 20px;
+}
+
+.rules__video-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+}
+
+.rules__secondary-content h2 {
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.rules__visiting-notes {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.rules__visiting-notes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/accessible.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.rules__visiting-notes p {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.rules__visiting-notes p span {
+  display: block;
+}
+
+.rules__visiting-notes p a {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+  color: #000000;
+  display: inline;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.rules__visiting-notes p a:hover,
+.rules__visiting-notes p a:focus {
+  color: #7B61FF;
+}
+
+.rules__visiting-notes p a:hover use.icon__symbol,
+.rules__visiting-notes p a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.rules__visiting-notes p a .icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(4px);
+}
+
+.rules__visiting-notes p a use.icon__symbol {
+  stroke: #000000;
+}
+
+.rules--page .rules__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.rules--page .rules__head .page__subtitle {
+  margin-bottom: 0;
+}
+
+.rules--page .rules__head .page__wrap {
+  margin-bottom: 0;
+}
+
+.event-posters--section .event-posters__head {
+  grid-template-areas: "title title" "type-filter type-filter";
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  margin-bottom: 25px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: calc(100% - 125px) 100px;
+  grid-gap: 25px;
+}
+
+.event-posters--section .event-posters__list {
+  margin-bottom: 30px;
+}
+
+.event-posters--section .page__subtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  margin-bottom: 0;
+}
+
+.event-posters--section .filter--select-poster-type {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: type-filter;
+}
+
+.event-posters__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.event-posters__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  display: none;
+  overflow: hidden;
+}
+
+.event-posters__item:nth-child(-n+3) {
+  display: block;
+}
+
+.event-posters__item:hover .excursion__img {
+  transform: scale(1.05);
+}
+
+.event-posters__item.excursion--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.event-posters__item.excursion--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.event-posters__item .poster {
+  position: relative;
+}
+
+.event-posters__item .poster__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.event-posters__item .poster__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.event-posters__item .poster__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.event-posters__item .poster__pushkincard {
+  display: none;
+}
+
+.event-posters__item .poster__age::after {
+  content: "+";
+}
+
+.event-posters__item .poster__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.event-posters__item .poster__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.event-posters__item .poster__price {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.event-posters__item .poster__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.event-posters__item .poster__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.event-posters__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.event-posters__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.event-posters__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
+}
+
+.programs--section {
+  padding-bottom: 30px;
+}
+
+.programs--section .programs__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.programs--section .programs__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.programs--section .programs__type-filter {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.programs--section .programs__tabs-wrap {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.programs--section .programs__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.programs--section .programs__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.programs--section .programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.programs--section .programs__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.programs--section .programs__item:hover .program__img {
+  transform: scale(1.05);
+}
+
+.programs--section .programs__item.program--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.programs--section .programs__item.program--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.programs--section .programs__item .program {
+  position: relative;
+}
+
+.programs--section .programs__item .program__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.programs--section .programs__item .program__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.programs--section .programs__item .program__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.programs--section .programs__item .program__pushkincard {
+  display: none;
+}
+
+.programs--section .programs__item .program__age::after {
+  content: "+";
+}
+
+.programs--section .programs__item .program__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.programs--section .programs__item .program__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.programs--section .programs__item .program__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.programs--section .programs__item .program__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.programs--section .programs__item .program__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.programs--section .programs__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.programs--section .programs__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.programs--section .programs__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
+}
+
+.master-classes--section {
+  background-color: #F9F9F9;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: -1;
+}
+
+.master-classes--section .master-classes__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
+.master-classes--section .master-classes__head .page__subtitle {
+  margin-bottom: 0;
+}
+
+.master-classes--section .master-classes__type-filter {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.master-classes--section .master-classes__tabs-wrap {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.master-classes--section .master-classes__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.master-classes--section .master-classes__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.master-classes--section .master-classes__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.master-classes--section .master-classes__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.master-classes--section .master-classes__item:hover .master-class__img {
+  transform: scale(1.05);
+}
+
+.master-classes--section .master-classes__item.master-class--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.master-classes--section .master-classes__item.master-class--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.master-classes--section .master-classes__item .master-class {
+  position: relative;
+}
+
+.master-classes--section .master-classes__item .master-class__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.master-classes--section .master-classes__item .master-class__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.master-classes--section .master-classes__item .master-class__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.master-classes--section .master-classes__item .master-class__pushkincard {
+  display: none;
+}
+
+.master-classes--section .master-classes__item .master-class__age::after {
+  content: "+";
+}
+
+.master-classes--section .master-classes__item .master-class__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.master-classes--section .master-classes__item .master-class__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.master-classes--section .master-classes__item .master-class__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.master-classes--section .master-classes__item .master-class__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.master-classes--section .master-classes__item .master-class__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.master-classes--section .master-classes__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.master-classes--section .master-classes__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.master-classes--section .master-classes__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
+}
+
+.lectures--section {
+  padding-bottom: 30px;
+}
+
+.lectures--section .lectures__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.lectures--section .lectures__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.lectures--section .lectures__type-filter {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lectures--section .lectures__tabs-wrap {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lectures--section .lectures__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.lectures--section .lectures__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.lectures--section .lectures__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.lectures--section .lectures__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.lectures--section .lectures__item:hover .program__img {
+  transform: scale(1.05);
+}
+
+.lectures--section .lectures__item.lecture--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.lectures--section .lectures__item.lecture--pushkincard .lecture__pushkincard {
+  display: block;
+}
+
+.lectures--section .lectures__item .lecture {
+  position: relative;
+}
+
+.lectures--section .lectures__item .lecture__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.lectures--section .lectures__item .lecture__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.lectures--section .lectures__item .lecture__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.lectures--section .lectures__item .lecture__pushkincard {
+  display: none;
+}
+
+.lectures--section .lectures__item .lecture__age::after {
+  content: "+";
+}
+
+.lectures--section .lectures__item .lecture__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.lectures--section .lectures__item .lecture__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.lectures--section .lectures__item .lecture__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.lectures--section .lectures__item .lecture__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.lectures--section .lectures__item .lecture__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.lectures--section .lectures__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.lectures--section .lectures__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.lectures--section .lectures__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
+}
+
+.season-ticket {
+  background-color: #F9F9F9;
+}
+
+.season-ticket__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.season-ticket__item {
+  width: 100%;
+  min-height: 20px;
+  background-color: #ffffff;
+}
+
+.season-ticket__item .season-ticket__link {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.season-ticket__item .season-ticket__link:hover,
+.season-ticket__item .season-ticket__link:focus {
+  box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+}
+
+.season-ticket__item .season-ticket__item-img {
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.season-ticket__item .season-ticket__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.season-ticket__item .season-ticket__title span {
+  width: 60%;
+  flex-grow: 1;
+}
+
+.season-ticket__item .season-ticket__title use.icon__symbol {
+  width: 20px;
+  height: 20px;
+  stroke: #000000;
+}
+
+.useful-links {
+  background-color: #F9F9F9;
+}
+
+.useful-links__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.useful-links__item {
+  width: 100%;
+  min-height: 20px;
+  background-color: #ffffff;
+}
+
+.useful-links__item .useful-links__link {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.useful-links__item .useful-links__link:hover,
+.useful-links__item .useful-links__link:focus {
+  box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+}
+
+.useful-links__item .useful-links__item-img {
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.useful-links__item .useful-links__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.useful-links__item .useful-links__title span {
+  width: 60%;
+  flex-grow: 1;
+}
+
+.useful-links__item .useful-links__title use.icon__symbol {
+  width: 20px;
+  height: 20px;
+  stroke: #000000;
+}
+
+.collections--page .collections__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.collections--page .collections__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.collections--page .collections__filters {
+  border-bottom: 1px solid #EAEBEC;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.collections--page .collections__filters-title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  min-height: 30px;
+  transition: 0.4s;
+}
+
+.collections--page .collections__filters-title span {
+  display: none;
+}
+
+.collections--page .collections__filters-title--selected span {
+  color: #7B61FF;
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.collections--page .collections__filters-title::before,
+.collections--page .collections__filters-title::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  background-color: #4E4E4E;
+}
+
+.collections--page .collections__filters-title::before {
+  right: 0;
+  width: 18px;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 1;
+}
+
+.collections--page .collections__filters-title::after {
+  right: 8px;
+  width: 2px;
+  height: 18px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.collections--page .collections__filters-title.active {
+  color: #7B61FF;
+}
+
+.collections--page .collections__filters-title.active::before {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.collections--page .collections__filters-title.active::after {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.collections--page .collections__filters-block {
+  padding-top: 10px;
+  display: none;
+}
+
+.collections--page .collections__filters-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.collections--page .collections__filters-btn-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.collections--page .collections__filters-btn-wrap .btn {
+  min-height: 35px;
+  padding: 5px 18px;
+}
+
+.collections--page .collections__filters-btn-wrap .btn--main-invert {
+  background-color: transparent;
+}
+
+.collections--page .collections__filters-btn-wrap .btn--main-invert:hover,
+.collections--page .collections__filters-btn-wrap .btn--main-invert:focus {
+  background-color: #D13726;
+  border-color: #D13726;
+  color: #ffffff;
+}
+
+.collections--page .collections__status-filters {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collections--page .collections__tabs-wrap {
+  position: relative;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.collections--page .collections__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.collections--page .collections__list {
+  margin-bottom: 30px;
+}
+
+.collections--page .filter--select-place,
+.collections--page .filter--select-collection-type {
+  flex-grow: 1;
+  width: 200px;
+}
+
+.collections--page .filter--search-collection {
+  flex-grow: 1;
+  width: 200px;
+}
+
+.collections--page .filter--search-collection {
+  position: relative;
+}
+
+.collections--page .filter--search-collection input[type=search] {
+  width: 100%;
+  padding-right: 40px;
+  border: 1px solid #DDDDDD;
+  outline: none;
+}
+
+.collections--page .filter--search-collection input[type=search]:hover,
+.collections--page .filter--search-collection input[type=search]:focus {
+  border: 1px solid #7B61FF;
+}
+
+.collections--page .filter--search-collection button[type=submit] {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  outline-color: #7B61FF;
+}
+
+.collections--page .filter--search-collection button[type=submit] .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.collections--page .filter--search-collection button[type=submit] use.icon__symbol {
+  stroke: #4E4E4E;
+}
+
+.collections--page .filter--search-collection button[type=submit]:hover use.icon__symbol,
+.collections--page .filter--search-collection button[type=submit]:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.collections__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.collections__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.collections__item {
+  width: 100%;
+  min-height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #DDD;
+}
+
+.collections__item .collections__link {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.collections__item .collections__link:hover,
+.collections__item .collections__link:focus {
+  box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+}
+
+.collections__item .collections__item-img {
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.collections__item .collections__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.collections__item .collections__title span {
+  width: 60%;
+  flex-grow: 1;
+}
+
+.collections__item .collections__title use.icon__symbol {
+  width: 20px;
+  height: 20px;
+  stroke: #000000;
+}
+
+.collections .link--more {
+  margin-top: 30px;
+}
+
+.collections--section {
+  background-color: #EAEBEC;
+}
+
+.collection-exhibit {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "head" "img" "text";
+}
+
+.collection-exhibit__head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  position: relative;
+  width: 100%;
+  grid-area: head;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.collection-exhibit > .collection-exhibit__head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.collection-exhibit__head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  background-color: #F9F9F9;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.collection-exhibit__head-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.collection-exhibit__type {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  color: #4E4E4E;
+  margin-bottom: 10px;
+}
+
+.collection-exhibit__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.collection-exhibit__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-area: text;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.news-detail > .collection-exhibit__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.collection-exhibit > .collection-exhibit__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.collection-exhibit__text p:first-child {
+  margin-top: 0;
+}
+
+.collection-exhibit__text a {
+  color: #EB3E2B;
+  text-decoration: none;
+}
+
+.collection-exhibit__text a:hover,
+.collection-exhibit__text a:focus {
+  text-decoration: underline;
+}
+
+.collection-exhibit__text dl {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.collection-exhibit__text dl > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+
+.collection-exhibit__text dt,
+.collection-exhibit__text dd {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  flex-grow: 1;
+}
+
+.collection-exhibit__text dt {
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.collection-exhibit__img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+}
+
+.application .page__wrap > .collection-exhibit__img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.news-detail > .collection-exhibit__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.collection-exhibit > .collection-exhibit__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.museums-mariel--page {
+  margin-bottom: 30px;
+}
+
+.museums-mariel--page .museums-mariel__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  margin-bottom: -22px;
+}
+
+.museums-mariel--page .museums-mariel__head .page__subtitle {
+  margin-bottom: 0;
+}
+
+.museums-mariel--page .museums-mariel__head .page__wrap {
+  margin-bottom: 0;
+}
+
+.museums-mariel--page .museums-mariel__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.museums-mariel__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+
+.museums-mariel__item {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #DDDDDD;
+}
+
+.museums-mariel__item .museum-mariel__img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.museums-mariel__item .museum-mariel__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.museums-mariel__item .museum-mariel__title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  box-orient: vertical;
+}
+
+.museums-mariel__item .museum-mariel__about {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  box-orient: vertical;
+}
+
+.museums-mariel__item .museum-mariel__info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.museums-mariel__item .museum-mariel__info-item {
+  position: relative;
+  padding-left: 28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  box-orient: vertical;
+}
+
+.museums-mariel__item .museum-mariel__info-item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.museums-mariel__item .museum-mariel__info-item--time::before {
+  background-image: url("../img/icons/clock.svg");
+}
+
+.museums-mariel__item .museum-mariel__info-item--address::before {
+  background-image: url("../img/icons/thin-pin.svg");
+}
+
+.museums-mariel__item-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.museums-mariel__item-link:hover,
+.museums-mariel__item-link:focus {
+  box-shadow: 0px 10px 50px 0px rgba(181, 181, 181, 0.5);
+}
+
+.museums-mariel__item-link .icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.museums-mariel__item-link .icon use.icon__symbol {
+  stroke: #000000;
+}
+
+.museums-mariel__map {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  width: 100%;
+  height: 380px;
+  margin-top: 30px;
+  background-color: #EAEBEC;
+}
+
+.museum-mariel .page__cover {
+  background-image: url("../img/museum-mariel/cover.jpg");
+}
+
+.museum-mariel__info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.museum-mariel__info-item span {
+  font-weight: bold;
+}
+
+.museum-mariel__info-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.museum-mariel__info-item a:hover,
+.museum-mariel__info-item a:focus {
+  color: #EB3E2B;
+  text-decoration: underline;
+}
+
+.museum-mariel__btn-wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.museum-mariel__info {
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.museum-mariel__gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.museum-mariel__gallery-list > li > a {
+  position: relative;
+}
+
+.museum-mariel__gallery-list > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.museum-mariel__gallery-list > li > a:hover .img::before,
+.museum-mariel__gallery-list > li > a:focus .img::before {
+  opacity: 1;
+}
+
+.museum-mariel__gallery-list > li > a .img {
+  position: relative;
+}
+
+.museum-mariel__gallery-list > li > a .img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50 50;
+  z-index: 5;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.museum-mariel__subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 13px;
+}
+
+.museum-mariel__working-mode,
+.museum-mariel__price {
+  margin-bottom: 18px;
+}
+
+.museum-mariel__working-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 36px;
+  display: flex;
+  gap: 20px;
+}
+
+.museum-mariel__working-list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/calendar-heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.museum-mariel__price ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.museum-mariel__price ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/tabler-ticket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.museum-mariel__price li span {
+  color: #000000;
+}
+
+.museum-mariel__visiting-rules-title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.museum-mariel__visiting-rules-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.museum-mariel__visiting-rules-title a:hover,
+.museum-mariel__visiting-rules-title a:focus {
+  color: #7B61FF;
+}
+
+.museum-mariel__visiting-rules-title a:hover use.icon__symbol,
+.museum-mariel__visiting-rules-title a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.museum-mariel__visiting-rules-title a .icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+}
+
+.museum-mariel__visiting-rules-title a use.icon__symbol {
+  stroke: #000000;
+}
+
+.museum-mariel__visiting-rules {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.museum-mariel__visiting-notes {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+}
+
+.museum-mariel__visiting-notes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/accessible.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.museum-mariel__visiting-notes p {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.museum-mariel__visiting-notes p span {
+  display: block;
+}
+
+.museum-mariel__visiting-notes p a {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-style: normal;
+  color: #000000;
+  display: inline;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.museum-mariel__visiting-notes p a:hover,
+.museum-mariel__visiting-notes p a:focus {
+  color: #7B61FF;
+}
+
+.museum-mariel__visiting-notes p a:hover use.icon__symbol,
+.museum-mariel__visiting-notes p a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.museum-mariel__visiting-notes p a .icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  transform: translateY(4px);
+}
+
+.museum-mariel__visiting-notes p a use.icon__symbol {
+  stroke: #000000;
+}
+
+.page__head .museum-mariel__title {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.page__head .museum-mariel__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.page__head .museum-mariel__title a:hover,
+.page__head .museum-mariel__title a:focus {
+  color: #7B61FF;
+}
+
+.page__head .museum-mariel__title a:hover use.icon__symbol,
+.page__head .museum-mariel__title a:focus use.icon__symbol {
+  stroke: #7B61FF;
+}
+
+.page__head .museum-mariel__title a .icon {
+  width: 14px;
+  height: 14px;
+  transform: translateY(2px);
+}
+
+.page__head .museum-mariel__title a use.icon__symbol {
+  stroke: #000000;
+}
+
+.page__head .museum-mariel__info-list {
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #4E4E4E;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.page__head .museum-mariel__info-item--time a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #7B61FF;
+  margin-left: 14px;
+  text-decoration: none;
+  min-height: 30px;
+}
+
+.page__head .museum-mariel__info-item--time a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #7B61FF;
+  bottom: 7px;
+  left: 0;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.page__head .museum-mariel__info-item--time a:hover::before,
+.page__head .museum-mariel__info-item--time a:focus::before {
+  opacity: 0;
+}
+
+.page__head .museum-mariel__btn-wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
@@ -5040,12 +8509,14 @@ select:active {
   }
 
   .filter--tabs-status,
-  .filter--tabs-museum-tags {
+  .filter--tabs-museum-tags,
+  .filter--tabs-price-block {
     padding-right: 0;
   }
 
   .filter--tabs-status label:before,
-  .filter--tabs-museum-tags label:before {
+  .filter--tabs-museum-tags label:before,
+  .filter--tabs-price-block label:before {
     bottom: -6px;
   }
 
@@ -5065,6 +8536,7 @@ select:active {
     aspect-ratio: 144/45;
   }
 
+  .collection-exhibit .img,
   .news-detail__img .img {
     aspect-ratio: 46/36;
   }
@@ -5401,18 +8873,153 @@ select:active {
     gap: 15px;
   }
 
+  .events--section .events__item .event__info {
+    border-left: 2px dashed #EAEBEC;
+  }
+
+  .events--holidays .events__item .event__info {
+    border-left: 2px dashed #F9F9F9;
+  }
+
+  .events--holidays .events__head,
   .events--section .events__head {
     padding-left: 15px;
     padding-right: 15px;
   }
 
+  .events--holidays .events__list,
   .events--section .events__list {
     margin-bottom: 50px;
   }
 
+  .events--holidays .filter--select-status select,
   .events--section .filter--select-status select {
     font-size: 16px;
     letter-spacing: 0.64px;
+  }
+
+  .events--page .events__head {
+    margin-bottom: 50px;
+  }
+
+  .events--page .events__status-filters {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .events--page .events__list {
+    margin-bottom: 50px;
+  }
+
+  .events--page > .page__wrap {
+    padding-bottom: 40px;
+  }
+
+  .event__period {
+    font-size: 32px;
+  }
+
+  .event__period {
+    font-size: 30px;
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+    margin-bottom: 30px;
+  }
+
+  .event__period time:last-child::before {
+    left: -36px;
+  }
+
+  .event__price {
+    margin-bottom: 40px;
+  }
+
+  .event__price ul {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .event__price ul::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .event__price span {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .event__price span::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .event__price-title {
+    font-size: 23px;
+  }
+
+  .event__price-title {
+    margin-bottom: 25px;
+  }
+
+  .event__price-title a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .event__visiting-rules-title {
+    font-size: 23px;
+  }
+
+  .event__visiting-rules-title {
+    margin-bottom: 25px;
+  }
+
+  .event__visiting-rules-title a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .event__visiting-notes {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .event__visiting-notes::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .event__visiting-notes p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .event__visiting-notes p a {
+    font-size: 20px;
+  }
+
+  .event__visiting-notes p a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
   }
 
   .excursions__list {
@@ -5480,6 +9087,19 @@ select:active {
   }
 
   .excursions--section .excursions__list {
+    margin-bottom: 50px;
+  }
+
+  .excursions--page .excursions__head {
+    margin-bottom: 50px;
+  }
+
+  .excursions--page .excursions__status-filters {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .excursions--page .excursions__list {
     margin-bottom: 50px;
   }
 
@@ -5621,7 +9241,7 @@ select:active {
     display: none;
   }
 
-  .museum-area__info-list {
+  .museum-mariel__info-list {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5630,29 +9250,29 @@ select:active {
     gap: 10px;
   }
 
-  .museum-area__btn-wrap {
+  .museum-mariel__btn-wrap {
     margin: 0;
   }
 
-  .museum-area__info {
+  .museum-mariel__info {
     padding-top: 30px;
     padding-bottom: 60px;
   }
 
-  .museum-area__subtitle {
+  .museum-mariel__subtitle {
     font-size: 23px;
   }
 
-  .museum-area__subtitle {
+  .museum-mariel__subtitle {
     margin-bottom: 22px;
   }
 
-  .museum-area__working-mode,
-  .museum-area__price {
+  .museum-mariel__working-mode,
+  .museum-mariel__price {
     margin-bottom: 60px;
   }
 
-  .museum-area__working-list {
+  .museum-mariel__working-list {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5660,7 +9280,7 @@ select:active {
     font-style: normal;
   }
 
-  .museum-area__price ul {
+  .museum-mariel__price ul {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5669,31 +9289,31 @@ select:active {
     padding-left: 40px;
   }
 
-  .museum-area__price ul::before {
+  .museum-mariel__price ul::before {
     width: 24px;
     height: 24px;
   }
 
-  .museum-area__visiting-rules-title {
+  .museum-mariel__visiting-rules-title {
     font-size: 23px;
   }
 
-  .museum-area__visiting-rules-title {
+  .museum-mariel__visiting-rules-title {
     margin-bottom: 25px;
   }
 
-  .museum-area__visiting-rules-title a .icon {
+  .museum-mariel__visiting-rules-title a .icon {
     width: 20px;
     height: 20px;
     transform: translateY(5px);
   }
 
-  .museum-area__visiting-rules {
+  .museum-mariel__visiting-rules {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .museum-area__visiting-notes {
+  .museum-mariel__visiting-notes {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5702,12 +9322,12 @@ select:active {
     padding-left: 40px;
   }
 
-  .museum-area__visiting-notes::before {
+  .museum-mariel__visiting-notes::before {
     width: 24px;
     height: 24px;
   }
 
-  .museum-area__visiting-notes p {
+  .museum-mariel__visiting-notes p {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5715,31 +9335,31 @@ select:active {
     font-style: normal;
   }
 
-  .museum-area__visiting-notes p a {
+  .museum-mariel__visiting-notes p a {
     font-size: 20px;
   }
 
-  .museum-area__visiting-notes p a .icon {
+  .museum-mariel__visiting-notes p a .icon {
     width: 20px;
     height: 20px;
     transform: translateY(5px);
   }
 
-  .page__head .museum-area__title {
+  .page__head .museum-mariel__title {
     font-size: 23px;
   }
 
-  .page__head .museum-area__title {
+  .page__head .museum-mariel__title {
     margin-bottom: 20px;
   }
 
-  .page__head .museum-area__title a .icon {
+  .page__head .museum-mariel__title a .icon {
     width: 20px;
     height: 20px;
     transform: translateY(5px);
   }
 
-  .page__head .museum-area__info-list {
+  .page__head .museum-mariel__info-list {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
@@ -5748,16 +9368,16 @@ select:active {
     row-gap: 10px;
   }
 
-  .page__head .museum-area__info-item--time a {
+  .page__head .museum-mariel__info-item--time a {
     min-height: unset;
     font-size: 14px;
   }
 
-  .page__head .museum-area__info-item--time a::before {
+  .page__head .museum-mariel__info-item--time a::before {
     bottom: 0;
   }
 
-  .page__head .museum-area__btn-wrap {
+  .page__head .museum-mariel__btn-wrap {
     margin: 0;
   }
 
@@ -5885,23 +9505,23 @@ select:active {
     padding: 20px;
   }
 
-  .accessible-museum .page__wrap {
+  .accessibility .page__wrap {
     margin-bottom: 25px;
   }
 
-  .accessible-museum__info {
+  .accessibility__info {
     padding: 30px 0;
   }
 
-  .accessible-museum__subtitle {
+  .accessibility__subtitle {
     font-size: 23px;
   }
 
-  .accessible-museum__subtitle {
+  .accessibility__subtitle {
     margin-bottom: 30px;
   }
 
-  .accessible-museum__note {
+  .accessibility__note {
     font-size: 18px;
   }
 
@@ -5929,6 +9549,786 @@ select:active {
     font-weight: 400;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
+  }
+
+  .faq--page .faq__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .price__head {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+  }
+
+  .price__head .page__subtitle {
+    margin-bottom: 60px;
+  }
+
+  .price__subtitle {
+    font-size: 23px;
+  }
+
+  .price__subtitle {
+    margin-bottom: 22px;
+  }
+
+  .price .table {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+
+  .price .table caption {
+    font-size: 23px;
+  }
+
+  .price .table td,
+  .price .table th {
+    padding: 14px 20px;
+  }
+
+  .price .privileges {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .price .privileges__price {
+    margin-bottom: 60px;
+  }
+
+  .price .privileges__price p {
+    padding-left: 40px;
+  }
+
+  .price .privileges__price p::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .price .privileges__visiting-rules-title {
+    font-size: 23px;
+  }
+
+  .price .privileges__visiting-rules-title {
+    margin-bottom: 25px;
+  }
+
+  .price .privileges__visiting-rules-title a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .price .privileges__visiting-rules {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .price .privileges__visiting-notes {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .price .privileges__visiting-notes::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .price .privileges__visiting-notes p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .price .privileges__visiting-notes p a {
+    font-size: 20px;
+  }
+
+  .price .privileges__visiting-notes p a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .rules {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .rules__main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rules__secondary-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rules__video-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rules__video-content p {
+    font-size: 20px;
+  }
+
+  .rules__secondary-content h2 {
+    font-size: 23px;
+  }
+
+  .rules__visiting-notes {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .rules__visiting-notes::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rules__visiting-notes p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .rules__visiting-notes p a {
+    font-size: 20px;
+  }
+
+  .rules__visiting-notes p a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .event-posters--section .event-posters__head {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .event-posters--section .event-posters__list {
+    margin-bottom: 50px;
+  }
+
+  .event-posters__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .event-posters__item:nth-child(-n+4) {
+    display: block;
+  }
+
+  .event-posters__item.excursion--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .event-posters__item .poster__title {
+    font-size: 23px;
+  }
+
+  .event-posters__item .poster__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .event-posters__item .poster__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .event-posters__item .poster__price {
+    font-size: 18px;
+  }
+
+  .event-posters__item .poster__btn-wrap {
+    gap: 20px;
+  }
+
+  .event-posters__item-type {
+    font-size: 12px;
+  }
+
+  .event-posters__item-type {
+    margin-top: 20px;
+  }
+
+  .event-posters__item-type span {
+    padding-left: 30px;
+  }
+
+  .event-posters__item-type span::before {
+    width: 20px;
+  }
+
+  .programs--section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .programs--section .programs__head {
+    padding-top: 0;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .programs--section .programs__head .page__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .programs--section .programs__type-filter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .programs--section .programs__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .programs--section .programs__list {
+    margin-bottom: 40px;
+  }
+
+  .programs--section .programs__item.program--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .programs--section .programs__item .program__title {
+    font-size: 23px;
+  }
+
+  .programs--section .programs__item .program__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .programs--section .programs__item .program__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .programs--section .programs__item .program__days {
+    font-size: 18px;
+  }
+
+  .programs--section .programs__item .program__btn-wrap {
+    gap: 20px;
+  }
+
+  .programs--section .programs__item-type {
+    font-size: 12px;
+  }
+
+  .programs--section .programs__item-type {
+    margin-top: 20px;
+  }
+
+  .programs--section .programs__item-type span {
+    padding-left: 30px;
+  }
+
+  .programs--section .programs__item-type span::before {
+    width: 20px;
+  }
+
+  .master-classes--section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .master-classes--section .master-classes__head {
+    padding-top: 0;
+    margin-bottom: 40px;
+    background-color: transparent;
+  }
+
+  .master-classes--section .master-classes__type-filter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .master-classes--section .master-classes__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .master-classes--section .master-classes__list {
+    margin-bottom: 40px;
+  }
+
+  .master-classes--section .master-classes__item.master-class--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__title {
+    font-size: 23px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__days {
+    font-size: 18px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__btn-wrap {
+    gap: 20px;
+  }
+
+  .master-classes--section .master-classes__item-type {
+    font-size: 12px;
+  }
+
+  .master-classes--section .master-classes__item-type {
+    margin-top: 20px;
+  }
+
+  .master-classes--section .master-classes__item-type span {
+    padding-left: 30px;
+  }
+
+  .master-classes--section .master-classes__item-type span::before {
+    width: 20px;
+  }
+
+  .lectures--section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .lectures--section .lectures__head {
+    padding-top: 0;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .lectures--section .lectures__head .page__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .lectures--section .lectures__type-filter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lectures--section .lectures__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lectures--section .lectures__list {
+    margin-bottom: 40px;
+  }
+
+  .lectures--section .lectures__item.lecture--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .lectures--section .lectures__item .lecture__title {
+    font-size: 23px;
+  }
+
+  .lectures--section .lectures__item .lecture__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .lectures--section .lectures__item .lecture__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lectures--section .lectures__item .lecture__days {
+    font-size: 18px;
+  }
+
+  .lectures--section .lectures__item .lecture__btn-wrap {
+    gap: 20px;
+  }
+
+  .lectures--section .lectures__item-type {
+    font-size: 12px;
+  }
+
+  .lectures--section .lectures__item-type {
+    margin-top: 20px;
+  }
+
+  .lectures--section .lectures__item-type span {
+    padding-left: 30px;
+  }
+
+  .lectures--section .lectures__item-type span::before {
+    width: 20px;
+  }
+
+  .season-ticket__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .season-ticket__item .season-ticket__title {
+    font-size: 23px;
+  }
+
+  .season-ticket__item .season-ticket__title {
+    padding: 20px;
+  }
+
+  .useful-links__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .useful-links__item .useful-links__title {
+    font-size: 23px;
+  }
+
+  .useful-links__item .useful-links__title {
+    padding: 20px;
+  }
+
+  .collections--page .collections__head {
+    margin-bottom: 50px;
+  }
+
+  .collections--page .collections__status-filters {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .collections--page .collections__list {
+    margin-bottom: 50px;
+  }
+
+  .collections__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .collections__content {
+    margin-bottom: 60px;
+  }
+
+  .collections__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .collections__item .collections__title {
+    font-size: 23px;
+  }
+
+  .collections__item .collections__title {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+    font-style: normal;
+    padding: 20px;
+  }
+
+  .collections .link--more {
+    margin-top: 50px;
+  }
+
+  .collection-exhibit__type {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  .collection-exhibit__type {
+    margin-bottom: 20px;
+  }
+
+  .collection-exhibit__title {
+    font-size: 45px;
+  }
+
+  .collection-exhibit__text {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .collection-exhibit__text dl {
+    gap: 15px;
+  }
+
+  .collection-exhibit__text dt {
+    font-size: 23px;
+  }
+
+  .museums-mariel--page {
+    margin-bottom: 70px;
+  }
+
+  .museums-mariel--page .museums-mariel__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .museums-mariel__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .museums-mariel__item .museum-mariel__info {
+    padding: 20px 20px 50px;
+    gap: 30px;
+  }
+
+  .museums-mariel__item .museum-mariel__title {
+    font-size: 20px;
+  }
+
+  .museums-mariel__item .museum-mariel__title {
+    height: 50px;
+  }
+
+  .museums-mariel__item .museum-mariel__about {
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .museums-mariel__item .museum-mariel__info-list {
+    font-size: 14px;
+    line-height: 1.29;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .museums-mariel__item .museum-mariel__info-item {
+    padding-left: 38px;
+  }
+
+  .museums-mariel__item .museum-mariel__info-item::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .museums-mariel__item-link .icon {
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .museums-mariel__map {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .museum-mariel__info-list {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    gap: 10px;
+  }
+
+  .museum-mariel__btn-wrap {
+    margin: 0;
+  }
+
+  .museum-mariel__info {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .museum-mariel__subtitle {
+    font-size: 23px;
+  }
+
+  .museum-mariel__subtitle {
+    margin-bottom: 22px;
+  }
+
+  .museum-mariel__working-mode,
+  .museum-mariel__price {
+    margin-bottom: 60px;
+  }
+
+  .museum-mariel__working-list {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .museum-mariel__price ul {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .museum-mariel__price ul::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .museum-mariel__visiting-rules-title {
+    font-size: 23px;
+  }
+
+  .museum-mariel__visiting-rules-title {
+    margin-bottom: 25px;
+  }
+
+  .museum-mariel__visiting-rules-title a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .museum-mariel__visiting-rules {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .museum-mariel__visiting-notes {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+  }
+
+  .museum-mariel__visiting-notes::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .museum-mariel__visiting-notes p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
+
+  .museum-mariel__visiting-notes p a {
+    font-size: 20px;
+  }
+
+  .museum-mariel__visiting-notes p a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .page__head .museum-mariel__title {
+    font-size: 23px;
+  }
+
+  .page__head .museum-mariel__title {
+    margin-bottom: 20px;
+  }
+
+  .page__head .museum-mariel__title a .icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(5px);
+  }
+
+  .page__head .museum-mariel__info-list {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    row-gap: 10px;
+  }
+
+  .page__head .museum-mariel__info-item--time a {
+    min-height: unset;
+    font-size: 14px;
+  }
+
+  .page__head .museum-mariel__info-item--time a::before {
+    bottom: 0;
+  }
+
+  .page__head .museum-mariel__btn-wrap {
+    margin: 0;
   }
 
   .events__item .event__img {
@@ -5986,6 +10386,23 @@ select:active {
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
   }
+
+  .collection-exhibit__text {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .collection-exhibit__img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .application .page__wrap > .collection-exhibit__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
 }
 
 @media (min-width: 768px){
@@ -6009,6 +10426,12 @@ select:active {
   .form--feedback button[type=submit] {
     -ms-grid-row: 7;
     -ms-grid-column: 3;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .collections__item .collections__title {
+    font-size: 20px;
   }
 }
 
@@ -6043,7 +10466,7 @@ select:active {
     -ms-grid-column-span: 1;
   }
 
-  .events--section .events__head > .page__head-title {
+  .events--holidays .events__head > .page__head-title, .events--section .events__head > .page__head-title {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -6346,6 +10769,7 @@ select:active {
     margin-top: auto;
   }
 
+  .events--holidays .events__head,
   .events--section .events__head {
     grid-template-areas: "title place-filter time-filter";
     grid-row-gap: 50px;
@@ -6354,8 +10778,76 @@ select:active {
     margin-bottom: 60px;
   }
 
+  .events--holidays .filter--select-place,
   .events--section .filter--select-place {
     width: 250px;
+  }
+
+  .events--page .events__filters {
+    border-bottom: none;
+  }
+
+  .events--page .events__filters-title {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+  }
+
+  .events--page .events__filters-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+  }
+
+  .events--page .events__filters-wrap {
+    margin-bottom: 0;
+    width: 740px;
+  }
+
+  .events--page .events__filters-btn-wrap .btn {
+    min-height: 45px;
+    padding: 10px 40px;
+  }
+
+  .events--page .events__filters-btn-wrap .btn--main {
+    display: none;
+  }
+
+  .events--page .events__status-filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .events--page .events__tabs-wrap {
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .events--page .filter--select-age {
+    width: 180px;
+    margin-right: 0;
+  }
+
+  .event__price ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .event__price li {
+    width: 40%;
+    flex-grow: 1;
   }
 
   .excursions__item .excursion__wrap-content {
@@ -6369,6 +10861,62 @@ select:active {
     grid-column-gap: 110px;
     grid-template-columns: auto 250px 200px;
     margin-bottom: 60px;
+  }
+
+  .excursions--page .excursions__filters {
+    border-bottom: none;
+  }
+
+  .excursions--page .excursions__filters-title {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+  }
+
+  .excursions--page .excursions__filters-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+  }
+
+  .excursions--page .excursions__filters-wrap {
+    margin-bottom: 0;
+    width: 740px;
+  }
+
+  .excursions--page .excursions__filters-btn-wrap .btn {
+    min-height: 45px;
+    padding: 10px 40px;
+  }
+
+  .excursions--page .excursions__filters-btn-wrap .btn--main {
+    display: none;
+  }
+
+  .excursions--page .excursions__status-filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .excursions--page .excursions__tabs-wrap {
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .excursions--page .filter--select-age {
+    width: 180px;
+    margin-right: 0;
   }
 
   .application .figure {
@@ -6434,16 +10982,16 @@ select:active {
     padding: 0;
   }
 
-  .museum-area__info-list {
+  .museum-mariel__info-list {
     margin-bottom: 40px;
     grid-area: contacts;
   }
 
-  .museum-area__btn-wrap {
+  .museum-mariel__btn-wrap {
     gap: 30px;
   }
 
-  .museum-area__info {
+  .museum-mariel__info {
     display: grid;
     grid-template-columns: 1fr 480px;
     -moz-column-gap: 50px;
@@ -6451,40 +10999,40 @@ select:active {
     grid-template-areas: "text detail" "gallery gallery";
   }
 
-  .museum-area__working-list {
+  .museum-mariel__working-list {
     justify-content: space-between;
   }
 
-  .museum-area__working-list li {
+  .museum-mariel__working-list li {
     width: 40%;
     flex-grow: 1;
   }
 
-  .museum-area__price ul {
+  .museum-mariel__price ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  .museum-area__price li {
+  .museum-mariel__price li {
     width: 40%;
     flex-grow: 1;
   }
 
-  .museum-area__visiting-rules {
+  .museum-mariel__visiting-rules {
     grid-area: rules;
     padding-left: 0;
   }
 
-  .page__head .museum-area__info-list {
+  .page__head .museum-mariel__info-list {
     margin-bottom: 40px;
   }
 
-  .page__head .museum-area__btn-wrap {
+  .page__head .museum-mariel__btn-wrap {
     gap: 30px;
   }
 
-  .modal--museum-working-mode .museum-area__working-list {
+  .modal--museum-working-mode .museum-mariel__working-list {
     justify-content: unset;
   }
 
@@ -6554,7 +11102,7 @@ select:active {
     padding-right: 0;
     padding-left: 0;
     max-width: unset;
-    width: 460px;
+    width: 355px;
     margin: 0;
     order: 1;
   }
@@ -6567,27 +11115,27 @@ select:active {
     display: flex;
   }
 
-  .accessible-museum__wrap {
+  .accessibility__wrap {
     display: flex;
     justify-content: space-between;
     -moz-column-gap: 40px;
          column-gap: 40px;
   }
 
-  .accessible-museum__filter select {
+  .accessibility__filter select {
     display: none;
   }
 
-  .accessible-museum__filter ul.radio-buttons {
+  .accessibility__filter ul.radio-buttons {
     display: flex;
   }
 
-  .accessible-museum__text {
+  .accessibility__text {
     width: 30%;
     flex-grow: 1;
   }
 
-  .accessible-museum__info .page__wrap {
+  .accessibility__info .page__wrap {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -6595,21 +11143,27 @@ select:active {
          column-gap: 55px;
   }
 
-  .accessible-museum__subtitle {
+  .accessibility__subtitle {
     width: 100%;
   }
 
-  .accessible-museum__phone-list {
+  .accessibility__phone-list {
     margin-bottom: 0;
     flex-grow: 1;
   }
 
-  .accessible-museum__note {
+  .accessibility__note {
     padding: 20px 20px 20px 75px;
     width: 415px;
     font-size: 20px;
     line-height: 28px;
     background-size: 30px 30px;
+  }
+
+  .accessibility--page .accessibility__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .faq--section .figure--triangle-yellow {
@@ -6636,8 +11190,8 @@ select:active {
   }
 
   .faq--section .figure--cross-with-triangle use.icon__symbol {
-    stroke: #1175D0;
-    fill: #1175D0;
+    stroke: #7B61FF;
+    fill: #7B61FF;
   }
 
   .faq--section .faq__list-wrap {
@@ -6646,7 +11200,443 @@ select:active {
     width: 660px;
   }
 
+  .faq--page .faq__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .faq--page .faq__content {
+    grid-template-columns: 1fr 460px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    align-items: flex-start;
+    grid-template-areas: "list note" "list form";
+  }
+
+  .faq--page .faq__note {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 40px;
+    background-size: 24px 24px;
+    grid-area: note;
+  }
+
+  .faq--page .faq__note a {
+    display: none;
+  }
+
+  .faq--page .faq__list {
+    grid-area: list;
+    margin-bottom: 0;
+  }
+
+  .faq--page .faq__form {
+    padding-left: 40px;
+    grid-area: form;
+  }
+
+  .faq--page .form--feedback {
+    grid-template-columns: 1fr;
+    grid-template-areas: "theme" "name" "email" "message" "button";
+  }
+
+  .price .filter--select-price-block {
+    display: none;
+  }
+
+  .price .filter--tabs-price-block {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  .price .table--admission-in-museum thead,
+  .price .table--excursion thead {
+    display: table-header-group;
+  }
+
+  .price .table--admission-in-museum tbody tr,
+  .price .table--excursion tbody tr {
+    display: table-row;
+  }
+
+  .price .table--admission-in-museum .block__wrap,
+  .price .table--excursion .block__wrap {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .price .table--admission-in-museum .block__title,
+  .price .table--excursion .block__title {
+    text-align: left;
+    width: 300px;
+    background-color: unset;
+    color: unset;
+  }
+
+  .price .table--admission-in-museum .block__title.active,
+  .price .table--excursion .block__title.active {
+    background-color: unset;
+    color: unset;
+  }
+
+  .price .table--admission-in-museum .block__text,
+  .price .table--excursion .block__text {
+    display: table-cell;
+  }
+
+  .price .table--admission-in-museum .block__text p,
+  .price .table--excursion .block__text p {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    flex-grow: 1;
+  }
+
+  .price .table--admission-in-museum .block__text p::before,
+  .price .table--excursion .block__text p::before {
+    display: none;
+  }
+
+  .price .table--single thead {
+    display: table-header-group;
+  }
+
+  .price .table--single tbody tr {
+    display: table-row;
+  }
+
+  .price .table--single div {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .price .table--single th p,
+  .price .table--single td p {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    flex-grow: 1;
+  }
+
+  .price .table--single th p::before,
+  .price .table--single td p::before {
+    display: none;
+  }
+
+  .price .table thead {
+    margin-bottom: 14px;
+  }
+
+  .price .table thead tr {
+    background-color: #7B61FF;
+    color: #F9F9F9;
+  }
+
+  .price .table tbody tr {
+    background-color: #EAEBEC;
+    color: #4E4E4E;
+  }
+
+  .price__block--privileges {
+    grid-template-columns: 1fr 460px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .price .privileges__text {
+    margin-bottom: 0;
+  }
+
+  .price .privileges__price p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .price .privileges__visiting-rules {
+    grid-area: rules;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .rules__content-wrap {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "main secondary" "video secondary";
+    align-items: flex-start;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+  }
+
+  .rules__main-content {
+    grid-area: main;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rules__secondary-content {
+    grid-area: secondary;
+    margin: 0;
+    padding: 0;
+    padding: 30px;
+  }
+
+  .rules__video-content {
+    grid-area: video;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rules--page .rules__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .event-posters--section .event-posters__head {
+    grid-template-areas: "title title type-filter";
+    grid-row-gap: 50px;
+    grid-column-gap: 110px;
+    grid-template-columns: auto 250px 200px;
+    margin-bottom: 60px;
+  }
+
+  .event-posters__item .poster__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
+  .programs--section .programs__type-filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .programs--section .programs__tabs-wrap {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .programs--section .programs__item .program__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
+  .master-classes--section .master-classes__type-filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .master-classes--section .master-classes__tabs-wrap {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .master-classes--section .master-classes__item .master-class__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
+  .lectures--section .lectures__type-filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .lectures--section .lectures__tabs-wrap {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .lectures--section .lectures__item .lecture__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
+  .collections--page .collections__head {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    margin-bottom: -60px;
+  }
+
+  .collections--page .collections__filters {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .collections--page .collections__filters-title {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+  }
+
+  .collections--page .collections__filters-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+
+  .collections--page .collections__filters-wrap {
+    margin-bottom: 0;
+    width: 740px;
+  }
+
+  .collections--page .collections__filters-btn-wrap .btn {
+    min-height: 45px;
+    padding: 10px 40px;
+  }
+
+  .collections--page .collections__filters-btn-wrap .btn--main {
+    display: none;
+  }
+
+  .collections--page .collections__status-filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .collections--page .collections__tabs-wrap {
+    overflow: unset;
+    flex-grow: 1;
+  }
+
+  .collections--page .filter--select-place,
+  .collections--page .filter--select-collection-type {
+    flex-grow: 0;
+  }
+
+  .collections--page .filter--search-collection {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 290px;
+  }
+
+  .collection-exhibit {
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    grid-template-areas: "head img" "text img";
+    padding-bottom: 60px;
+  }
+
+  .collection-exhibit__head::before {
+    left: 0;
+    transform: none;
+  }
+
+  .collection-exhibit__head-wrap {
+    padding-right: 0;
+  }
+
+  .collection-exhibit__text {
+    padding-right: 0;
+  }
+
+  .collection-exhibit__img {
+    margin-right: 20px;
+    margin-top: 78px;
+  }
+
+  .museums-mariel--page .museums-mariel__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .museums-mariel__map {
+    margin-top: 55px;
+    height: 410px;
+  }
+
+  .museum-mariel__info-list {
+    margin-bottom: 40px;
+    grid-area: contacts;
+  }
+
+  .museum-mariel__btn-wrap {
+    gap: 30px;
+  }
+
+  .museum-mariel__info {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    grid-template-areas: "text detail" "gallery gallery";
+  }
+
+  .museum-mariel__working-list {
+    justify-content: space-between;
+  }
+
+  .museum-mariel__working-list li {
+    width: 40%;
+    flex-grow: 1;
+  }
+
+  .museum-mariel__price ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .museum-mariel__price li {
+    width: 40%;
+    flex-grow: 1;
+  }
+
+  .museum-mariel__visiting-rules {
+    grid-area: rules;
+    padding-left: 0;
+  }
+
+  .page__head .museum-mariel__info-list {
+    margin-bottom: 40px;
+  }
+
+  .page__head .museum-mariel__btn-wrap {
+    gap: 30px;
+  }
+
   .news-detail > .event__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .collection-exhibit > .event__img {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 3;
@@ -6670,7 +11660,7 @@ select:active {
     -ms-grid-column-span: 1;
   }
 
-  .museum-area__info > .application__text {
+  .museum-mariel__info > .application__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -6682,7 +11672,25 @@ select:active {
     -ms-grid-column-span: 1;
   }
 
+  .collection-exhibit > .application__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > .application__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
   .news-detail > .application__img-wrap {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .collection-exhibit > .application__img-wrap {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 3;
@@ -6699,13 +11707,18 @@ select:active {
     -ms-grid-column: 1;
   }
 
+  .collection-exhibit > .news-detail__head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
   .page__content .page__wrap > .news-detail__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
 
-  .museum-area__info > .news-detail__text {
+  .museum-mariel__info > .news-detail__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -6717,10 +11730,101 @@ select:active {
     -ms-grid-column-span: 1;
   }
 
+  .collection-exhibit > .news-detail__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > .news-detail__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
   .news-detail > .news-detail__img {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 3;
+  }
+
+  .collection-exhibit > .news-detail__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .collection-exhibit__head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .collection-exhibit > .collection-exhibit__head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .page__content .page__wrap > .collection-exhibit__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > .collection-exhibit__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .news-detail > .collection-exhibit__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .collection-exhibit > .collection-exhibit__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > .collection-exhibit__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .news-detail > .collection-exhibit__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .collection-exhibit > .collection-exhibit__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .faq--page .form--feedback > .form__field--theme {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .faq--page .form--feedback > .form__field--name {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .faq--page .form--feedback > .form__field--message {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+
+  .faq--page .form--feedback > button[type=submit] {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
   }
 
   .main-footer .social {
@@ -6742,6 +11846,44 @@ select:active {
   .main-footer .subscription {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .rules__main-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .rules__secondary-content {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+  }
+
+  .rules__video-content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .faq--page .faq__note {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .faq--page .faq__list {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+
+  .faq--page .faq__form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
   }
 }
 
@@ -6822,7 +11964,7 @@ select:active {
     -ms-grid-column-span: 1;
   }
 
-  .museum-area__info > .page__text {
+  .museum-mariel__info > .page__text {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -6830,6 +11972,18 @@ select:active {
 
   .news-detail > .page__text {
     -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .collection-exhibit > .page__text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > .page__text {
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
@@ -6859,6 +12013,12 @@ select:active {
   -ms-grid-column-span: 1;
   }
 
+.collection-exhibit > .page__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  }
+
 @media (min-width: 1024px) and (min-width: 768px) {
   .museum-areas--section-visitors .museum-areas__head-wrap {
     padding-left: 15px;
@@ -6866,6 +12026,11 @@ select:active {
   }
 
   .map__wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rules__content-wrap {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -6947,6 +12112,7 @@ select:active {
     margin-bottom: 30px;
   }
 
+  .events--holidays .events__head,
   .events--section .events__head {
     grid-column-gap: 50px;
   }
@@ -6978,11 +12144,11 @@ select:active {
     grid-column-gap: 50px;
   }
 
-  .museum-area__info {
+  .museum-mariel__info {
     grid-template-columns: auto auto;
   }
 
-  .museum-area__visiting-rules {
+  .museum-mariel__visiting-rules {
     margin: 0;
     padding-right: 0;
     width: 460px;
@@ -7021,6 +12187,100 @@ select:active {
   .tickets-and-benefits__list {
     grid-gap: 50px;
   }
+
+  .price .privileges__visiting-rules {
+    margin: 0;
+    padding-right: 0;
+    width: 460px;
+    justify-self: start;
+  }
+
+  .event-posters--section .event-posters__head {
+    grid-column-gap: 50px;
+  }
+
+  .event-posters__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .event-posters__item:nth-child(-n+6) {
+    display: block;
+  }
+
+  .programs--section .programs__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .master-classes--section .master-classes__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .lectures--section .lectures__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .season-ticket__list {
+    grid-gap: 50px;
+  }
+
+  .useful-links__list {
+    grid-gap: 50px;
+  }
+
+  .collections__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .collection-exhibit {
+    grid-template-columns: auto auto;
+  }
+
+  .collection-exhibit__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .collection-exhibit__head {
+    margin: 0;
+  }
+
+  .collection-exhibit__head-wrap {
+    width: 690px;
+    margin: 0 0 0 auto;
+  }
+
+  .collection-exhibit__text {
+    width: 690px;
+    margin: 0;
+    justify-self: end;
+  }
+
+  .collection-exhibit__img {
+    width: 460px;
+    align-self: start;
+  }
+
+  .museums-mariel__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .museum-mariel__info {
+    grid-template-columns: auto auto;
+  }
+
+  .museum-mariel__visiting-rules {
+    margin: 0;
+    padding-right: 0;
+    width: 460px;
+    justify-self: start;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -7038,6 +12298,7 @@ select:active {
             clip-path: inset(100%);
   }
 
+  .events--holidays .filter--select-status legend,
   .events--section .filter--select-status legend {
     position: absolute;
     overflow: hidden;

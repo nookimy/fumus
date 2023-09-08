@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <div class="fix"></div>
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol viewBox="0 0 20 20" id="icon-arrow-up-right">
+                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.833 14.167l8.334-8.334M5.833 5.833h8.334v8.334" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 18 18" id="icon-close">
+                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 4.5l-9 9M4.5 4.5l9 9" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 20 20" id="icon-eye">
+                <g clip-path="url(#cclip0_168_442)">
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M.833 10S4.167 3.333 10 3.333 19.167 10 19.167 10 15.833 16.667 10 16.667.833 10 .833 10z" class="icon__color-element"></path>
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" class="icon__color-element"></path>
+                </g>
+                <defs>
+                    <clipPath id="cclip0_168_442">
+                        <path fill="#fff" d="M0 0h20v20H0z"></path>
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol viewBox="0 0 341 567" id="icon-figure-cross-with-triangle">
+                <path fill="#7B61FF" d="M161.453 301.791c.731 0 1.324.593 1.324 1.324v28.749c0 1.179-1.426 1.77-2.259.936l-14.375-14.375-14.375-14.375c-.834-.833-.243-2.259.936-2.259h28.749z" class="icon__color-element"></path>
+                <path stroke="#7B61FF" stroke-width="3" d="M0 294.241h170.5m170.5 0H170.5m0 0V0m0 294.241V566.76" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 79 70" id="icon-logo">
+                <path fill-rule="evenodd" d="M35.447.717a1.014 1.014 0 010 1.433L3.88 33.716h34.002a1.014 1.014 0 010 2.027H3.88L35.447 67.31a1.013 1.013 0 11-1.434 1.433L.717 35.447a1.013 1.013 0 010-1.434L34.013.717a1.013 1.013 0 011.434 0z" class="icon__color-element" clip-rule="evenodd"></path>
+                <path fill-rule="evenodd" d="M78.145 34.76L45.527 2.142c-2.724-2.724-7.382-.795-7.382 3.058v59.12c0 3.853 4.658 5.782 7.382 3.058L78.145 34.76zm-3.88 1.014H40.171V64.32c0 2.047 2.474 3.072 3.922 1.625l30.17-30.171zm-34.093-2.028h34.093L44.093 3.576c-1.447-1.448-3.921-.423-3.921 1.624v28.546z" class="icon__color-element" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol viewBox="0 0 15 15" id="icon-logo-developer">
+                <g clip-path="url(#eclip0_185_2587)">
+                    <path fill="#B5B5B5" d="M1.756 7.5a5.744 5.744 0 1110.798 2.732c.627.052 1.179.373 1.538.849a7.5 7.5 0 10-3.011 3.011 2.147 2.147 0 01-.849-1.539A5.744 5.744 0 011.756 7.5z"></path>
+                    <circle cx="12.375" cy="12.375" r="1.593" fill="#48C8CD"></circle>
+                </g>
+                <defs>
+                    <clipPath id="eclip0_185_2587">
+                        <path fill="#fff" d="M0 0h15v15H0z"></path>
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol viewBox="0 0 102 16" id="icon-long-arrow-desktop-left">
+                <path fill="#000" d="M101 9a1 1 0 000-2v2zM.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.414 8l5.657-5.657A1 1 0 006.657.93L.293 7.293zM101 7H1v2h100V7z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 102 16" id="icon-long-arrow-desktop-right">
+                <path fill="#000" d="M1 7a1 1 0 000 2V7zm100.707 1.707a1 1 0 000-1.414L95.343.929a1 1 0 10-1.414 1.414L99.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM1 9h100V7H1v2z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 32 16" id="icon-long-arrow-left">
+                <path fill="#000" d="M31 9a1 1 0 100-2v2zM.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.414 8l5.657-5.657A1 1 0 006.657.93L.293 7.293zM31 7H1v2h30V7z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 32 16" id="icon-long-arrow-right">
+                <path fill="#000" d="M1 7a1 1 0 000 2V7zm30.707 1.707a1 1 0 000-1.414L25.343.929a1 1 0 10-1.414 1.414L29.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM1 9h30V7H1v2z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 45 45" id="icon-menu">
+                <path stroke="#000" stroke-linecap="round" stroke-width="2" d="M9.375 22.5H26.25M9.375 35.625h26.25M9.375 9.375h26.25M31.875 28.125L37.5 22.5M31.875 16.875L37.5 22.5" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 20 20" id="icon-ok">
+                <path fill="#000" d="M9.988 10.284c-2.354 0-4.31-1.955-4.31-4.268 0-2.394 1.956-4.35 4.311-4.35 2.435 0 4.311 1.956 4.311 4.35a4.285 4.285 0 01-4.297 4.269h-.015zm0-6.103c-.996 0-1.755.837-1.755 1.836 0 .996.759 1.755 1.756 1.755 1.038 0 1.756-.759 1.756-1.755 0-1-.718-1.836-1.757-1.836zm1.717 9.655l2.436 2.354c.48.517.48 1.276 0 1.755-.518.517-1.318.517-1.717 0L9.99 15.551l-2.355 2.394c-.239.24-.559.358-.919.358-.28 0-.598-.12-.878-.358-.48-.48-.48-1.238 0-1.756l2.475-2.354a11.244 11.244 0 01-2.553-1.116c-.599-.319-.718-1.117-.399-1.716.4-.598 1.118-.757 1.757-.358a5.516 5.516 0 005.747 0c.64-.4 1.397-.24 1.756.358.36.6.2 1.396-.36 1.716-.757.48-1.636.838-2.554 1.118v-.001z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 20 20" id="icon-search">
+                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.167 15.833a6.667 6.667 0 100-13.333 6.667 6.667 0 000 13.333zM17.5 17.5l-3.625-3.625" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 20 20" id="icon-telegram">
+                <path fill="#000" d="M17.22 3.098L2.447 8.794c-1.009.405-1.003.967-.185 1.218l3.793 1.184 8.777-5.538c.415-.252.794-.116.482.16l-7.11 6.418H8.2h.002l-.262 3.91c.383 0 .552-.175.767-.383l1.843-1.791 3.832 2.83c.707.39 1.215.19 1.39-.654L18.29 4.292c.258-1.032-.394-1.5-1.068-1.194z" class="icon__color-element"></path>
+            </symbol>
+            <symbol viewBox="0 0 20 12" id="icon-vk">
+                <path fill="#000" fill-rule="evenodd" d="M17.802 8.298s1.617 1.597 2.017 2.336c.008.01.014.022.018.035.163.273.203.487.123.645-.135.261-.592.392-.747.403h-2.858c-.199 0-.613-.052-1.117-.4-.385-.269-.768-.712-1.139-1.145-.554-.643-1.033-1.201-1.518-1.201a.548.548 0 00-.18.03c-.367.116-.833.639-.833 2.032 0 .436-.344.684-.585.684H9.674c-.446 0-2.768-.156-4.827-2.327C2.324 6.732.058 1.4.037 1.353-.106 1.008.19.82.51.82h2.886c.387 0 .513.234.601.444.102.241.48 1.205 1.1 2.288C6.102 5.314 6.72 6.031 7.212 6.031a.527.527 0 00.264-.07c.644-.354.524-2.654.494-3.128 0-.092 0-1.027-.33-1.479C7.402 1.03 7 .904 6.757.858c.065-.094.203-.238.38-.323.441-.22 1.238-.252 2.03-.252h.438c.858.012 1.08.067 1.392.146.628.15.64.557.585 1.943-.016.396-.033.842-.033 1.367 0 .112-.005.237-.005.364-.019.711-.044 1.512.458 1.841a.41.41 0 00.217.062c.174 0 .695 0 2.108-2.425.62-1.071 1.1-2.334 1.133-2.429.028-.053.112-.202.214-.262a.479.479 0 01.236-.056h3.395c.37 0 .621.056.67.196.082.227-.016.92-1.566 3.016-.26.349-.49.651-.69.915-1.406 1.844-1.406 1.937.082 3.337z" class="icon__color-element" clip-rule="evenodd"></path>
+            </symbol>
+            <symbol viewBox="0 0 19 19" id="icon-youtube">
+                <path fill="#000" d="M11.024 9.34L8.89 8.345c-.186-.087-.34.01-.34.216v1.876c0 .206.154.303.34.216l2.133-.995c.187-.088.187-.23 0-.318zM9.5.38a9.12 9.12 0 100 18.24 9.12 9.12 0 100-18.24zm0 12.825c-4.668 0-4.75-.42-4.75-3.705 0-3.284.082-3.705 4.75-3.705s4.75.42 4.75 3.705c0 3.284-.082 3.705-4.75 3.705z" class="icon__color-element"></path>
+            </symbol>
+        </svg>
+    </div>
+    <!--<include src="./src/components/blocks/main-header/main-header.html"></include>-->
+    <main>
+        <div class="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="./">Главная</a>
+                </li>
+                <li>
+                    События
+                </li>
+            </ul>
+        </div>
+        <section class="events events--page">
+            <div class="events__head">
+                <div class="page__wrap">
+                    <h1 class="page__subtitle">События</h1>
+                    <div class="events__filters">
+                        <h3 class="events__filters-title events__filters-title--selected">Фильтр<span>(1)</span></h3>
+                        <div class="events__filters-block">
+                            <div class="events__filters-wrap">
+                                <fieldset class="filter filter--select-place">
+                                    <legend class="visually-hidden">Музейные комплексы</legend>
+                                    <select form="events-filters">
+                                        <option label="Музейный комплекс">Все музейные комплексы</option>
+                                        <option>Национальный музей Республики Марий Эл им. Т. Евсеева</option>
+                                        <option>Музей истории Православия </option>
+                                        <option>Музей народно-прикладного искусства</option>
+                                        <option>Музей ...</option>
+
+                                    </select>
+                                </fieldset>
+                                <fieldset class="filter filter--select-audience">
+                                    <legend class="visually-hidden">Аудитория</legend>
+                                    <select form="events-filters">
+                                        <option>Все</option>
+                                        <option>Вариант 1</option>
+                                        <option>Вариант 2</option>
+                                        <option>Вариант 3</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset class="filter filter--select-date">
+                                    <label class="visually-hidden" for="date">Дата проведения</label>
+                                    <input type="date" id="date" name="date">
+                                </fieldset>
+                                <fieldset class="filter filter--check-pushkincard">
+                                    <input type="checkbox" id="pushkincard" name="pushkincard" checked="">
+                                    <label for="pushkincard"><span class="visually-hidden">По пушкинской карте</span></label>
+                                </fieldset>
+                            </div>
+                            <div class="events__filters-btn-wrap">
+                                <button class="btn btn--main">Применить</button>
+                                <button class="btn btn--main-invert">Сбросить фильтр</button>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="visually-hidden" id="events-filters"></form>
+                </div>
+                <div class="events__status-filters">
+                    <div class="events__tabs-wrap">
+                        <fieldset class="filter filter--tabs-status">
+                            <legend class="visually-hidden">Период Проведения</legend>
+                            <div class="form__field">
+                                <input type="radio" id="today" name="period" checked="">
+                                <label for="today">Сегодня</label>
+                            </div>
+                            <div class="form__field">
+                                <input type="radio" id="tomorrow" name="period">
+                                <label for="tomorrow">Завтра</label>
+                            </div>
+                            <div class="form__field">
+                                <input type="radio" id="weekend" name="period">
+                                <label for="weekend">В выходные</label>
+                            </div>
+                            <div class="form__field">
+                                <input type="radio" id="this-week" name="period">
+                                <label for="this-week">На этой неделе</label>
+                            </div>
+                            <div class="form__field">
+                                <input type="radio" id="coming-soon" name="period">
+                                <label for="coming-soon">Скоро будет</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset class="filter filter--select-age">
+                        <select form="events-filters">
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                        </select>
+                    </fieldset><!--Показывать только при выборе пункта Архив-->
+                </div>
+            </div>
+            <div class="page__wrap">
+                <ul class="events__list">
+                    <li class="events__item event event--pushkincard">
+                        <picture>
+                            <source type="image/webp" srcset="
+            ./img/events/events-image1-767@1x.webp 1x,
+            ./img/events/events-image1-767@2x.webp 2x,
+            ./img/events/events-image1-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+            ./img/events/events-image1-767@1x.jpg 1x,
+            ./img/events/events-image1-767@2x.jpg 2x,
+            ./img/events/events-image1-767@3x.jpg 3x">
+                            <img class="event__img" src="./img/events/events-image1.jpg" alt="Воркшоп Вам пора в музей">
+                        </picture>
+                        <div class="event__info">
+                            <p class="event__days">
+                                <time class="event__time-start" datetime="2022-03-21"><span class="event__day-month">21</span> марта <span class="event__weekday">ср</span></time>
+                                <time class="event__time-end" datetime="2022-03-31"><span class="event__day-month">31</span> марта <span class="event__weekday">чт</span></time>
+                            </p>
+                            <p class="event__age">6</p>
+                        </div>
+                        <div class="event__wrap-content">
+                            <h3 class="event__title">Воркшоп «Вам пора в музей»</h3>
+                            <div class="event__pushkincard">
+                                <p class="visually-hidden">Действует программа Пушкинская карта</p>
+                            </div>
+                            <p class="event__advt">С 21 по 31 марта 2022 года наш музей приглашает школьников на воркшоп «Вам пора в музей»! Мы проведём для вас интерактивные программы и игры на базе нашего музея!</p>
+                            <div class="event__place">
+                                <ul>
+                                    <li>Национальный музей Республики Марий Эл им. Т. Евсеева</li>
+                                </ul>
+                            </div>
+                            <div class="event__link-wrap">
+                                <a class="btn btn--main-invert" href="#">Купить билет</a>
+                                <a class="btn btn--link" href="#">Подробнее
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="events__item event">
+                        <picture>
+                            <source type="image/webp" srcset="
+            ./img/events/events-image2-767@1x.webp 1x,
+            ./img/events/events-image2-767@2x.webp 2x,
+            ./img/events/events-image2-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+            ./img/events/events-image2-767@1x.jpg 1x,
+            ./img/events/events-image2-767@2x.jpg 2x,
+            ./img/events/events-image2-767@3x.jpg 3x">
+                            <img class="event__img" src="./img/events/events-image2.jpg" alt="Евсеевский день каждую среду">
+                        </picture>
+                        <div class="event__info">
+                            <p class="event__days">
+                                <time class="event__time-end" datetime="2022-03-31"><span class="event__day-month">30</span> марта <span class="event__weekday">ср</span></time>
+                            </p>
+                            <p class="event__age">6</p>
+                        </div>
+                        <div class="event__wrap-content">
+                            <h3 class="event__title">Евсеевский день каждую среду</h3>
+                            <div class="event__pushkincard">
+                                <p class="visually-hidden">Действует программа Пушкинская карта</p>
+                            </div>
+                            <p class="event__advt">Дорогие друзья! В связи с проведением в музее акции «Евсеевский день» с 1 по 31 марта по средам мы приглашаем учащихся 1–4 классов школ республики посетить наши площадки бесплатно!</p>
+                            <div class="event__place">
+                                <ul>
+                                    <li>Музей истории и археологии</li>
+                                    <li>Музей истории православия Республики Марий Эл</li>
+                                    <li>Музей народно-прикладного искусства</li>
+                                    <li>Дом-музей И.С. Ключникова-Палантая</li>
+                                </ul>
+                            </div>
+                            <div class="event__link-wrap">
+                                <a class="btn btn--link" href="#">Подробнее
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="events__item event">
+                        <picture>
+                            <source type="image/webp" srcset="
+            ./img/events/events-image2-767@1x.webp 1x,
+            ./img/events/events-image2-767@2x.webp 2x,
+            ./img/events/events-image2-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+            ./img/events/events-image2-767@1x.jpg 1x,
+            ./img/events/events-image2-767@2x.jpg 2x,
+            ./img/events/events-image2-767@3x.jpg 3x">
+                            <img class="event__img" src="./img/events/events-image2.jpg" alt="Евсеевский день каждую среду">
+                        </picture>
+                        <div class="event__info">
+                            <p class="event__days">
+                                <time class="event__time-end" datetime="2022-03-31"><span class="event__day-month">30</span> марта <span class="event__weekday">ср</span></time>
+                            </p>
+                            <p class="event__age">6</p>
+                        </div>
+                        <div class="event__wrap-content">
+                            <h3 class="event__title">Евсеевский день каждую среду</h3>
+                            <div class="event__pushkincard">
+                                <p class="visually-hidden">Действует программа Пушкинская карта</p>
+                            </div>
+                            <p class="event__advt">Дорогие друзья! В связи с проведением в музее акции «Евсеевский день» с 1 по 31 марта по средам мы приглашаем учащихся 1–4 классов школ республики посетить наши площадки бесплатно!</p>
+                            <div class="event__place">
+                                <ul>
+                                    <li>Музей истории и археологии</li>
+                                    <li>Музей истории православия Республики Марий Эл</li>
+                                    <li>Музей народно-прикладного искусства</li>
+                                    <li>Дом-музей И.С. Ключникова-Палантая</li>
+                                </ul>
+                            </div>
+                            <div class="event__link-wrap">
+                                <a class="btn btn--link" href="#">Подробнее
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="events__item event">
+                        <picture>
+                            <source type="image/webp" srcset="
+            ./img/events/events-image2-767@1x.webp 1x,
+            ./img/events/events-image2-767@2x.webp 2x,
+            ./img/events/events-image2-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+            ./img/events/events-image2-767@1x.jpg 1x,
+            ./img/events/events-image2-767@2x.jpg 2x,
+            ./img/events/events-image2-767@3x.jpg 3x">
+                            <img class="event__img" src="./img/events/events-image2.jpg" alt="Евсеевский день каждую среду">
+                        </picture>
+                        <div class="event__info">
+                            <p class="event__days">
+                                <time class="event__time-end" datetime="2022-03-31"><span class="event__day-month">30</span> марта <span class="event__weekday">ср</span></time>
+                            </p>
+                            <p class="event__age">6</p>
+                        </div>
+                        <div class="event__wrap-content">
+                            <h3 class="event__title">Евсеевский день каждую среду</h3>
+                            <div class="event__pushkincard">
+                                <p class="visually-hidden">Действует программа Пушкинская карта</p>
+                            </div>
+                            <p class="event__advt">Дорогие друзья! В связи с проведением в музее акции «Евсеевский день» с 1 по 31 марта по средам мы приглашаем учащихся 1–4 классов школ республики посетить наши площадки бесплатно!</p>
+                            <div class="event__place">
+                                <ul>
+                                    <li>Музей истории и археологии</li>
+                                    <li>Музей истории православия Республики Марий Эл</li>
+                                    <li>Музей народно-прикладного искусства</li>
+                                    <li>Дом-музей И.С. Ключникова-Палантая</li>
+                                </ul>
+                            </div>
+                            <div class="event__link-wrap">
+                                <a class="btn btn--link" href="#">Подробнее
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="events__item event">
+                        <picture>
+                            <source type="image/webp" srcset="
+            ./img/events/events-image2-767@1x.webp 1x,
+            ./img/events/events-image2-767@2x.webp 2x,
+            ./img/events/events-image2-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+            ./img/events/events-image2-767@1x.jpg 1x,
+            ./img/events/events-image2-767@2x.jpg 2x,
+            ./img/events/events-image2-767@3x.jpg 3x">
+                            <img class="event__img" src="./img/events/events-image2.jpg" alt="Евсеевский день каждую среду">
+                        </picture>
+                        <div class="event__info">
+                            <p class="event__days">
+                                <time class="event__time-end" datetime="2022-03-31"><span class="event__day-month">30</span> марта <span class="event__weekday">ср</span></time>
+                            </p>
+                            <p class="event__age">6</p>
+                        </div>
+                        <div class="event__wrap-content">
+                            <h3 class="event__title">Евсеевский день каждую среду</h3>
+                            <div class="event__pushkincard">
+                                <p class="visually-hidden">Действует программа Пушкинская карта</p>
+                            </div>
+                            <p class="event__advt">Дорогие друзья! В связи с проведением в музее акции «Евсеевский день» с 1 по 31 марта по средам мы приглашаем учащихся 1–4 классов школ республики посетить наши площадки бесплатно!</p>
+                            <div class="event__place">
+                                <ul>
+                                    <li>Музей истории и археологии</li>
+                                    <li>Музей истории православия Республики Марий Эл</li>
+                                    <li>Музей народно-прикладного искусства</li>
+                                    <li>Дом-музей И.С. Ключникова-Палантая</li>
+                                </ul>
+                            </div>
+                            <div class="event__link-wrap">
+                                <a class="btn btn--link" href="#">Подробнее
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a class="link link--more" href="#">Показать ещё</a>
+            </div>
+        </section>
+        <section class="map page__section">
+            <h2 class="visually-hidden">Музейные площадки на карте</h2>
+            <div class="map__wrap">
+                <div class="map__frame"></div>
+                <div class="map__filter">
+                    <select class="form__select" form="museum-list">
+                        <option>Национальный музей Республики Марий Эл имени Тимофея Евсеева</option>
+                        <option>Музей истории и археологии Республики Марий Эл</option>
+                        <option>Благовещенская башня</option>
+                        <option>Музей истории Православия Республики Марий Эл</option>
+                        <option>Дом-музей И. С. Ключникова-Палантая</option>
+                        <option>Музей народно-прикладного искусства</option>
+                    </select>
+                    <ul class="radio-buttons">
+                        <li>
+                            <input id="museum1" type="radio" name="museums" value="museum1">
+                            <label for="museum1">Национальный музей Республики Марий Эл имени Тимофея Евсеева</label>
+                        </li>
+                        <li>
+                            <input id="museum2" type="radio" name="museums" value="museum2" checked="">
+                            <label for="museum2">Музей истории и археологии Республики Марий Эл</label>
+                        </li>
+                        <li>
+                            <input id="museum3" type="radio" name="museums" value="museum3">
+                            <label for="museum3">Благовещенская башня</label>
+                        </li>
+
+                        <li>
+                            <input id="museum4" type="radio" name="museums" value="museum4">
+                            <label for="museum4">Музей истории Православия Республики Марий Эл</label>
+                        </li>
+                        <li>
+                            <input id="museum5" type="radio" name="museums" value="museum5" checked="">
+                            <label for="museum5">Дом-музей И. С. Ключникова-Палантая</label>
+                        </li>
+                        <li>
+                            <input id="museum6" type="radio" name="museums" value="museum6">
+                            <label for="museum6">Музей народно-прикладного искусства</label>
+                        </li>
+                    </ul>
+                    <form id="museum-list"></form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="logo">
+                <svg class="icon" width="39px" height="35px" fill="none">
+                    <use class="icon__symbol" xlink:href="#icon-logo"></use>
+                </svg>
+                <span class="logo__text">Национальный музей Республики Марий Эл им. Т. Евсеева</span>
+            </div>
+            <div class="subscription">
+                <h2 class="subscription__title">Подписаться на новости</h2>
+                <form class="form form--subscription">
+                    <input type="email" placeholder="Ваш e-mail" name="email" value="" inputmode="email" required="">
+                    <button type="submit">
+                        <span class="visually-hidden">Подписаться</span>
+                        <svg class="icon" width="20px" height="20px" fill="none">
+                            <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="social">
+                <h2 class="social__title">Давайте дружить</h2>
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__item-link" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                            <svg class="icon" width="20px" height="20px" fill="none">
+                                <use class="icon__symbol" xlink:href="#icon-vk"></use>
+                            </svg>
+                            <span class="visually-hidden">Вконтакте</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__item-link" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                            <svg class="icon" width="20px" height="20px" fill="none">
+                                <use class="icon__symbol" xlink:href="#icon-ok"></use>
+                            </svg>
+                            <span class="visually-hidden">Одноклассники</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__item-link" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                            <svg class="icon" width="20px" height="20px" fill="none">
+                                <use class="icon__symbol" xlink:href="#icon-telegram"></use>
+                            </svg>
+                            <span class="visually-hidden">Телеграм</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <ul class="main-footer__partners-list">
+                <li class="mincult-rf">
+                    <a href="#">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 768px)" srcset="
+              ./img/main-footer/gerb-mincult-rf-170.webp,
+              ./img/main-footer/gerb-mincult-rf-170@2x.webp 2x,
+              ./img/main-footer/gerb-mincult-rf-170@3x.webp 3x">
+                            <source type="image/webp" srcset="
+              ./img/main-footer/gerb-mincult-rf-130@1x.webp 1x,
+              ./img/main-footer/gerb-mincult-rf-130@2x.webp 2x,
+              ./img/main-footer/gerb-mincult-rf-130@3x.webp 3x">
+                            <source type="image/jpeg" media="(min-width: 768px)" srcset="
+              ./img/main-footer/gerb-mincult-rf-170.png 1x,
+              ./img/main-footer/gerb-mincult-rf-170@2x.png 2x,
+              ./img/main-footer/gerb-mincult-rf-170@3x.png 3x">
+                            <source type="image/jpeg" srcset="
+              ./img/main-footer/gerb-mincult-rf-130@1x.png 1x,
+              ./img/main-footer/gerb-mincult-rf-130@2x.png 2x,
+              ./img/main-footer/gerb-mincult-rf-130@3x.png 3x">
+                            <img src="/img/main-footer/gerb-mincult-rf.png" alt="Герб Министерства культуры Российской Федерации">
+                        </picture>
+                    </a>
+
+                </li>
+                <li class="mincult-mariel">
+                    <a href="#">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 768px)" srcset="
+              ./img/main-footer/gerb-mariel-36.webp,
+              ./img/main-footer/gerb-mariel-36@2x.webp 2x,
+              ./img/main-footer/gerb-mariel-36@3x.webp 3x">
+                            <source type="image/webp" srcset="
+              ./img/main-footer/gerb-mariel-22@1x.webp 1x,
+              ./img/main-footer/gerb-mariel-22@2x.webp 2x,
+              ./img/main-footer/gerb-mariel-22@3x.webp 3x">
+                            <source type="image/jpeg" media="(min-width: 768px)" srcset="
+              ./img/main-footer/gerb-mariel-36.png 1x,
+              ./img/main-footer/gerb-mariel-36@2x.png 2x,
+              ./img/main-footer/gerb-mariel-36@3x.png 3x">
+                            <source type="image/jpeg" srcset="
+              ./img/main-footer/gerb-mariel-22@1x.png 1x,
+              ./img/main-footer/gerb-mariel-22@2x.png 2x,
+              ./img/main-footer/gerb-mariel-22@3x.png 3x">
+                            <img src="/img/main-footer/gerb-mariel.png" alt="Герб Министерства культуры Российской Федерации">
+                        </picture>
+                        <span>Министерство культуры, печати и по делам национальностей Республики Марий Эл</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="main-footer__copyright">
+                © <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script> Национальный музей Республики Марий Эл им. Т. Евсеева.
+            </p>
+            <div class="main-footer__site-developer">
+                <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+                    <p>Сделано в <span class="visually-hidden">onmaster.ru</span></p>
+                    <svg class="icon" width="15px" height="15px">
+                        <use class="icon__symbol" xlink:href="#icon-logo-developer"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="main-footer__menu">
+                <ul>
+                    <li>
+                        <a href="#">О музее</a>
+                        <ul>
+                            <li><a href="#">Ответы на частые вопросы</a></li>
+                            <li><a href="#">История</a></li>
+                            <li><a href="#">Проекты</a></li>
+                            <li><a href="#">Партнеры</a></li>
+                            <li><a href="#">Поддержать музей</a></li>
+                            <li><a href="#">Ассоциация музеев</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Билеты</a>
+                        <ul>
+                            <li><a href="#">Купить</a></li>
+                            <li><a href="#">Возврат</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Наука в музее</a>
+                        <ul>
+                            <li><a href="#">Научные отделы</a></li>
+                            <li><a href="#">Исследования</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal1" class="modal modal--museum-working-mode">
+        <div class="modal__body">
+            <div class="modal__content">
+                <a href="#" class="modal__close-btn">
+                    <svg class="icon" width="18px" height="18px" fill="none">
+                        <use class="icon__symbol" xlink:href="#icon-close"></use>
+                    </svg>
+                </a>
+                <h2 class="modal__title">Режим работы музея</h2>
+                <div class="modal__text">
+                    <ul class="museum-area__working-list">
+                        <li><span>Пн</span> / Выходной</li>
+                        <li><span>Вт-Вс</span> / 10:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
+    <script>
+        if ($(window).width() < '1024') {
+            $('.open-submenu').click(function() {
+                $(this).toggleClass('open-submenu--in').next().slideToggle();
+                $('.open-submenu').not(this).removeClass('open-submenu--in').next().slideUp();
+            });
+        };
+
+        /*$(window).scroll(function() {
+            var height = $(window).scrollTop();
+
+            /!*Если сделали скролл на 100px задаём новый класс для header*!/
+            if(height > 150){
+                $('.main-header').addClass('main-header--desktop-sticky');
+                $('.main-header').removeClass('main-header--desktop');
+            } else{
+                /!*Если меньше 100px удаляем класс для header*!/
+                $('.main-header').removeClass('main-header--desktop-sticky');
+                $('.main-header').addClass('main-header--desktop');
+            }
+        });*/
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".expositions__filters-title").click(function(event) {
+                    $(".expositions__filters-title").not($(this)).removeClass("active");
+                    $(".expositions__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".collections__filters-title").click(function(event) {
+                    $(".collections__filters-title").not($(this)).removeClass("active");
+                    $(".collections__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".excursions__filters-title").click(function(event) {
+                    $(".excursions__filters-title").not($(this)).removeClass("active");
+                    $(".excursions__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".events__filters-title").click(function(event) {
+                    $(".events__filters-title").not($(this)).removeClass("active");
+                    $(".events__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".question").click(function(event) {
+                if ($(".faq__list").hasClass("faq__list--showoneitem")) {
+                    $(".question").not($(this)).removeClass("active");
+                    $(".answer").not($(this).next()).slideUp(300);
+                }
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $("td.block__title").click(function(event) {
+                    if ($("tbody.block").hasClass("block--showoneitem")) {
+                        $("td.block__title").not($(this)).removeClass("active");
+                        $("td.block__text").not($(this).next()).slideUp(300);
+                    }
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+
+
+</body>
+
+</html>

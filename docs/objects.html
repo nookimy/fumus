@@ -34,8 +34,8 @@
                 </defs>
             </symbol>
             <symbol viewBox="0 0 341 567" id="icon-figure-cross-with-triangle">
-                <path fill="#1175D0" d="M161.453 301.791c.731 0 1.324.593 1.324 1.324v28.749c0 1.179-1.426 1.77-2.259.936l-14.375-14.375-14.375-14.375c-.834-.833-.243-2.259.936-2.259h28.749z" class="icon__color-element"></path>
-                <path stroke="#1175D0" stroke-width="3" d="M0 294.241h170.5m170.5 0H170.5m0 0V0m0 294.241V566.76" class="icon__color-element"></path>
+                <path fill="#7B61FF" d="M161.453 301.791c.731 0 1.324.593 1.324 1.324v28.749c0 1.179-1.426 1.77-2.259.936l-14.375-14.375-14.375-14.375c-.834-.833-.243-2.259.936-2.259h28.749z" class="icon__color-element"></path>
+                <path stroke="#7B61FF" stroke-width="3" d="M0 294.241h170.5m170.5 0H170.5m0 0V0m0 294.241V566.76" class="icon__color-element"></path>
             </symbol>
             <symbol viewBox="0 0 79 70" id="icon-logo">
                 <path fill-rule="evenodd" d="M35.447.717a1.014 1.014 0 010 1.433L3.88 33.716h34.002a1.014 1.014 0 010 2.027H3.88L35.447 67.31a1.013 1.013 0 11-1.434 1.433L.717 35.447a1.013 1.013 0 010-1.434L34.013.717a1.013 1.013 0 011.434 0z" class="icon__color-element" clip-rule="evenodd"></path>
@@ -546,6 +546,41 @@
             }
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".collections__filters-title").click(function(event) {
+                    $(".collections__filters-title").not($(this)).removeClass("active");
+                    $(".collections__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".excursions__filters-title").click(function(event) {
+                    $(".excursions__filters-title").not($(this)).removeClass("active");
+                    $(".excursions__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".events__filters-title").click(function(event) {
+                    $(".events__filters-title").not($(this)).removeClass("active");
+                    $(".events__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $(".question").click(function(event) {
@@ -555,6 +590,20 @@
                 }
                 $(this).toggleClass("active").next().slideToggle(300);
             });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $("td.block__title").click(function(event) {
+                    if ($("tbody.block").hasClass("block--showoneitem")) {
+                        $("td.block__title").not($(this)).removeClass("active");
+                        $("td.block__text").not($(this).next()).slideUp(300);
+                    }
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
         });
     </script>
 
