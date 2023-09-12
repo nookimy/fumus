@@ -86,7 +86,7 @@
     </div>
     <!--<include src="./src/components/blocks/main-header/main-header.html"></include>-->
     <main>
-        <div class="breadcrumbs breadcrumbs--hide-last">
+        <div class="breadcrumbs">
             <ul>
                 <li>
                     <a href="./">Главная</a>
@@ -95,141 +95,197 @@
                     <a href="about.html">O музее</a>
                 </li>
                 <li>
-                    <a href="news.html">Новости</a>
-                </li>
-                <li>
-                    Акция «Ночь музеев» пройдёт 21 мая
+                    Наш коллектив
                 </li>
             </ul>
         </div>
-        <section class="news-detail">
-            <div class="news-detail__head">
-                <div class="news-detail__head-wrap">
-                    <time class="news-detail__date" datetime="2022-05-10">10 мая 2022</time>
-                    <h1 class="news-detail__title">Акция «Ночь музеев» пройдёт 21 мая</h1>
+        <section class="team team--page">
+            <div class="team__head">
+                <div class="page__wrap">
+                    <h1 class="page__subtitle">Наш коллектив</h1>
                 </div>
             </div>
-
-            <div class="news-detail__text">
-                <p>Ежегодная акция «Ночь музеев», уже ставшая доброй традицией в Республике Марий Эл, в этом году состоится в ночь с 21 на 22 мая. Основная тема акции в 2022 году – «Точка отсчёта».</p>
-                <p>Выставки, мастер-классы, интерактивы и другие активности в режиме нон-стоп — главная прелесть «Ночи музеев»!</p>
-                <p>Следите за обновлениями на официальном сайте музея и в соцсетях, ведь совсем скоро мы начнём приоткрывать <a href="#">завесу тайны</a> и поделимся с Вами программой «Ночи музеев» этого года!</p>
-            </div>
-            <div class="news-detail__img">
-                <div class="img">
-                    <picture>
-                        <source type="image/webp" srcset="
-        ./img/news-detail/museums-night-767@1x.webp 1x,
-        ./img/news-detail/museums-night-767@2x.webp 2x,
-        ./img/news-detail/museums-night-767@3x.webp 3x">
-                        <source type="image/jpeg" srcset="
-        ./img/news-detail/museums-night-767@1x.jpg 1x,
-        ./img/news-detail/museums-night-767@2x.jpg 2x,
-        ./img/news-detail/museums-night-767@3x.jpg 3x">
-                        <img class="exposition__img" src="./img/news-detail/museums-night.jpg" alt="Ночь музеев 2022">
-                    </picture>
+            <div class="team__content">
+                <div class="team__section">
+                    <h2 class="team__subtitle">Руководство</h2>
+                    <ul class="team__list">
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Зверева Светлана Владимировна</h3>
+                            <p class="employee__position">Директор</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Яндулова Татьяна Вениаминовна</h3>
+                            <p class="employee__position">Заместитель директора по общим вопросам и развитию</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Ефремова Диана Юрьевна</h3>
+                            <p class="employee__position">Заместитель директора по научной работе</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Петрова Татьяна Анатольевна</h3>
+                            <p class="employee__position">Главный бухгалтер </p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Кириллова Елена Васильевна</h3>
+                            <p class="employee__position">Главный хранитель фондов</p>
+                        </li>
+                    </ul>
                 </div>
-
-            </div>
-        </section>
-        <section class="news page__section">
-            <div class="page__wrap">
-                <h2 class="page__subtitle">Другие новости</h2>
-                <ul class="news__list">
-                    <li class="news__item">
-                        <a class="news__link" href="./img/news-detail/news-detail.html">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/news-detail/news-detail1-767@1x.webp 1x,
-            ./img/news-detail/news-detail1-767@2x.webp 2x,
-            ./img/news-detail/news-detail1-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/news-detail/news-detail1-767@1x.jpg 1x,
-            ./img/news-detail/news-detail1-767@2x.jpg 2x,
-            ./img/news-detail/news-detail1-767@3x.jpg 3x">
-                                <img class="news__item-img" src="./img/news-detail/news-detail1.jpg" alt="«Открывая мир» в музее">
-                            </picture>
-                            <h3 class="news__title">
-                                <span>«Открывая мир» в музее</span>
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                                </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./img/news-detail/news-detail.html">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/news-detail/news-detail2-767@1x.webp 1x,
-            ./img/news-detail/news-detail2-767@2x.webp 2x,
-            ./img/news-detail/news-detail2-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/news-detail/news-detail2-767@1x.jpg 1x,
-            ./img/news-detail/news-detail2-767@2x.jpg 2x,
-            ./img/news-detail/news-detail2-767@3x.jpg 3x">
-                                <img class="news__item-img" src="./img/news-detail/news-detail2.jpg" alt="К 60-летию финского профессора археологии Мики Лавенто">
-                            </picture>
-                            <h3 class="news__title">
-                                <span>К 60-летию финского профессора археологии Мики Лавенто</span>
-
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                                </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./img/news-detail/news-detail.html">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/news-detail/news-detail3-767@1x.webp 1x,
-            ./img/news-detail/news-detail3-767@2x.webp 2x,
-            ./img/news-detail/news-detail3-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/news-detail/news-detail3-767@1x.jpg 1x,
-            ./img/news-detail/news-detail3-767@2x.jpg 2x,
-            ./img/news-detail/news-detail3-767@3x.jpg 3x">
-                                <img class="news__item-img" src="./img/news-detail/news-detail3.jpg" alt="«Тепло женской души» в Параньгинском музее">
-                            </picture>
-                            <h3 class="news__title">
-                                <span>«Тепло женской души» в Параньгинском музее</span>
-
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                                </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./img/news-detail/news-detail.html">
-                            <picture>
-                                <source type="image/webp" srcset="
-            ./img/news-detail/news-detail4-767@1x.webp 1x,
-            ./img/news-detail/news-detail4-767@2x.webp 2x,
-            ./img/news-detail/news-detail4-767@3x.webp 3x">
-                                <source type="image/jpeg" srcset="
-            ./img/news-detail/news-detail4-767@1x.jpg 1x,
-            ./img/news-detail/news-detail4-767@2x.jpg 2x,
-            ./img/news-detail/news-detail4-767@3x.jpg 3x">
-                                <img class="news__item-img" src="./img/news-detail/news-detail4.jpg" alt="О творчестве людей с ограниченными возможностями здоровья">
-                            </picture>
-                            <h3 class="news__title">
-                                <span>О творчестве людей с ограниченными возможностями здоровья</span>
-
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                                </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-
-                </ul>
-                <a class="link link--more" href="#">Все новости</a>
+                <div class="team__section">
+                    <h2 class="team__subtitle">Филиалы</h2>
+                    <ul class="team__list">
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Смирнова Наталья Евгеньевна</h3>
+                            <p class="employee__position">Заведующая Домом-музеем И.С. Ключникова-Палантая</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Матвеева Татьяна Алексеевна</h3>
+                            <p class="employee__position">Заведующая музеем Народно-прикладного искусства</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Пасынкова Светлана Сергеевна</h3>
+                            <p class="employee__position">Заведующая музеем Истории православия</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Петрова Татьяна Анатольевна</h3>
+                            <p class="employee__position">Заведующая отделом истории (Музей истории и археологии)</p>
+                        </li>
+                        <li class="team__item employee">
+                            <div class="img">
+                                <picture>
+                                    <source type="image/webp" srcset="
+                          ./img/team/no-photo-320@1x.webp 1x,
+                          ./img/team/no-photo-320@2x.webp 2x,
+                          ./img/team/no-photo-320@3x.webp 3x">
+                                    <source type="image/jpeg" srcset="
+                          ./img/team/no-photo-320@1x.png 1x,
+                          ./img/team/no-photo-320@2x.png 2x,
+                          ./img/team/no-photo-320@3x.png 3x">
+                                    <img class="img" src="./img/team/no-photo.png" alt="">
+                                </picture>
+                            </div>
+                            <h3 class="employee__name">Кириллова Елена Васильевна</h3>
+                            <p class="employee__position">Главный хранитель фондов</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
