@@ -399,7 +399,7 @@
                 <h2 class="page__subtitle">Абонементы</h2>
                 <ul class="season-ticket__list">
                     <li class="season-ticket__item">
-                        <a class="season-ticket__link" href="./price.html">
+                        <a class="season-ticket__link" href="./tickets.html">
                             <div class="img">
                                 <picture>
                                     <source type="image/webp" srcset="
@@ -569,7 +569,7 @@
                 <h2 class="page__subtitle">Абонементы</h2>
                 <ul class="useful-links__list">
                     <li class="useful-links__item">
-                        <a class="useful-links__link" href="./price.html">
+                        <a class="useful-links__link" href="./tickets.html">
                             <div class="img">
                                 <picture>
                                     <source type="image/webp" srcset="
@@ -837,28 +837,8 @@
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
-    <script>
-        if ($(window).width() < '1024') {
-            $('.open-submenu').click(function() {
-                $(this).toggleClass('open-submenu--in').next().slideToggle();
-                $('.open-submenu').not(this).removeClass('open-submenu--in').next().slideUp();
-            });
-        };
+    <script src="js/navigation.js"></script>
 
-        /*$(window).scroll(function() {
-            var height = $(window).scrollTop();
-
-            /!*Если сделали скролл на 100px задаём новый класс для header*!/
-            if(height > 150){
-                $('.main-header').addClass('main-header--desktop-sticky');
-                $('.main-header').removeClass('main-header--desktop');
-            } else{
-                /!*Если меньше 100px удаляем класс для header*!/
-                $('.main-header').removeClass('main-header--desktop-sticky');
-                $('.main-header').addClass('main-header--desktop');
-            }
-        });*/
-    </script>
     <script>
         $(document).ready(function() {
             if ($(window).width() < '1024') {
@@ -870,7 +850,6 @@
             }
         });
     </script>
-
     <script>
         $(document).ready(function() {
             if ($(window).width() < '1024') {
@@ -882,7 +861,6 @@
             }
         });
     </script>
-
     <script>
         $(document).ready(function() {
             if ($(window).width() < '1024') {
@@ -916,7 +894,6 @@
             });
         });
     </script>
-
     <script>
         $(document).ready(function() {
             if ($(window).width() < '1024') {
