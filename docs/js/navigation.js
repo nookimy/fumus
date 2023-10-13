@@ -133,17 +133,12 @@ function fixFeader() {
         scrollChange = 150;
 
     } else {
-        scrollChange = 124;
+        scrollChange = 274;
 
     }
-
     scrollpos = window.scrollY;
-
-
-
     if (scrollpos >= scrollChange) {
         mainHeader.classList.add("main-header--fixed");
-        scrollShowHeader();
     } else {
         mainHeader.classList.remove("main-header--fixed");
     }
@@ -155,8 +150,10 @@ function scrollShowHeader() {
 
         if (prevScrollpos > currentScrollPos) {
             document.querySelector('.main-header__nav').style.transform = "translateY(0)";
+
         } else {
             document.querySelector('.main-header__nav').style.transform = "translateY(-100%)";
+
         }
 
         prevScrollpos = currentScrollPos;
@@ -164,5 +161,32 @@ function scrollShowHeader() {
 }
 
 window.addEventListener('scroll', function() {
+    scrollShowHeader();
     fixFeader();
 });
+
+/*Положение основного контента страницы в зависимости от высоты хэдера*/
+let navHeight = document.querySelector('.main-header__nav').offsetHeight;
+let menuHeight = document.querySelector('.main-header__menu').offsetHeight;
+
+function headerPadding() {
+
+    if (windowWidth < 1024) {
+        mainHeader.style.paddingBottom = navHeight + "px";
+        menu.style.paddingTop = navHeight + "px";
+        search.style.paddingTop = navHeight + "px";
+    } else {
+        mainHeader.style.paddingBottom = navHeight + menuHeight + "px";
+        console.log()
+    }
+
+
+
+};
+
+headerPadding();
+
+
+
+
+

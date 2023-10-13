@@ -1252,17 +1252,16 @@ select:active {
 .main-header__nav,
 .main-header__menu,
 .main-header__search {
-  position: absolute;
+  position: fixed;
+  transition: all 0.3s ease 0s;
 }
 
 .main-header__menu,
 .main-header__search {
-  top: 80px;
   left: 0;
   width: 100%;
   transform: translateY(-100%);
   overflow: auto;
-  transition: all 0.3s ease 0s;
 }
 
 .main-header__menu--opened,
@@ -1275,13 +1274,11 @@ select:active {
 .main-header--fixed .main-header__search {
   position: fixed;
   top: 0;
-  transition: all 0.3s ease 0s;
 }
 
 .main-header--fixed .main-header__nav--opened,
 .main-header--fixed .main-header__menu--opened,
 .main-header--fixed .main-header__search--opened {
-  top: 80px;
   transform: translateY(0);
 }
 
@@ -1294,16 +1291,8 @@ select:active {
   position: fixed;
 }
 
-.main-header__container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #ffffff;
-}
-
 .main-header__nav {
-  width: 100%;
+  width: 100vw;
   padding: 20px 0 25px;
   background-color: #ffffff;
   box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
@@ -1651,7 +1640,7 @@ select:active {
 .main-header__menu .site-nav__sub-list {
   width: 100%;
   max-height: 0;
-  transition: max-height 0.5s ease-out;
+  transition: all 0.3s ease 0s;
   overflow: hidden;
   width: 100%;
   flex-grow: 1;
@@ -6041,6 +6030,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  padding-bottom: 45px;
 }
 
 .rules__main-content {
@@ -8344,6 +8334,237 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   color: #4E4E4E;
 }
 
+.posters {
+  padding-bottom: 30px;
+}
+
+.posters--master-classes {
+  background-color: #F9F9F9;
+}
+
+.posters__head {
+  background-color: #F9F9F9;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.posters__head .page__subtitle {
+  margin-bottom: 20px;
+}
+
+.posters__type-filter {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.posters__tabs-wrap {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.posters__tabs-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.posters__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.posters .link--more {
+  margin-top: 20px;
+}
+
+.posters__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.posters__item {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.posters__item:hover .poster__img {
+  transform: scale(1.05);
+}
+
+.posters__item-link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster {
+  color: #ffffff;
+}
+
+.poster--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+  z-index: 1;
+}
+
+.poster--pushkincard .poster__pushkincard {
+  display: block;
+}
+
+.poster__type {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  width: calc(100% - 50px);
+}
+
+.poster__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: auto;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+}
+
+.poster__info-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.poster__place {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  width: 50%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.poster__days,
+.poster__price,
+.poster__duration {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+}
+
+.poster__price::after {
+  content: " ₽";
+}
+
+.poster__label-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.poster__label {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding: 5px 10px;
+  min-height: 30px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.poster__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.poster__pushkincard {
+  display: none;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 16px;
@@ -10432,6 +10653,87 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     font-size: 23px;
   }
 
+  .posters {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .posters__head {
+    padding-top: 0;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .posters__head .page__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .posters__type-filter {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .posters__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .posters .link--more {
+    margin-top: 40px;
+  }
+
+  .posters__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .posters__item-link {
+    padding: 20px;
+  }
+
+  .poster--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .poster__type {
+    font-size: 12px;
+  }
+
+  .poster__title {
+    font-size: 23px;
+  }
+
+  .poster__info-wrap {
+    margin-bottom: 20px;
+  }
+
+  .poster__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+  }
+
+  .poster__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .poster__days,
+  .poster__price,
+  .poster__duration {
+    font-size: 18px;
+  }
+
+  .poster__label-wrap {
+    gap: 20px;
+  }
+
   .events__item .event__img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -10659,15 +10961,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     order: 4;
   }
 
-  .main-header__container {
-    position: absolute;
-  }
-
   .main-header__nav {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
   }
 
   .main-header__nav .main-header__button-wrap {
@@ -11594,6 +11890,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-left: 20px;
     padding-right: 20px;
     max-width: 1200px;
+    padding-bottom: 75px;
   }
 
   .rules__main-content {
@@ -11882,6 +12179,20 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     font-weight: 400;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
+  }
+
+  .posters__type-filter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .posters__tabs-wrap {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: unset;
+    flex-grow: 1;
   }
 
   .news-detail > .event__img {
@@ -12534,6 +12845,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 0;
     width: 460px;
     justify-self: start;
+  }
+
+  .posters__list {
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
