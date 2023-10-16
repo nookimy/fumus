@@ -192,8 +192,9 @@
                             <button class="btn__open-sublist"></button>
                             <ul class="site-nav__sub-list">
                                 <li><a class="site-nav__sub-link" href="./team.html">Наш коллектив</a></li>
-                                <li><a class="site-nav__sub-link" href="./">История музея</a></li><!-- в разработке -->
-                                <li><a class="site-nav__sub-link" href="./news-detail.html">Новости</a></li><!-- в разработке, пока есть только детальная страница -->
+                                <li><a class="site-nav__sub-link" href="./history.html">История музея</a></li>
+                                <li><a class="site-nav__sub-link" href="./pages-of-history.html">Страницы истории</a></li>
+                                <li><a class="site-nav__sub-link" href="./news-detail.html">Новости</a></li><!-- пока есть только детальная страница -->
                             </ul>
                         </li>
                         <li><a class="site-nav__link" href=".museums-mariel.html">Музеи Марий Эл</a></li>
@@ -269,14 +270,14 @@
                     <li class="posters__item poster poster--pushkincard">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/galloping-across-europe-767@1x.webp 1x,
+            ./img/tours/galloping-across-europe-767@2x.webp 2x,
+            ./img/tours/galloping-across-europe-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/programs/programs-1.jpg" alt="">
+            ./img/tours/galloping-across-europe-767@1x.jpg 1x,
+            ./img/tours/galloping-across-europe-767@2x.jpg 2x,
+            ./img/tours/galloping-across-europe-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/galloping-across-europe.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">экскурсия по йошкар-Оле</p>
@@ -297,14 +298,14 @@
                     <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/land-of-sonorous-gusli-767@1x.webp 1x,
+            ./img/tours/land-of-sonorous-gusli-767@2x.webp 2x,
+            ./img/tours/land-of-sonorous-gusli-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/programs/programs-image2.jpg" alt="">
+            ./img/tours/land-of-sonorous-gusli-767@1x.jpg 1x,
+            ./img/tours/land-of-sonorous-gusli-767@2x.jpg 2x,
+            ./img/tours/land-of-sonorous-gusli-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/land-of-sonorous-gusli.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">экскурсии по марий эл</p>
@@ -326,14 +327,14 @@
                     <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/legends-of-sheremetev-castle-767@1x.webp 1x,
+            ./img/tours/legends-of-sheremetev-castle-767@2x.webp 2x,
+            ./img/tours/legends-of-sheremetev-castle-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/programs/programs-image3.jpg" alt="">
+            ./img/tours/legends-of-sheremetev-castle-767@1x.jpg 1x,
+            ./img/tours/legends-of-sheremetev-castle-767@2x.jpg 2x,
+            ./img/tours/legends-of-sheremetev-castle-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/legends-of-sheremetev-castle.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">экскурсии в замок шереметевых</p>
@@ -352,8 +353,7 @@
                         <p class="poster__pushkincard visually-hidden">Действует программа Пушкинская карта</p>
                     </li>
                 </ul>
-
-                <a class="link link--more" href="./excursions.html">Показать ещё</a>
+                <a class="link link--more" href="#">Показать ещё</a>
             </div>
         </section>
         <section class="posters posters--master-classes" id="master-classes">
@@ -364,26 +364,25 @@
             </div>
             <div class="posters__content">
                 <ul class="posters__list">
-                    <li class="posters__item poster poster--pushkincard">
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/on-a-scooter-767@1x.webp 1x,
+            ./img/tours/on-a-scooter-767@2x.webp 2x,
+            ./img/tours/on-a-scooter-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/on-a-scooter-767@1x.jpg 1x,
+            ./img/tours/on-a-scooter-767@2x.jpg 2x,
+            ./img/tours/on-a-scooter-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/on-a-scooter.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
-                            <p class="poster__type">Музейно-краеведческий квест</p>
-                            <h3 class="poster__title">Такая разная Марий Эл <span>(6+)</span></h3>
+                            <p class="poster__type">Мастер-класс</p>
+                            <h3 class="poster__title">На самокате с «Йошкиным Котом»!</h3>
                             <div class="poster__info-wrap">
                                 <ul class="poster__place">
-                                    <li>Национальный музей Республики Марий Эл им. Т. Евсеева</li>
+                                    <li>Музей истории города Йошкар-Олы</li>
                                 </ul>
-                                <p class="poster__days">15.02 — 30.12</p>
                             </div>
                             <div class="poster__label-wrap">
                                 <p class="poster__label">Сборная группа</p>
@@ -395,23 +394,22 @@
                     <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/pendant-with-mari-ornament-767@1x.webp 1x,
+            ./img/tours/pendant-with-mari-ornament-767@2x.webp 2x,
+            ./img/tours/pendant-with-mari-ornament-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/pendant-with-mari-ornament-767@1x.jpg 1x,
+            ./img/tours/pendant-with-mari-ornament-767@2x.jpg 2x,
+            ./img/tours/pendant-with-mari-ornament-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/pendant-with-mari-ornament.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
-                            <p class="poster__type">Hаучно-познавательная программа</p>
-                            <h3 class="poster__title">«В мире археологии»</h3>
+                            <p class="poster__type">МАСТЕР-КЛАСС</p>
+                            <h3 class="poster__title">Кулон с марийским орнаментом</h3>
                             <div class="poster__info-wrap">
                                 <ul class="poster__place">
-                                    <li>Музей истории и археологии</li>
+                                    <li>Республиканский музей изобразительных искусств</li>
                                 </ul>
-                                <p class="poster__days">20.05 — 17.09</p>
                             </div>
                             <div class="poster__label-wrap">
                                 <p class="poster__label">Сборная группа</p>
@@ -423,23 +421,22 @@
                     <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/gingerbread-master-class-767@1x.webp 1x,
+            ./img/tours/gingerbread-master-class-767@2x.webp 2x,
+            ./img/tours/gingerbread-master-class-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/gingerbread-master-class-767@1x.jpg 1x,
+            ./img/tours/gingerbread-master-class-767@2x.jpg 2x,
+            ./img/tours/gingerbread-master-class-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/gingerbread-master-class.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
-                            <p class="poster__type">Музейная программа</p>
-                            <h3 class="poster__title">Игрозавры <span>(6+)</span></h3>
+                            <p class="poster__type">МАСТЕР-КЛАСС</p>
+                            <h3 class="poster__title">Пряничный мастер-класс «Йошкин кот»</h3>
                             <div class="poster__info-wrap">
                                 <ul class="poster__place">
-                                    <li>Национальный музей Республики Марий Эл им. Т. Евсеева</li>
+                                    <li>Музей истории города Йошкар-Олы</li>
                                 </ul>
-                                <p class="poster__days">01.01 — 31.12</p>
                             </div>
                             <div class="poster__label-wrap">
                                 <p class="poster__label">Сборная группа</p>
@@ -449,8 +446,7 @@
                         <p class="poster__pushkincard visually-hidden">Действует программа Пушкинская карта</p>
                     </li>
                 </ul>
-
-                <a class="link link--more" href="./excursions.html">Показать ещё</a>
+                <a class="link link--more" href="#">Показать ещё</a>
             </div>
         </section>
         <section class="posters posters--interactive-programs" id="interactive-programs">
@@ -464,14 +460,14 @@
                     <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/walking-with-yoshka-cat-767@1x.webp 1x,
+            ./img/tours/walking-with-yoshka-cat-767@2x.webp 2x,
+            ./img/tours/walking-with-yoshka-cat-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/walking-with-yoshka-cat-767@1x.jpg 1x,
+            ./img/tours/walking-with-yoshka-cat-767@2x.jpg 2x,
+            ./img/tours/walking-with-yoshka-cat-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/walking-with-yoshka-cat.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">Познавательная пешеходная экскурсия</p>
@@ -492,14 +488,14 @@
                     <li class="posters__item poster poster--pushkincard">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/on-the-surface-of-the-water-767@1x.webp 1x,
+            ./img/tours/on-the-surface-of-the-water-767@2x.webp 2x,
+            ./img/tours/on-the-surface-of-the-water-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/on-the-surface-of-the-water-767@1x.jpg 1x,
+            ./img/tours/on-the-surface-of-the-water-767@2x.jpg 2x,
+            ./img/tours/on-the-surface-of-the-water-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/on-the-surface-of-the-water.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">Водная экскурсия</p>
@@ -517,18 +513,17 @@
                         </a>
                         <p class="poster__pushkincard visually-hidden">Действует программа Пушкинская карта</p>
                     </li>
-
-                    <li class="posters__item poster">
+                    <li class="posters__item poster poster--pushkincard">
                         <picture>
                             <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/igrosaurs-767@1x.webp 1x,
+            ./img/tours/igrosaurs-767@2x.webp 2x,
+            ./img/tours/igrosaurs-767@3x.webp 3x">
                             <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                            <img class="poster__img" src="./img/images/image.jpg" alt="">
+            ./img/tours/igrosaurs-767@1x.jpg 1x,
+            ./img/tours/igrosaurs-767@2x.jpg 2x,
+            ./img/tours/igrosaurs-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/tours/igrosaurs.jpg" alt="">
                         </picture>
                         <a class="posters__item-link" href="#">
                             <p class="poster__type">Музейная программа</p>
@@ -547,8 +542,7 @@
                         <p class="poster__pushkincard visually-hidden">Действует программа Пушкинская карта</p>
                     </li>
                 </ul>
-
-                <a class="link link--more" href="./excursions.html">Показать ещё</a>
+                <a class="link link--more" href="#">Показать ещё</a>
             </div>
         </section>
 
@@ -556,18 +550,18 @@
             <div class="page__wrap">
                 <ul class="useful-links__list">
                     <li class="useful-links__item">
-                        <a class="useful-links__link" href="./tickets.html">
+                        <a class="useful-links__link" href="#">
                             <div class="img">
                                 <picture>
                                     <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/family-programs-767@1x.webp 1x,
+            ./img/tours/family-programs-767@2x.webp 2x,
+            ./img/tours/family-programs-767@3x.webp 3x">
                                     <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                                    <img class="useful-links__item-img" src="./img/images/image.jpg" alt="">
+            ./img/tours/family-programs-767@1x.jpg 1x,
+            ./img/tours/family-programs-767@2x.jpg 2x,
+            ./img/tours/family-programs-767@3x.jpg 3x">
+                                    <img class="useful-links__item-img" src="./img/tours/family-programs.jpg" alt="">
                                 </picture>
                             </div>
 
@@ -585,14 +579,14 @@
                             <div class="img">
                                 <picture>
                                     <source type="image/webp" srcset="
-            ./img/images/image-767@1x.webp 1x,
-            ./img/images/image-767@2x.webp 2x,
-            ./img/images/image-767@3x.webp 3x">
+            ./img/tours/tours-for-schoolchildren-767@1x.webp 1x,
+            ./img/tours/tours-for-schoolchildren-767@2x.webp 2x,
+            ./img/tours/tours-for-schoolchildren-767@3x.webp 3x">
                                     <source type="image/jpeg" srcset="
-            ./img/images/image-767@1x.jpg 1x,
-            ./img/images/image-767@2x.jpg 2x,
-            ./img/images/image-767@3x.jpg 3x">
-                                    <img class="useful-links__item-img" src="./img/images/image.jpg" alt="">
+            ./img/tours/tours-for-schoolchildren-767@1x.jpg 1x,
+            ./img/tours/tours-for-schoolchildren-767@2x.jpg 2x,
+            ./img/tours/tours-for-schoolchildren-767@3x.jpg 3x">
+                                    <img class="useful-links__item-img" src="./img/tours/tours-for-schoolchildren.jpg" alt="">
                                 </picture>
                             </div>
 
