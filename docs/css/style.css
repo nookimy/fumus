@@ -389,6 +389,7 @@ img {
   display: flex;
   gap: 20px;
   align-items: center;
+  border: none;
 }
 
 .btn--up > span {
@@ -709,6 +710,20 @@ body.lock .fix {
 
 body {
   overflow-x: hidden;
+}
+
+body .figure__yellow-triangle {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-color: #FFE69A;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 100% 100%, 100% 0);
+  transform: translateX(410px);
+  z-index: -1;
 }
 
 .link {
@@ -9406,7 +9421,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .btn--up {
-    border-color: #EB3E2B;
+    border-color: 1px solid #EB3E2B;
     padding: 10px;
     background-color: white;
   }
@@ -11879,20 +11894,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     width: 100vw;
     height: 1px;
     transform: translateX(0);
-  }
-
-  body .figure__yellow-triangle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    aspect-ratio: 1/1;
-    background-color: #FFE69A;
-    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
-            clip-path: polygon(0 0, 100% 100%, 100% 0);
-    transform: translateX(410px);
-    z-index: -1;
   }
 
   .main-header--fixed {
@@ -14583,6 +14584,20 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 @media (max-width: 1023px) {
+  body .figure__yellow-triangle {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+  }
+
   .expositions--section .filter--select-status legend {
     position: absolute;
     overflow: hidden;
