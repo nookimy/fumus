@@ -390,6 +390,7 @@ img {
   gap: 20px;
   align-items: center;
   border: none;
+  transform: translateX(110%);
 }
 
 .btn--up > span {
