@@ -3450,197 +3450,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   stroke: #000000;
 }
 
-.excursions__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.excursions__item {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-  width: 100%;
-  min-height: 100px;
-  aspect-ratio: 1/1;
-  display: none;
-  overflow: hidden;
-}
-
-.excursions__item:nth-child(-n+3) {
-  display: block;
-}
-
-.excursions__item:hover .excursion__img {
-  transform: scale(1.05);
-}
-
-.excursions__item.excursion--pushkincard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/expositions/pushkin-card.png") no-repeat center;
-  background-size: contain;
-  border-radius: 50%;
-  border: 1px solid #B5B5B5;
-}
-
-.excursions__item.excursion--pushkincard .excursions__pushkincard {
-  display: block;
-}
-
-.excursions__item .excursion {
-  position: relative;
-}
-
-.excursions__item .excursion__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
-  transition: 2s;
-}
-
-.excursions__item .excursion__wrap-content {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: grid;
-  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
-  grid-template-columns: 1.35fr 1fr;
-  align-content: end;
-  align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 10px;
-}
-
-.excursions__item .excursion__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #B5B5B5;
-  grid-area: title;
-}
-
-.excursions__item .excursion__pushkincard {
-  display: none;
-}
-
-.excursions__item .excursion__age::after {
-  content: "+";
-}
-
-.excursions__item .excursion__place {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding-left: 25px;
-  grid-area: place;
-  min-height: 15px;
-}
-
-.excursions__item .excursion__place::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background: url("../img/icons/map-pin-light.svg") no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%);
-}
-
-.excursions__item .excursion__days {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  grid-area: days;
-  text-align: center;
-}
-
-.excursions__item .excursion__btn-wrap {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  display: flex;
-  gap: 10px;
-  grid-area: btn-wrap;
-}
-
-.excursions__item .excursion__btn-wrap .btn {
-  width: auto;
-  flex-grow: 1;
-}
-
-.excursions__item-type {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #FFE69A;
-  margin-top: 15px;
-  width: calc(100% - 50px);
-}
-
-.excursions__item-type span {
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-}
-
-.excursions__item-type span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  background-color: #FFE69A;
-  transform: translateY(-50%);
-}
-
 .excursions--section .excursions__head {
   grid-template-areas: "title title" "type-filter type-filter";
   width: 100%;
@@ -3653,10 +3462,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   align-items: center;
   grid-template-columns: calc(100% - 125px) 100px;
   grid-gap: 25px;
-}
-
-.excursions--section .excursions__list {
-  margin-bottom: 30px;
 }
 
 .excursions--section .page__subtitle {
@@ -3815,10 +3620,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   display: none;
 }
 
-.excursions--page .excursions__list {
-  margin-bottom: 30px;
-}
-
 .excursions--page .filter--select-age {
   display: none;
   width: 100%;
@@ -3908,7 +3709,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   top: -282px;
   left: 50%;
   transform: translateX(-811px);
-  z-index: 100;
+  z-index: -1;
 }
 
 .application .figure--cross-with-triangle use.icon__symbol {
@@ -3958,12 +3759,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-}
-
-.excursions__item .excursion__wrap-content > .application__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
 }
 
 .excursions--section .excursions__head > .application__title {
@@ -6258,10 +6053,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   grid-gap: 25px;
 }
 
-.event-posters--section .event-posters__list {
-  margin-bottom: 30px;
-}
-
 .event-posters--section .page__subtitle {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -6275,197 +6066,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: type-filter;
-}
-
-.event-posters__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.event-posters__item {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-  width: 100%;
-  min-height: 100px;
-  aspect-ratio: 1/1;
-  display: none;
-  overflow: hidden;
-}
-
-.event-posters__item:nth-child(-n+3) {
-  display: block;
-}
-
-.event-posters__item:hover .excursion__img {
-  transform: scale(1.05);
-}
-
-.event-posters__item.excursion--pushkincard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/expositions/pushkin-card.png") no-repeat center;
-  background-size: contain;
-  border-radius: 50%;
-  border: 1px solid #B5B5B5;
-}
-
-.event-posters__item.excursion--pushkincard .excursions__pushkincard {
-  display: block;
-}
-
-.event-posters__item .poster {
-  position: relative;
-}
-
-.event-posters__item .poster__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
-  transition: 2s;
-}
-
-.event-posters__item .poster__wrap-content {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: grid;
-  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
-  grid-template-columns: 1.35fr 1fr;
-  align-content: end;
-  align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 10px;
-}
-
-.event-posters__item .poster__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #B5B5B5;
-  grid-area: title;
-}
-
-.event-posters__item .poster__pushkincard {
-  display: none;
-}
-
-.event-posters__item .poster__age::after {
-  content: "+";
-}
-
-.event-posters__item .poster__place {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding-left: 25px;
-  grid-area: place;
-  min-height: 15px;
-}
-
-.event-posters__item .poster__place::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background: url("../img/icons/map-pin-light.svg") no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%);
-}
-
-.event-posters__item .poster__price {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  grid-area: days;
-  text-align: center;
-}
-
-.event-posters__item .poster__btn-wrap {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  display: flex;
-  gap: 10px;
-  grid-area: btn-wrap;
-}
-
-.event-posters__item .poster__btn-wrap .btn {
-  width: auto;
-  flex-grow: 1;
-}
-
-.event-posters__item-type {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #FFE69A;
-  margin-top: 15px;
-  width: calc(100% - 50px);
-}
-
-.event-posters__item-type span {
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-}
-
-.event-posters__item-type span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  background-color: #FFE69A;
-  transform: translateY(-50%);
 }
 
 .programs--section {
@@ -6510,205 +6110,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   display: none;
 }
 
-.programs--section .programs__content {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1200px;
-}
-
-.programs--section .programs__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-
-.programs--section .programs__item {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-  width: 100%;
-  min-height: 100px;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-}
-
-.programs--section .programs__item:hover .program__img {
-  transform: scale(1.05);
-}
-
-.programs--section .programs__item.program--pushkincard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/expositions/pushkin-card.png") no-repeat center;
-  background-size: contain;
-  border-radius: 50%;
-  border: 1px solid #B5B5B5;
-}
-
-.programs--section .programs__item.program--pushkincard .excursions__pushkincard {
-  display: block;
-}
-
-.programs--section .programs__item .program {
-  position: relative;
-}
-
-.programs--section .programs__item .program__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
-  transition: 2s;
-}
-
-.programs--section .programs__item .program__wrap-content {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: grid;
-  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
-  grid-template-columns: 1.35fr 1fr;
-  align-content: end;
-  align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 10px;
-}
-
-.programs--section .programs__item .program__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #B5B5B5;
-  grid-area: title;
-}
-
-.programs--section .programs__item .program__pushkincard {
-  display: none;
-}
-
-.programs--section .programs__item .program__age::after {
-  content: "+";
-}
-
-.programs--section .programs__item .program__place {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding-left: 25px;
-  grid-area: place;
-  min-height: 15px;
-}
-
-.programs--section .programs__item .program__place::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background: url("../img/icons/map-pin-light.svg") no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%);
-}
-
-.programs--section .programs__item .program__days {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  grid-area: days;
-  text-align: center;
-}
-
-.programs--section .programs__item .program__btn-wrap {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  display: flex;
-  gap: 10px;
-  grid-area: btn-wrap;
-}
-
-.programs--section .programs__item .program__btn-wrap .btn {
-  width: auto;
-  flex-grow: 1;
-}
-
-.programs--section .programs__item-type {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #FFE69A;
-  margin-top: 15px;
-  width: calc(100% - 50px);
-}
-
-.programs--section .programs__item-type span {
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-}
-
-.programs--section .programs__item-type span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  background-color: #FFE69A;
-  transform: translateY(-50%);
-}
-
 .master-classes--section {
   background-color: #F9F9F9;
   padding-bottom: 30px;
-  position: relative;
-  z-index: -1;
 }
 
 .master-classes--section .master-classes__head {
@@ -6746,200 +6150,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .master-classes--section .master-classes__tabs-wrap::-webkit-scrollbar {
   display: none;
-}
-
-.master-classes--section .master-classes__content {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1200px;
-}
-
-.master-classes--section .master-classes__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-
-.master-classes--section .master-classes__item {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-  width: 100%;
-  min-height: 100px;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-}
-
-.master-classes--section .master-classes__item:hover .master-class__img {
-  transform: scale(1.05);
-}
-
-.master-classes--section .master-classes__item.master-class--pushkincard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/expositions/pushkin-card.png") no-repeat center;
-  background-size: contain;
-  border-radius: 50%;
-  border: 1px solid #B5B5B5;
-}
-
-.master-classes--section .master-classes__item.master-class--pushkincard .excursions__pushkincard {
-  display: block;
-}
-
-.master-classes--section .master-classes__item .master-class {
-  position: relative;
-}
-
-.master-classes--section .master-classes__item .master-class__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
-  transition: 2s;
-}
-
-.master-classes--section .master-classes__item .master-class__wrap-content {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: grid;
-  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
-  grid-template-columns: 1.35fr 1fr;
-  align-content: end;
-  align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 10px;
-}
-
-.master-classes--section .master-classes__item .master-class__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #B5B5B5;
-  grid-area: title;
-}
-
-.master-classes--section .master-classes__item .master-class__pushkincard {
-  display: none;
-}
-
-.master-classes--section .master-classes__item .master-class__age::after {
-  content: "+";
-}
-
-.master-classes--section .master-classes__item .master-class__place {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding-left: 25px;
-  grid-area: place;
-  min-height: 15px;
-}
-
-.master-classes--section .master-classes__item .master-class__place::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background: url("../img/icons/map-pin-light.svg") no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%);
-}
-
-.master-classes--section .master-classes__item .master-class__days {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  grid-area: days;
-  text-align: center;
-}
-
-.master-classes--section .master-classes__item .master-class__btn-wrap {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  display: flex;
-  gap: 10px;
-  grid-area: btn-wrap;
-}
-
-.master-classes--section .master-classes__item .master-class__btn-wrap .btn {
-  width: auto;
-  flex-grow: 1;
-}
-
-.master-classes--section .master-classes__item-type {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #FFE69A;
-  margin-top: 15px;
-  width: calc(100% - 50px);
-}
-
-.master-classes--section .master-classes__item-type span {
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-}
-
-.master-classes--section .master-classes__item-type span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  background-color: #FFE69A;
-  transform: translateY(-50%);
 }
 
 .lectures--section {
@@ -6982,200 +6192,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .lectures--section .lectures__tabs-wrap::-webkit-scrollbar {
   display: none;
-}
-
-.lectures--section .lectures__content {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1200px;
-}
-
-.lectures--section .lectures__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  margin-bottom: 20px;
-}
-
-.lectures--section .lectures__item {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-  width: 100%;
-  min-height: 100px;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-}
-
-.lectures--section .lectures__item:hover .program__img {
-  transform: scale(1.05);
-}
-
-.lectures--section .lectures__item.lecture--pushkincard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 20px;
-  height: 20px;
-  background: url("../img/expositions/pushkin-card.png") no-repeat center;
-  background-size: contain;
-  border-radius: 50%;
-  border: 1px solid #B5B5B5;
-}
-
-.lectures--section .lectures__item.lecture--pushkincard .lecture__pushkincard {
-  display: block;
-}
-
-.lectures--section .lectures__item .lecture {
-  position: relative;
-}
-
-.lectures--section .lectures__item .lecture__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
-  transition: 2s;
-}
-
-.lectures--section .lectures__item .lecture__wrap-content {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: grid;
-  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
-  grid-template-columns: 1.35fr 1fr;
-  align-content: end;
-  align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 10px;
-}
-
-.lectures--section .lectures__item .lecture__title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #B5B5B5;
-  grid-area: title;
-}
-
-.lectures--section .lectures__item .lecture__pushkincard {
-  display: none;
-}
-
-.lectures--section .lectures__item .lecture__age::after {
-  content: "+";
-}
-
-.lectures--section .lectures__item .lecture__place {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding-left: 25px;
-  grid-area: place;
-  min-height: 15px;
-}
-
-.lectures--section .lectures__item .lecture__place::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  background: url("../img/icons/map-pin-light.svg") no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%);
-}
-
-.lectures--section .lectures__item .lecture__days {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.1;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  grid-area: days;
-  text-align: center;
-}
-
-.lectures--section .lectures__item .lecture__btn-wrap {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  display: flex;
-  gap: 10px;
-  grid-area: btn-wrap;
-}
-
-.lectures--section .lectures__item .lecture__btn-wrap .btn {
-  width: auto;
-  flex-grow: 1;
-}
-
-.lectures--section .lectures__item-type {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #FFE69A;
-  margin-top: 15px;
-  width: calc(100% - 50px);
-}
-
-.lectures--section .lectures__item-type span {
-  display: inline-block;
-  position: relative;
-  padding-left: 20px;
-}
-
-.lectures--section .lectures__item-type span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  background-color: #FFE69A;
-  transform: translateY(-50%);
 }
 
 .season-ticket {
@@ -8516,6 +7532,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   aspect-ratio: 1/1;
   width: 100%;
   overflow: hidden;
+  z-index: 1;
 }
 
 .posters__item:hover .poster__img {
@@ -10134,72 +9151,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     transform: translateY(5px);
   }
 
-  .excursions__list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .excursions__item:nth-child(-n+4) {
-    display: block;
-  }
-
-  .excursions__item.excursion--pushkincard::before {
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .excursions__item .excursion__title {
-    font-size: 23px;
-  }
-
-  .excursions__item .excursion__place {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 30px;
-    min-height: 20px;
-  }
-
-  .excursions__item .excursion__place::before {
-    width: 20px;
-    height: 20px;
-  }
-
-  .excursions__item .excursion__days {
-    font-size: 18px;
-  }
-
-  .excursions__item .excursion__btn-wrap {
-    gap: 20px;
-  }
-
-  .excursions__item-type {
-    font-size: 12px;
-  }
-
-  .excursions__item-type {
-    margin-top: 20px;
-  }
-
-  .excursions__item-type span {
-    padding-left: 30px;
-  }
-
-  .excursions__item-type span::before {
-    width: 20px;
-  }
-
   .excursions--section .excursions__head {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .excursions--section .excursions__list {
-    margin-bottom: 50px;
   }
 
   .excursions--page .excursions__head {
@@ -10209,10 +9163,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .excursions--page .excursions__status-filters {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .excursions--page .excursions__list {
-    margin-bottom: 50px;
   }
 
   .application .page__wrap {
@@ -10846,69 +9796,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 15px;
   }
 
-  .event-posters--section .event-posters__list {
-    margin-bottom: 50px;
-  }
-
-  .event-posters__list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
-  .event-posters__item:nth-child(-n+4) {
-    display: block;
-  }
-
-  .event-posters__item.excursion--pushkincard::before {
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .event-posters__item .poster__title {
-    font-size: 23px;
-  }
-
-  .event-posters__item .poster__place {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 30px;
-    min-height: 20px;
-  }
-
-  .event-posters__item .poster__place::before {
-    width: 20px;
-    height: 20px;
-  }
-
-  .event-posters__item .poster__price {
-    font-size: 18px;
-  }
-
-  .event-posters__item .poster__btn-wrap {
-    gap: 20px;
-  }
-
-  .event-posters__item-type {
-    font-size: 12px;
-  }
-
-  .event-posters__item-type {
-    margin-top: 20px;
-  }
-
-  .event-posters__item-type span {
-    padding-left: 30px;
-  }
-
-  .event-posters__item-type span::before {
-    width: 20px;
-  }
-
   .programs--section {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -10930,65 +9817,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 15px;
   }
 
-  .programs--section .programs__content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .programs--section .programs__list {
-    margin-bottom: 40px;
-  }
-
-  .programs--section .programs__item.program--pushkincard::before {
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .programs--section .programs__item .program__title {
-    font-size: 23px;
-  }
-
-  .programs--section .programs__item .program__place {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 30px;
-    min-height: 20px;
-  }
-
-  .programs--section .programs__item .program__place::before {
-    width: 20px;
-    height: 20px;
-  }
-
-  .programs--section .programs__item .program__days {
-    font-size: 18px;
-  }
-
-  .programs--section .programs__item .program__btn-wrap {
-    gap: 20px;
-  }
-
-  .programs--section .programs__item-type {
-    font-size: 12px;
-  }
-
-  .programs--section .programs__item-type {
-    margin-top: 20px;
-  }
-
-  .programs--section .programs__item-type span {
-    padding-left: 30px;
-  }
-
-  .programs--section .programs__item-type span::before {
-    width: 20px;
-  }
-
   .master-classes--section {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -11003,65 +9831,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .master-classes--section .master-classes__type-filter {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .master-classes--section .master-classes__content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .master-classes--section .master-classes__list {
-    margin-bottom: 40px;
-  }
-
-  .master-classes--section .master-classes__item.master-class--pushkincard::before {
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .master-classes--section .master-classes__item .master-class__title {
-    font-size: 23px;
-  }
-
-  .master-classes--section .master-classes__item .master-class__place {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 30px;
-    min-height: 20px;
-  }
-
-  .master-classes--section .master-classes__item .master-class__place::before {
-    width: 20px;
-    height: 20px;
-  }
-
-  .master-classes--section .master-classes__item .master-class__days {
-    font-size: 18px;
-  }
-
-  .master-classes--section .master-classes__item .master-class__btn-wrap {
-    gap: 20px;
-  }
-
-  .master-classes--section .master-classes__item-type {
-    font-size: 12px;
-  }
-
-  .master-classes--section .master-classes__item-type {
-    margin-top: 20px;
-  }
-
-  .master-classes--section .master-classes__item-type span {
-    padding-left: 30px;
-  }
-
-  .master-classes--section .master-classes__item-type span::before {
-    width: 20px;
   }
 
   .lectures--section {
@@ -11083,65 +9852,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .lectures--section .lectures__type-filter {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .lectures--section .lectures__content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .lectures--section .lectures__list {
-    margin-bottom: 40px;
-  }
-
-  .lectures--section .lectures__item.lecture--pushkincard::before {
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .lectures--section .lectures__item .lecture__title {
-    font-size: 23px;
-  }
-
-  .lectures--section .lectures__item .lecture__place {
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 30px;
-    min-height: 20px;
-  }
-
-  .lectures--section .lectures__item .lecture__place::before {
-    width: 20px;
-    height: 20px;
-  }
-
-  .lectures--section .lectures__item .lecture__days {
-    font-size: 18px;
-  }
-
-  .lectures--section .lectures__item .lecture__btn-wrap {
-    gap: 20px;
-  }
-
-  .lectures--section .lectures__item-type {
-    font-size: 12px;
-  }
-
-  .lectures--section .lectures__item-type {
-    margin-top: 20px;
-  }
-
-  .lectures--section .lectures__item-type span {
-    padding-left: 30px;
-  }
-
-  .lectures--section .lectures__item-type span::before {
-    width: 20px;
   }
 
   .season-ticket__list {
@@ -11803,12 +10513,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column-span: 1;
   }
 
-  .excursions__item .excursion__wrap-content > .page__head-title {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
   .excursions--section .excursions__head > .page__head-title {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -12333,11 +11037,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .event__price li {
     width: 40%;
     flex-grow: 1;
-  }
-
-  .excursions__item .excursion__wrap-content {
-    grid-template-columns: auto 120px;
-    padding: 20px;
   }
 
   .excursions--section .excursions__head {
@@ -12895,11 +11594,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     margin-bottom: 60px;
   }
 
-  .event-posters__item .poster__wrap-content {
-    grid-template-columns: auto 120px;
-    padding: 20px;
-  }
-
   .programs--section .programs__type-filter {
     flex-direction: row;
     align-items: center;
@@ -12912,11 +11606,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-left: 0;
     overflow: unset;
     flex-grow: 1;
-  }
-
-  .programs--section .programs__item .program__wrap-content {
-    grid-template-columns: auto 120px;
-    padding: 20px;
   }
 
   .master-classes--section .master-classes__type-filter {
@@ -12933,11 +11622,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     flex-grow: 1;
   }
 
-  .master-classes--section .master-classes__item .master-class__wrap-content {
-    grid-template-columns: auto 120px;
-    padding: 20px;
-  }
-
   .lectures--section .lectures__type-filter {
     flex-direction: row;
     align-items: center;
@@ -12950,11 +11634,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-left: 0;
     overflow: unset;
     flex-grow: 1;
-  }
-
-  .lectures--section .lectures__item .lecture__wrap-content {
-    grid-template-columns: auto 120px;
-    padding: 20px;
   }
 
   .collections--page .collections__head {
@@ -14343,16 +13022,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     grid-column-gap: 50px;
   }
 
-  .excursions__list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 50px;
-  }
-
-  .excursions__item:nth-child(-n+6) {
-    display: block;
-  }
-
   .excursions--section .excursions__head {
     grid-column-gap: 50px;
   }
@@ -14423,31 +13092,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
   .event-posters--section .event-posters__head {
     grid-column-gap: 50px;
-  }
-
-  .event-posters__list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 50px;
-  }
-
-  .event-posters__item:nth-child(-n+6) {
-    display: block;
-  }
-
-  .programs--section .programs__list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
-  }
-
-  .master-classes--section .master-classes__list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
-  }
-
-  .lectures--section .lectures__list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
   }
 
   .season-ticket__list {

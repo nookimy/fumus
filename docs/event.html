@@ -425,7 +425,7 @@
             </div>
         </section>
 
-        <section class="event-posters event-posters--section page__section">
+        <section class="posters event-posters event-posters--section page__section">
             <div class="event-posters__head">
                 <h2 class="page__subtitle">Афиша мероприятий</h2>
                 <fieldset class="filter filter--select-poster-type">
@@ -440,10 +440,9 @@
                 </fieldset>
                 <form class="visually-hidden" id="event-posters-filters"></form>
             </div>
-            <div class="page__wrap">
-                <ul class="event-posters__list">
-                    <li class="event-posters__item poster">
-                        <p class="event-posters__item-type"><span>Музейно-краеведческий квест</span></p>
+            <div class="posters__content">
+                <ul class="posters__list">
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
             ./img/event-posters/event-poster1-767@1x.webp 1x,
@@ -455,19 +454,22 @@
             ./img/event-posters/event-poster1-767@3x.jpg 3x">
                             <img class="poster__img" src="./img/event-posters/event-poster1.jpg" alt="">
                         </picture>
-                        <div class="poster__wrap-content">
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Музейно-краеведческий квест</p>
                             <h3 class="poster__title">«Такая разная Марий Эл» (1-4 класс)</h3>
-                            <p class="poster__place">Национальный музей Республики Марий Эл им. Т. Евсеева</p>
-                            <p class="poster__price">150 ₽</p>
-                            <div class="poster__btn-wrap">
-                                <a class="btn btn--small-btn" href="#">Сборная группа</a>
-                                <a class="btn btn--small-btn" href="#">Организованная группа</a>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Национальный музей Республики Марий Эл им. Т. Евсеева</li>
+                                </ul>
+                                <p class="poster__price">150</p>
                             </div>
-                        </div>
-                        <p class="poster__pushkincard visually-hidden">Действует программа Пушкинская карта</p>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
                     </li>
-                    <li class="event-posters__item poster">
-                        <p class="event-posters__item-type"><span>Музейная научно-познавательная программа</span></p>
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
             ./img/event-posters/event-poster2-767@1x.webp 1x,
@@ -479,18 +481,22 @@
             ./img/event-posters/event-poster2-767@3x.jpg 3x">
                             <img class="poster__img" src="./img/event-posters/event-poster2.jpg" alt="">
                         </picture>
-                        <div class="poster__wrap-content">
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Музейная научно-познавательная программа</p>
                             <h3 class="poster__title">«В мире археологии» (1-4 класс)</h3>
-                            <p class="poster__place">Музей истории и археологии</p>
-                            <p class="poster__price">150 ₽</p>
-                            <div class="poster__btn-wrap">
-                                <a class="btn btn--small-btn" href="#">Сборная группа</a>
-                                <a class="btn btn--small-btn" href="#">Организованная группа</a>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Музей истории и археологии</li>
+                                </ul>
+                                <p class="poster__price">150</p>
                             </div>
-                        </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
                     </li>
-                    <li class="event-posters__item poster">
-                        <p class="event-posters__item-type"><span>Музейная программа</span></p>
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
             ./img/event-posters/event-poster3-767@1x.webp 1x,
@@ -502,18 +508,22 @@
             ./img/event-posters/event-poster3-767@3x.jpg 3x">
                             <img class="poster__img" src="./img/event-posters/event-poster3.jpg" alt="">
                         </picture>
-                        <div class="poster__wrap-content">
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Музейная программа</p>
                             <h3 class="poster__title">«Творим вместе. Сказочное путешествие» (1-4 класс)</h3>
-                            <p class="poster__place">Музей народно-прикладного искусства</p>
-                            <p class="poster__price">150 ₽</p>
-                            <div class="poster__btn-wrap">
-                                <a class="btn btn--small-btn" href="#">Сборная группа</a>
-                                <a class="btn btn--small-btn" href="#">Организованная группа</a>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Музей народно-прикладного искусства</li>
+                                </ul>
+                                <p class="poster__price">150</p>
                             </div>
-                        </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
                     </li>
-                    <li class="event-posters__item poster">
-                        <p class="event-posters__item-type"><span>Экскурсия по выставке</span></p>
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
             ./img/event-posters/event-poster4-767@1x.webp 1x,
@@ -525,18 +535,22 @@
             ./img/event-posters/event-poster4-767@3x.jpg 3x">
                             <img class="poster__img" src="./img/event-posters/event-poster4.jpg" alt="">
                         </picture>
-                        <div class="poster__wrap-content">
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Экскурсия по выставке</p>
                             <h3 class="poster__title">«Николай Карамзин. История в некотором смысле…» (1-4 класс)</h3>
-                            <p class="poster__place">Музей истории Православия</p>
-                            <p class="poster__price"></p>
-                            <div class="poster__btn-wrap">
-                                <a class="btn btn--small-btn" href="#">Музей истории православия</a>
-                                <a class="btn btn--small-btn" href="#">150 ₽</a>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Музей истории Православия</li>
+                                </ul>
+                                <p class="poster__price">150</p>
                             </div>
-                        </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
                     </li>
-                    <li class="event-posters__item poster">
-                        <p class="event-posters__item-type"><span>Экскурсия-квест</span></p>
+                    <li class="posters__item poster">
                         <picture>
                             <source type="image/webp" srcset="
             ./img/event-posters/event-poster5-767@1x.webp 1x,
@@ -548,17 +562,24 @@
             ./img/event-posters/event-poster5-767@3x.jpg 3x">
                             <img class="poster__img" src="./img/event-posters/event-poster5.jpg" alt="">
                         </picture>
-                        <div class="poster__wrap-content">
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Экскурсия-квест</p>
                             <h3 class="poster__title">«В лабиринте времени» (1-4 класс)</h3>
-                            <p class="poster__place">Культурно-выставочный центр “Башня”</p>
-                            <p class="poster__price">150 ₽</p>
-                            <div class="poster__btn-wrap">
-                                <a class="btn btn--small-btn" href="#">Сборная группа</a>
-                                <a class="btn btn--small-btn" href="#">Организованная группа</a>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Культурно-выставочный центр “Башня”</li>
+                                </ul>
+                                <p class="poster__days">150</p>
                             </div>
-                        </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
                     </li>
+
                 </ul>
+                <a class="link link--more" href="#">Показать ещё</a>
             </div>
         </section>
     </main>
