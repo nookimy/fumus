@@ -225,126 +225,328 @@
 
     </header>
     <main>
-        <div class="breadcrumbs breadcrumbs--hide-last">
+        <div class="breadcrumbs">
             <ul>
                 <li>
                     <a href="./">Главная</a>
                 </li>
                 <li>
-                    <a href="about.html">O музее</a>
+                    <a href="./posetitelyam.html">Посетителям</a>
                 </li>
                 <li>
-                    Новости
+                    <a href="./excursions.html">Экскурсии</a>
+                </li>
+                <li>
+                    Марий Эл. Сохраняя традиции
                 </li>
             </ul>
         </div>
-        <section class="news page__section">
-            <div class="page__wrap">
-                <h2 class="page__subtitle">Новости</h2>
-                <ul class="news__list">
-                    <li class="news__item">
-                        <a class="news__link" href="./news-detail.html">
-                            <div class="img">
-                                <picture>
-                                    <source type="image/webp" srcset="
-            ./img/news/news1-767@1x.webp 1x,
-            ./img/news/news1-767@2x.webp 2x,
-            ./img/news/news1-767@3x.webp 3x">
-                                    <source type="image/jpeg" srcset="
-            ./img/news/news1-767@1x.jpg 1x,
-            ./img/news/news1-767@2x.jpg 2x,
-            ./img/news/news1-767@3x.jpg 3x">
-                                    <img class="news__item-img" src="./img/news/news1.jpg" alt="«Открывая мир» в музее">
-                                </picture>
-                            </div>
-                            <h3 class="news__title">
-                                <span>«Открывая мир» в музее</span>
+        <section class="excursion">
+            <div class="page__cover">
+                <div class="blur"></div>
+                <div class="img">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="
+                            ./img/exposition/cover-1920.webp,
+                            ./img/exposition/cover-1920@2x.webp 2x,
+                            ./img/exposition/cover-1920@3x.webp 3x">
+                        <source type="image/webp" srcset="
+                            ./img/exposition/cover-1023@1x.webp 1x,
+                            ./img/exposition/cover-1023@2x.webp 2x,
+                            ./img/exposition/cover-1023@3x.webp 3x">
+                        <source type="image/jpeg" media="(min-width: 1024px)" srcset="
+                            ./img/exposition/cover-1920.jpg 1x,
+                            ./img/exposition/cover-1920@2x.jpg 2x,
+                            ./img/exposition/cover-1920@3x.jpg 3x">
+                        <source type="image/jpeg" srcset="
+                            ./img/exposition/cover-1023@1x.jpg 1x,
+                            ./img/exposition/cover-1023@2x.jpg 2x,
+                            ./img/exposition/cover-1023@3x.jpg 3x">
+
+                        <img src="/./img/exposition/cover.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="page__head">
+                <div class="page__wrap">
+                    <h1 class="page__head-title"><span>Обзорная экскурсия </span>«Марий Эл. Сохраняя традиции» (6+)</h1>
+                    <div class="page__head-info">
+                        <div class="excursion__period">
+                            <time class="excursion__start-time" datetime="2022-04-16">1.09.2022</time>
+                            <time class="excursion__end-time" datetime="2022-08-01">1.09.2023</time>
+                        </div>
+
+                        <p class="museum-area__title">
+                            <a href="#">
+                                Национальный музей Республики Марий Эл им. Т. Евсеева
                                 <svg class="icon" width="20px" height="20px" fill="none">
                                     <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
                                 </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./news-detail.html">
-                            <div class="img">
-                                <picture>
-                                    <source type="image/webp" srcset="
-            ./img/news/news2-767@1x.webp 1x,
-            ./img/news/news2-767@2x.webp 2x,
-            ./img/news/news2-767@3x.webp 3x">
-                                    <source type="image/jpeg" srcset="
-            ./img/news/news2-767@1x.jpg 1x,
-            ./img/news/news2-767@2x.jpg 2x,
-            ./img/news/news2-767@3x.jpg 3x">
-                                    <img class="news__item-img" src="./img/news/news2.jpg" alt="К 60-летию финского профессора археологии Мики Лавенто">
-                                </picture>
-                            </div>
-                            <h3 class="news__title">
-                                <span>К 60-летию финского профессора археологии Мики Лавенто</span>
-
+                            </a>
+                        </p>
+                        <ul class="museum-area__info-list">
+                            <li class="museum-area__info-item museum-area__info-item--time">Сегодня: открыто с 10:00 до 18:00 <a href="#modal1" class="modal-link">Режим работы</a></li>
+                            <li class="museum-area__info-item museum-area__info-item--address">г. Йошкар-Ола, ул. Советская, 153</li>
+                        </ul>
+                        <div class="museum-area__btn-wrap">
+                            <a class="btn btn--main" href="#">Купить билет</a>
+                            <a class="btn btn--secondary" href="#">
+                                Все экскурсии
                                 <svg class="icon" width="20px" height="20px" fill="none">
                                     <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
                                 </svg>
-                            </h3>
-                        </a>
+                            </a>
+                        </div>
 
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./news-detail.html">
-                            <div class="img">
-                                <picture>
-                                    <source type="image/webp" srcset="
-            ./img/news/news3-767@1x.webp 1x,
-            ./img/news/news3-767@2x.webp 2x,
-            ./img/news/news3-767@3x.webp 3x">
-                                    <source type="image/jpeg" srcset="
-            ./img/news/news3-767@1x.jpg 1x,
-            ./img/news/news3-767@2x.jpg 2x,
-            ./img/news/news3-767@3x.jpg 3x">
-                                    <img class="news__item-img" src="./img/news/news3.jpg" alt="«Тепло женской души» в Параньгинском музее">
-                                </picture>
+                    </div>
+                    <ul class="page__link-list">
+                        <li><a href="#">Обзор</a></li>
+                        <li><a href="#">Фото</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page__content">
+                <div class="page__wrap">
+                    <div class="page__text">
+                        <p>Марийская земля из глубин веков пронесла древнюю веру предков и сохранила ее по сей день.Марийские леса поражают красотой природы, многообразием растительного и животного мира. А каждый район республики обладает своей неповторимой изюминкой — природной или культурной достопримечательностью! Какие обряды, ритуалы, праздники бытовали в марийской деревне конца XIX — начала XX веков? Чем живет Республика Марий Эл сегодня? Чем известен каждый ее район? Обо всем этом можно узнать на обзорной экскурсии.</p>
+
+                        <p>Обзорная экскурсия «Марий Эл. Сохраняя традиции» включает посещение двух постоянных экспозиционно-выставочных залов «Обряды жизненного цикла: Традиционная культура народа мари в XIX – ХХ вв.» и «Тот самый музей». </p>
+
+                        <p>Расскажем о богатстве и самобытности духовной и материальной культуры народа мари в XIX – ХХ веках и разнообразии животного и растительного мира Республики Марий Эл.</p>
+
+                        <p>Экскурсия проводится для групп от 10 человек или в составе сборных групп по отдельному расписанию. </p>
+                        <p>Обязательна предварительная запись по тел. 8 (8362) 34-75-32.</p>
+                    </div>
+                    <div class="page__slider">
+                        <div class="page__slider-wrap">
+                            <div class="excursion__gallery-wrap swiper">
+                                <ul class="excursion__gallery-list swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="./img/exposition/photo1.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/exposition/photo1-768@1x.webp 1x,
+                            ./img/exposition/photo1-768@2x.webp 2x,
+                            ./img/exposition/photo1-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/exposition/photo1-768@1x.jpg 1x,
+                            ./img/exposition/photo1-768@2x.jpg 2x,
+                            ./img/exposition/photo1-768@3x.jpg 3x">
+                                                    <img src="./img/exposition/photo1.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="./img/exposition/photo2.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/exposition/photo2-768@1x.webp 1x,
+                            ./img/exposition/photo2-768@2x.webp 2x,
+                            ./img/exposition/photo2-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/exposition/photo2-768@1x.jpg 1x,
+                            ./img/exposition/photo2-768@2x.jpg 2x,
+                            ./img/exposition/photo2-768@3x.jpg 3x">
+                                                    <img src="./img/exposition/photo2.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="./img/exposition/photo3.jpg">
+                                            <div class="img">
+                                                <picture>
+                                                    <source type="image/webp" srcset="
+                            ./img/exposition/photo3-768@1x.webp 1x,
+                            ./img/exposition/photo3-768@2x.webp 2x,
+                            ./img/exposition/photo3-768@3x.webp 3x">
+                                                    <source type="image/jpeg" srcset="
+                            ./img/exposition/photo3-768@1x.jpg 1x,
+                            ./img/exposition/photo3-768@2x.jpg 2x,
+                            ./img/exposition/photo3-768@3x.jpg 3x">
+                                                    <img src="./img/exposition/photo3.jpg" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
                             </div>
-                            <h3 class="news__title">
-                                <span>«Тепло женской души» в Параньгинском музее</span>
-
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                        </div>
+                        <div class="page__slider-buttons">
+                            <button class="swiper-button-prev swiper-button-prev--mobile">
+                                <svg class="icon" width="32px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-left"></use>
                                 </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-                    <li class="news__item">
-                        <a class="news__link" href="./news-detail.html">
-                            <div class="img">
-                                <picture>
-                                    <source type="image/webp" srcset="
-            ./img/news/news4-767@1x.webp 1x,
-            ./img/news/news4-767@2x.webp 2x,
-            ./img/news/news4-767@3x.webp 3x">
-                                    <source type="image/jpeg" srcset="
-            ./img/news/news4-767@1x.jpg 1x,
-            ./img/news/news4-767@2x.jpg 2x,
-            ./img/news/news4-767@3x.jpg 3x">
-                                    <img class="news__item-img" src="./img/news/news4.jpg" alt="О творчестве людей с ограниченными возможностями здоровья">
-                                </picture>
+                            </button>
+                            <button class="swiper-button-next swiper-button-next--mobile">
+                                <svg class="icon" width="32px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-right"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-prev swiper-button-prev--desktop">
+                                <svg class="icon" width="102px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-desktop-left"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next swiper-button-next--desktop">
+                                <svg class="icon" width="102px" height="16px" fill="none">
+                                    <use class="icon__symbol" xlink:href="#icon-long-arrow-desktop-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="page__content-info">
+                        <div class="excursion__price">
+                            <p class="excursion__price-title">
+                                <a href="#">
+                                    Стоимость
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </p>
+                            <ul>
+                                <li><span>150 ₽</span> / Взрослые</li>
+                                <li><span>200 ₽</span> / С экскурсией</li>
+                                <li><span>0, 100</span> ₽ / Льготные</li>
+                                <li><span>150 ₽</span> / С экскурсией льготный</li>
+                            </ul>
+                        </div>
+                        <div class="excursion__label-wrap">
+                            <p class="excursion__label">Сборная группа</p>
+                            <p class="excursion__label">Организованная группа</p>
+                        </div>
+                        <div class="excursion__visiting-rules">
+                            <p class="excursion__visiting-rules-title">
+                                <a href="#">
+                                    Правила посещения музея
+                                    <svg class="icon" width="20px" height="20px" fill="none">
+                                        <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                    </svg>
+                                </a>
+                            </p>
+                            <div class="excursion__visiting-notes">
+                                <p><span>Эта, а также другие выставки музея доступны для</span>
+                                    <a href="#">
+                                        людей с ограниченными возможностями здоровья&nbsp; <svg class="icon" width="20px" height="20px" fill="none">
+                                            <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
+                                        </svg>
+                                    </a>
+                                </p>
                             </div>
-                            <h3 class="news__title">
-                                <span>О творчестве людей с ограниченными возможностями здоровья</span>
+                        </div>
+                    </div>
+                </div>
 
-                                <svg class="icon" width="20px" height="20px" fill="none">
-                                    <use class="icon__symbol" xlink:href="#icon-arrow-up-right"></use>
-                                </svg>
-                            </h3>
-                        </a>
-
-                    </li>
-
-                </ul>
             </div>
         </section>
+        <section class="expositions expositions--section page__section">
+            <div class="expositions__head">
+                <h2 class="page__subtitle">Другие выставки музея</h2>
+                <fieldset class="filter filter--select-place">
+                    <legend class="visually-hidden">Музейные комплексы</legend>
+                    <select form="expositions-filters">
+                        <option label="Музейный комплекс">Все музейные комплексы</option>
+                        <option>Национальный музей Республики Марий Эл им. Т. Евсеева</option>
+                        <option>Музей истории Православия </option>
+                        <option>Музей народно-прикладного искусства</option>
+                        <option>Музей ...</option>
+                    </select>
+                </fieldset>
+                <form class="visually-hidden" id="expositions-filters"></form>
+            </div>
+            <div class="posters__content">
+                <ul class="posters__list">
+                    <li class="posters__item poster">
+                        <picture>
+                            <source type="image/webp" srcset="
+                  ./img/excursions/excursions-image1-767@1x.webp 1x,
+                  ./img/excursions/excursions-image1-767@2x.webp 2x,
+                  ./img/excursions/excursions-image1-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+                  ./img/excursions/excursions-image1-767@1x.jpg 1x,
+                  ./img/excursions/excursions-image1-767@2x.jpg 2x,
+                  ./img/excursions/excursions-image1-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/excursions/excursions-image1.jpg" alt="">
+                        </picture>
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Музейно-образовательная программа</p>
+                            <h3 class="poster__title">Финно-угры: кто они? (6+)</h3>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Национальный музей Республики Марий Эл им. Т. Евсеева</li>
+                                </ul>
+                                <p class="poster__days">15.02 — 30.12</p>
+                            </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="posters__item poster">
+                        <picture>
+                            <source type="image/webp" srcset="
+                  ./img/excursions/excursions-image2-767@1x.webp 1x,
+                  ./img/excursions/excursions-image2-767@2x.webp 2x,
+                  ./img/excursions/excursions-image2-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+                  ./img/excursions/excursions-image2-767@1x.jpg 1x,
+                  ./img/excursions/excursions-image2-767@2x.jpg 2x,
+                  ./img/excursions/excursions-image2-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/excursions/excursions-image2.jpg" alt="">
+                        </picture>
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">Обзорная экскурсия</p>
+                            <h3 class="poster__title">Ворвись в историю! (6+)</h3>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Музей истории и археологии</li>
+                                </ul>
+                                <p class="poster__days">15.02 — 30.12</p>
+                            </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="posters__item poster">
+                        <picture>
+                            <source type="image/webp" srcset="
+                  ./img/excursions/excursions-image3-767@1x.webp 1x,
+                  ./img/excursions/excursions-image3-767@2x.webp 2x,
+                  ./img/excursions/excursions-image3-767@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+                  ./img/excursions/excursions-image3-767@1x.jpg 1x,
+                  ./img/excursions/excursions-image3-767@2x.jpg 2x,
+                  ./img/excursions/excursions-image3-767@3x.jpg 3x">
+                            <img class="poster__img" src="./img/excursions/excursions-image3.jpg" alt="">
+                        </picture>
+                        <a class="posters__item-link" href="#">
+                            <p class="poster__type">экскурсия</p>
+                            <h3 class="poster__title">Искусство на высоте</h3>
+                            <div class="poster__info-wrap">
+                                <ul class="poster__place">
+                                    <li>Благовещенская башня</li>
+                                </ul>
+
+                            </div>
+                            <div class="poster__label-wrap">
+                                <p class="poster__label">Сборная группа</p>
+                                <p class="poster__label">Организованная группа</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="link link--more" href="#">Показать ещё</a>
+            </div>
+        </section>
+
     </main>
     <footer class="main-footer">
         <div class="main-footer__container">

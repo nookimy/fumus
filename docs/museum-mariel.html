@@ -35,8 +35,8 @@
                 </defs>
             </symbol>
             <symbol viewBox="0 0 341 567" id="icon-figure-cross-with-triangle">
-                <path fill="#7B61FF" d="M161.453 301.791c.731 0 1.324.593 1.324 1.324v28.749c0 1.179-1.426 1.77-2.259.936l-14.375-14.375-14.375-14.375c-.834-.833-.243-2.259.936-2.259h28.749z" class="icon__color-element"></path>
-                <path stroke="#7B61FF" stroke-width="3" d="M0 294.241h170.5m170.5 0H170.5m0 0V0m0 294.241V566.76" class="icon__color-element"></path>
+                <path fill="#1175D0" d="M161.453 301.791c.731 0 1.324.593 1.324 1.324v28.749c0 1.179-1.426 1.77-2.259.936l-14.375-14.375-14.375-14.375c-.834-.833-.243-2.259.936-2.259h28.749z" class="icon__color-element"></path>
+                <path stroke="#1175D0" stroke-width="3" d="M0 294.241h170.5m170.5 0H170.5m0 0V0m0 294.241V566.76" class="icon__color-element"></path>
             </symbol>
             <symbol viewBox="0 0 79 70" id="icon-logo">
                 <path fill-rule="evenodd" d="M35.447.717a1.014 1.014 0 010 1.433L3.88 33.716h34.002a1.014 1.014 0 010 2.027H3.88L35.447 67.31a1.013 1.013 0 11-1.434 1.433L.717 35.447a1.013 1.013 0 010-1.434L34.013.717a1.013 1.013 0 011.434 0z" class="icon__color-element" clip-rule="evenodd"></path>
@@ -78,7 +78,7 @@
                 <path fill="#000" d="M17.22 3.098L2.447 8.794c-1.009.405-1.003.967-.185 1.218l3.793 1.184 8.777-5.538c.415-.252.794-.116.482.16l-7.11 6.418H8.2h.002l-.262 3.91c.383 0 .552-.175.767-.383l1.843-1.791 3.832 2.83c.707.39 1.215.19 1.39-.654L18.29 4.292c.258-1.032-.394-1.5-1.068-1.194z" class="icon__color-element"></path>
             </symbol>
             <symbol viewBox="0 0 44 55" id="icon-up-button">
-                <path fill="#EAEBEC" d="M44 46.55c0 3.105-3.76 4.652-5.945 2.446L23.166 33.961 6.327 17.998C4.047 15.837 5.577 12 8.718 12h31.807A3.475 3.475 0 0144 15.476V46.55z" opacity=".9"></path>
+                <path fill="#EAEBEC" d="M44 46.55c0 3.105-3.76 4.652-5.945 2.446L23.166 33.961 6.327 17.998C4.047 15.837 5.577 12 8.718 12h31.807A3.475 3.475 0 0144 15.476V46.55z" class="icon__figure" opacity=".9"></path>
                 <path fill="#EB3E2B" d="M30 31a1 1 0 102 0h-2zM31.707.293a1 1 0 00-1.414 0l-6.364 6.364a1 1 0 001.414 1.414L31 2.414l5.657 5.657a1 1 0 101.414-1.414L31.707.293zM32 31V1h-2v30h2z"></path>
             </symbol>
             <symbol viewBox="0 0 20 12" id="icon-vk">
@@ -191,9 +191,8 @@
                                 <li><a class="site-nav__sub-link" href="./tours.html">Экскурсии и туры</a></li>
                                 <li><a class="site-nav__sub-link" href="./for-guides.html">Внештатным экскурсоводам</a></li>
                             </ul>
-                        </li><!-- в разработке -->
-                        <li><a class="site-nav__link" href="#">Евсеев онлайн</a></li><!-- ? -->
-                        <li><a class="site-nav__link" href="#">Наука</a></li><!-- ? -->
+                        </li>
+
                         <li>
                             <a class="site-nav__link open-submenu">О музее</a>
                             <button class="btn__open-sublist"></button>
@@ -574,6 +573,11 @@
             </div>
         </div>
     </footer>
+    <button class="btn btn--up">
+        <svg class="icon" width="44px" height="55px" fill="none">
+            <use class="icon__symbol" xlink:href="#icon-up-button"></use>
+        </svg>
+    </button>
 
     <div id="modal1" class="modal modal--museum-working-mode">
         <div class="modal__body">
