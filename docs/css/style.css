@@ -1247,6 +1247,16 @@ select:active {
      object-fit: contain;
 }
 
+.archmap__place-popup .img {
+  width: 100%;
+  aspect-ratio: 54/20;
+}
+
+.archmap__place-popup .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*Три состояния меню:
 1. Мобильное: фиксированное с бургером, скрывается при скролле вниз, показывается при скролле вверх
 2. Десктопное: Статичное полностью раскрытое, показывается до момента своего скрытия из вьюпорта
@@ -1311,6 +1321,7 @@ select:active {
   background-color: #ffffff;
   box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
   z-index: 15;
+  position: relative;
 }
 
 .main-header__nav .page__wrap {
@@ -4086,6 +4097,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
+.archmap__area-label li.point-type > .application__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
 .application__download-link {
   font-size: 12px;
   line-height: 1.25;
@@ -5303,6 +5320,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
+}
+
+.archmap__area-label li.point-type > .news-detail__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
 }
 
 .news-detail__text p:first-child {
@@ -7066,6 +7089,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
+.archmap__area-label li.point-type > .collection-exhibit__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
 .collection-exhibit__text p:first-child {
   margin-top: 0;
 }
@@ -8316,6 +8345,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
+.archmap__area-label li.point-type > .history__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
 .history__text img {
   display: block;
   width: 100%;
@@ -8631,6 +8666,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
+.archmap__area-label li.point-type > .pages-history__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
 .pages-history__text img {
   display: block;
   width: 100%;
@@ -8708,6 +8749,362 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 .pages-history__text .block__text {
   display: none;
   padding: 10px 0 0 0;
+}
+
+.archmap {
+  margin-bottom: 83px;
+}
+
+.archmap__navigation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #EAEBEC;
+}
+
+.archmap__prompt {
+  width: 100%;
+  max-width: 230px;
+  position: sticky;
+  top: 30px;
+  left: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.archmap__header {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.archmap__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.archmap__breadcrumbs {
+  font-size: 12px;
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
+.archmap__breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+
+.archmap__breadcrumbs li {
+  position: relative;
+  display: inline;
+  margin-right: 14px;
+}
+
+.archmap__breadcrumbs li::after {
+  position: absolute;
+  content: "/";
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.archmap__breadcrumbs li:last-child::after {
+  display: none;
+}
+
+.archmap__breadcrumbs li a {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  min-height: 30px;
+  transition: 0.4s;
+}
+
+.archmap__breadcrumbs li a:hover,
+.archmap__breadcrumbs li a:focus {
+  color: #1175D0;
+}
+
+.archmap__footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.archmap__footer p {
+  margin: 0;
+  width: 40%;
+  flex-grow: 1;
+}
+
+.archmap__designation {
+  width: 40%;
+  flex-grow: 1;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid var(--additional-light-gray, #EAEBEC);
+  background: #FFF;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.archmap__designation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.archmap__designation .point-type {
+  gap: 20px;
+  align-items: center;
+}
+
+.archmap__designation .point-type .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.archmap__area-label {
+  width: 100%;
+  max-width: 400px;
+  display: inline-block;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 25px;
+}
+
+.archmap__area-label h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-style: normal;
+  text-transform: unset;
+  margin-bottom: 25px;
+}
+
+.archmap__area-label ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.archmap__area-label li.point-type {
+  border-radius: 4px;
+  background: #FFF;
+  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: 24px auto;
+  grid-template-areas: "icon num" "text text";
+  align-items: center;
+  flex-grow: 1;
+}
+
+.archmap__area-label li.point-type--selishche use.icon__symbol,
+.archmap__area-label li.point-type--stay use.icon__symbol,
+.archmap__area-label li.point-type--cemetery use.icon__symbol {
+  fill: #4E4E4E;
+}
+
+.archmap__area-label li.point-type .icon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  width: 24px;
+  height: 24px;
+}
+
+.archmap__area-label li.point-type span {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  grid-area: num;
+  text-align: center;
+}
+
+.archmap__area-label li.point-type p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text;
+}
+
+.archmap__place-popup {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 30px;
+}
+
+.archmap__place-popup .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.archmap__place-popup .close-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.archmap__place-popup .close-btn use.icon__symbol {
+  stroke: #000000;
+}
+
+.archmap__place-popup .place__title {
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.archmap__place-popup .place__feature-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 0px 0px 4px 4px;
+  border-right: 1px solid var(--additional-light-gray, #EAEBEC);
+  border-bottom: 1px solid var(--additional-light-gray, #EAEBEC);
+  border-left: 1px solid var(--additional-light-gray, #EAEBEC);
+  margin-bottom: 20px;
+}
+
+.archmap__place-popup .place__feature-item {
+  width: 40%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+
+.archmap__place-popup .place__feature-item h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.archmap__place-popup .place__feature-item p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  flex-grow: 1;
+  gap: 4px;
+}
+
+.archmap__place-popup .place__feature-item .point-type--selishche use.icon__symbol,
+.archmap__place-popup .place__feature-item .point-type--stay use.icon__symbol,
+.archmap__place-popup .place__feature-item .point-type--cemetery use.icon__symbol {
+  fill: #4E4E4E;
+}
+
+.archmap__place-popup .place__feature-item .point-type .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.archmap__place-popup .place__description {
+  font-size: 12px;
+}
+
+.point-type {
+  display: flex;
+  align-items: center;
+}
+
+.point-type .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.point-type--selishche use.icon__symbol {
+  fill: #EB3E2B;
+}
+
+.point-type--stay use.icon__symbol {
+  fill: #1175D0;
+}
+
+.point-type--cemetery use.icon__symbol {
+  fill: #4E4E4E;
 }
 
 @media (min-width: 768px) {
@@ -10764,6 +11161,70 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     font-size: 23px;
   }
 
+  .archmap__prompt {
+    font-size: 12px;
+  }
+
+  .archmap__header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .archmap__header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .archmap__title {
+    font-size: 45px;
+  }
+
+  .archmap__title {
+    margin-bottom: 30px;
+  }
+
+  .archmap__breadcrumbs {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  .archmap__breadcrumbs li {
+    margin-right: 25px;
+  }
+
+  .archmap__breadcrumbs li::after {
+    right: -14px;
+  }
+
+  .archmap__breadcrumbs li a {
+    min-height: unset;
+  }
+
+  .archmap__footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .archmap__area-label {
+    width: 400px;
+  }
+
+  .archmap__area-label h2 {
+    font-size: 32px;
+  }
+
+  .archmap__area-label h2 {
+    margin-bottom: 40px;
+  }
+
+  .archmap__area-label li.point-type span {
+    font-size: 23px;
+  }
+
+  .archmap__place-popup .place__title {
+    font-size: 23px;
+  }
+
   .events__item .event__img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -10866,6 +11327,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .pages-history__text {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .archmap__area-label li.point-type p {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
@@ -13017,6 +13484,56 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column-span: 1;
   }
 
+  .page__content .page__wrap > p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-area__info > p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .news-detail > p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .collection-exhibit > p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .museum-mariel__info > p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .guides__how .page__wrap > p {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .history > p {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .pages-history > p {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
   .faq--page .form--feedback > .form__field--theme {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -13369,6 +13886,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
+  }
+
+.archmap__area-label li.point-type > .page__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   }
 
 @media (min-width: 1024px) and (min-width: 768px) {
@@ -13747,5 +14270,57 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     white-space: nowrap;
     -webkit-clip-path: inset(100%);
             clip-path: inset(100%);
+  }
+
+  .archmap {
+    margin-bottom: 40px;
+  }
+
+  .archmap__prompt {
+    display: none;
+  }
+
+  .archmap__footer {
+    padding-top: 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .archmap__footer p {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .archmap__designation {
+    padding: 15px 0;
+    border: none;
+    width: 100%;
+  }
+
+  .archmap__designation .point-type {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .archmap__designation .point-type .icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .archmap__area-label {
+    padding: 15px;
+  }
+
+  .archmap__place-popup {
+    padding: 15px;
+  }
+
+  .archmap__place-popup .close-btn {
+    top: 15px;
+    right: 15px;
+  }
+
+  .archmap__place-popup .place__feature-item {
+    width: 100%;
   }
 }
