@@ -33,19 +33,21 @@
                 $(this).toggleClass("active").next().slideToggle(300);
             });
 
-            $(".block__title").click(function (event) {
-                if ($(".block").hasClass("block--showoneitem")) {
-                    $(".block__title").not($(this)).removeClass("active");
-                    $(".block__text").not($(this).next()).slideUp(300);
-                }
-                $(this).toggleClass("active").next().slideToggle(300);
-            });
+            
         }
 
         $(".question").click(function (event) {
             if ($(".faq__list").hasClass("faq__list--showoneitem")) {
                 $(".question").not($(this)).removeClass("active");
                 $(".answer").not($(this).next()).slideUp(300);
+            }
+            $(this).toggleClass("active").next().slideToggle(300);
+        });
+
+        $(".block__title").click(function (event) {
+            if ($(".block").hasClass("block--showoneitem")) {
+                $(".block__title").not($(this)).removeClass("active");
+                $(".block__text").not($(this).next()).slideUp(300);
             }
             $(this).toggleClass("active").next().slideToggle(300);
         });
