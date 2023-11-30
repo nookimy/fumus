@@ -5930,8 +5930,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   flex-direction: column;
 }
 
-.price .table--admission-in-museum .block__item,
-.price .table--excursion .block__item {
+.price .table--admission-in-museum .trow,
+.price .table--excursion .trow {
   margin-bottom: 15px;
 }
 
@@ -5942,29 +5942,29 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   gap: 10px;
 }
 
-.price .table--admission-in-museum .block__title,
-.price .table--excursion .block__title {
+.price .table--admission-in-museum .trow__title,
+.price .table--excursion .trow__title {
   text-align: center;
   background-color: #EAEBEC;
   color: #4E4E4E;
   transition: 0.4s;
 }
 
-.price .table--admission-in-museum .block__title.active,
-.price .table--excursion .block__title.active {
+.price .table--admission-in-museum .trow__title.active,
+.price .table--excursion .trow__title.active {
   background-color: #1175D0;
   color: #F9F9F9;
 }
 
-.price .table--admission-in-museum .block__text,
-.price .table--excursion .block__text {
+.price .table--admission-in-museum .trow__text,
+.price .table--excursion .trow__text {
   display: none;
   padding-right: 0;
   padding-left: 0;
 }
 
-.price .table--admission-in-museum .block__text p,
-.price .table--excursion .block__text p {
+.price .table--admission-in-museum .trow__text p,
+.price .table--excursion .trow__text p {
   margin: 0;
   padding: 0;
   display: flex;
@@ -5973,18 +5973,18 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   gap: 10px;
 }
 
-.price .table--admission-in-museum .block__text p:first-child::before,
-.price .table--excursion .block__text p:first-child::before {
+.price .table--admission-in-museum .trow__text p:first-child::before,
+.price .table--excursion .trow__text p:first-child::before {
   content: "Взрослые";
 }
 
-.price .table--admission-in-museum .block__text p:nth-child(2)::before,
-.price .table--excursion .block__text p:nth-child(2)::before {
+.price .table--admission-in-museum .trow__text p:nth-child(2)::before,
+.price .table--excursion .trow__text p:nth-child(2)::before {
   content: "Школьники, пенсионеры, студенты";
 }
 
-.price .table--admission-in-museum .block__text p:nth-child(3)::before,
-.price .table--excursion .block__text p:nth-child(3)::before {
+.price .table--admission-in-museum .trow__text p:nth-child(3)::before,
+.price .table--excursion .trow__text p:nth-child(3)::before {
   content: "Дошкольники (5+)";
 }
 
@@ -12365,35 +12365,35 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     gap: 50px;
   }
 
-  .price .table--admission-in-museum .block__title,
-  .price .table--excursion .block__title {
+  .price .table--admission-in-museum .trow__title,
+  .price .table--excursion .trow__title {
     text-align: left;
     width: 300px;
     background-color: unset;
     color: unset;
   }
 
-  .price .table--admission-in-museum .block__title.active,
-  .price .table--excursion .block__title.active {
+  .price .table--admission-in-museum .trow__title.active,
+  .price .table--excursion .trow__title.active {
     background-color: unset;
     color: unset;
   }
 
-  .price .table--admission-in-museum .block__text,
-  .price .table--excursion .block__text {
+  .price .table--admission-in-museum .trow__text,
+  .price .table--excursion .trow__text {
     display: table-cell;
   }
 
-  .price .table--admission-in-museum .block__text p,
-  .price .table--excursion .block__text p {
+  .price .table--admission-in-museum .trow__text p,
+  .price .table--excursion .trow__text p {
     display: flex;
     justify-content: center;
     width: 10%;
     flex-grow: 1;
   }
 
-  .price .table--admission-in-museum .block__text p::before,
-  .price .table--excursion .block__text p::before {
+  .price .table--admission-in-museum .trow__text p::before,
+  .price .table--excursion .trow__text p::before {
     display: none;
   }
 
