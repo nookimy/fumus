@@ -1912,12 +1912,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   width: 100%;
   min-height: 100px;
   aspect-ratio: 1/1;
-  display: none;
-  overflow: hidden;
-}
-
-.expositions__item:nth-child(-n+3) {
   display: block;
+  overflow: hidden;
 }
 
 .expositions__item.exposition--pushkincard::before {
@@ -4181,12 +4177,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 .news__item {
   width: 100%;
   min-height: 20px;
-  display: none;
-  background-color: #ffffff;
-}
-
-.news__item:nth-child(-n+4) {
   display: block;
+  background-color: #ffffff;
 }
 
 .news__item .news__link {
@@ -9481,10 +9473,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     grid-template-columns: 1fr 1fr;
   }
 
-  .expositions__item:nth-child(-n+4) {
-    display: block;
-  }
-
   .expositions__item.exposition--pushkincard::before {
     top: 20px;
     right: 20px;
@@ -13960,10 +13948,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .expositions__list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
-  }
-
-  .expositions__item:nth-child(-n+6) {
-    display: block;
   }
 
   .expositions--section .expositions__head {
