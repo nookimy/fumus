@@ -174,7 +174,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
 }
 
 body {
@@ -188,6 +188,7 @@ body {
   padding: 0;
   color: #000000;
   background-color: #ffffff;
+  min-height: 1500px;
 }
 
 img {
@@ -382,19 +383,23 @@ img {
 
 .btn--up {
   position: fixed;
-  bottom: 10px;
+  bottom: 50px;
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  gap: 20px;
   align-items: center;
   border: none;
   transform: translateX(110%);
-  padding: 5px;
 }
 
-.btn--up .icon__figure {
-  box-shadow: 0px 10px 50px 0px rgba(181, 181, 181, 0.5);
+.btn--up > span {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #EB3E2B;
 }
 
 .main-header__button-wrap .btn--main {
@@ -466,7 +471,7 @@ img {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   width: 100%;
   background: unset;
   padding: 0;
@@ -477,7 +482,7 @@ img {
 
 .select--time-filter:hover,
 .select--time-filter:focus {
-  color: #1175D0;
+  color: #7B61FF;
   outline: none;
   background-image: none;
 }
@@ -623,11 +628,11 @@ body.lock .fix {
 }
 
 .page__link-list li > a:hover {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .page__link-list li > a:hover::before {
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .page__content {
@@ -693,7 +698,7 @@ body.lock .fix {
 
 .page__slider-buttons .swiper-button-next use.icon__symbol,
 .page__slider-buttons .swiper-button-prev use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .page__slider-buttons .swiper-button-prev {
@@ -713,11 +718,12 @@ body .figure__yellow-triangle {
   position: absolute;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 50%;
   aspect-ratio: 1/1;
   background-color: #FFE69A;
   -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
           clip-path: polygon(0 0, 100% 100%, 100% 0);
+  transform: translateX(410px);
   z-index: -1;
 }
 
@@ -733,7 +739,7 @@ body .figure__yellow-triangle {
 
 .link--more {
   display: block;
-  color: #1175D0;
+  color: #7B61FF;
   text-transform: uppercase;
   padding: 5px 70px 5px 0;
   width: 190px;
@@ -806,7 +812,7 @@ input[type=date]:hover,
 input[type=date]:focus,
 input[type=date]:active {
   color: #000000;
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
 }
 
@@ -821,7 +827,7 @@ input[type=date]:hover,
 input[type=date]:focus,
 input[type=date]:active {
   color: #000000;
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
   cursor: pointer;
 }
@@ -857,7 +863,7 @@ select:focus,
 select:active {
   color: #000000;
   background-image: url("../img/icons/chevron-down-blue.svg");
-  border-color: #1175D0;
+  border-color: #7B61FF;
   outline: none;
   cursor: pointer;
 }
@@ -877,7 +883,7 @@ select:active {
 
 .form--search input[type=search]:hover,
 .form--search input[type=search]:focus {
-  border-bottom: 1px solid #1175D0;
+  border-bottom: 1px solid #7B61FF;
 }
 
 .form--search button[type=submit] {
@@ -898,7 +904,7 @@ select:active {
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
 }
 
 .form--search button[type=submit] .icon {
@@ -912,7 +918,7 @@ select:active {
 
 .form--search button[type=submit]:hover use.icon__symbol,
 .form--search button[type=submit]:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .form--subscription {
@@ -977,6 +983,20 @@ select:active {
   min-height: 35px;
 }
 
+.form--become-partner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.form--become-partner textarea,
+.form--become-partner input[type=text],
+.form--become-partner input[type=search],
+.form--become-partner input[type=email],
+.form--become-partner input[type=date] {
+  width: 100%;
+}
+
 .filter--tabs-status,
 .filter--tabs-museum-tags,
 .filter--tabs-price-block {
@@ -1029,7 +1049,7 @@ select:active {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .filter--tabs-status label:hover,
@@ -1038,13 +1058,13 @@ select:active {
 .filter--tabs-museum-tags label:focus,
 .filter--tabs-price-block label:hover,
 .filter--tabs-price-block label:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .filter--tabs-status input[type=radio]:checked + label,
 .filter--tabs-museum-tags input[type=radio]:checked + label,
 .filter--tabs-price-block input[type=radio]:checked + label {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .filter--tabs-status input[type=radio]:checked + label:before,
@@ -1179,19 +1199,15 @@ select:active {
 
 .event__gallery-list .img,
 .exposition__gallery-list .img,
-.excursion__gallery-list .img,
 .museum-area__gallery-list .img,
-.museum-mariel__gallery-list .img,
-.news-detail__gallery-list .img {
+.museum-mariel__gallery-list .img {
   aspect-ratio: 28/20;
 }
 
 .event__gallery-list .img img,
 .exposition__gallery-list .img img,
-.excursion__gallery-list .img img,
 .museum-area__gallery-list .img img,
-.museum-mariel__gallery-list .img img,
-.news-detail__gallery-list .img img {
+.museum-mariel__gallery-list .img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1247,14 +1263,14 @@ select:active {
      object-fit: contain;
 }
 
-.archmap__place-popup .img {
+.partners__item .img {
   width: 100%;
-  aspect-ratio: 54/20;
+  aspect-ratio: 1/1;
 }
 
-.archmap__place-popup .img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.partners__item .img img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*Три состояния меню:
@@ -1265,6 +1281,26 @@ select:active {
 .main-header {
   position: relative;
   z-index: 100;
+}
+
+.main-header__nav,
+.main-header__menu,
+.main-header__search {
+  position: fixed;
+  transition: all 0.3s ease 0s;
+}
+
+.main-header__menu,
+.main-header__search {
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  overflow: auto;
+}
+
+.main-header__menu--opened,
+.main-header__search--opened {
+  transform: translateY(0);
 }
 
 .main-header--fixed .main-header__nav,
@@ -1295,33 +1331,12 @@ select:active {
   position: fixed;
 }
 
-.main-header__nav,
-.main-header__menu,
-.main-header__search {
-  position: fixed;
-  transition: all 0.3s ease 0s;
-}
-
-.main-header__menu,
-.main-header__search {
-  left: 0;
-  width: 100%;
-  transform: translateY(-100%);
-  overflow: auto;
-}
-
-.main-header__menu--opened,
-.main-header__search--opened {
-  transform: translateY(0);
-}
-
 .main-header__nav {
   width: 100vw;
   padding: 20px 0 25px;
   background-color: #ffffff;
   box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
   z-index: 15;
-  position: relative;
 }
 
 .main-header__nav .page__wrap {
@@ -1403,7 +1418,7 @@ select:active {
 
 .main-nav__search-btn:hover use.icon__symbol,
 .main-nav__search-btn:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .main-nav__search {
@@ -1436,7 +1451,7 @@ select:active {
 
 .burger-button:hover use.icon__symbol,
 .burger-button:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .burger-button .icon {
@@ -1469,7 +1484,7 @@ select:active {
 
 .logo__link:hover use.icon__symbol,
 .logo__link:focus use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .logo .icon {
@@ -1562,7 +1577,7 @@ select:active {
 
 .visually-impaired__btn:hover use.icon__symbol,
 .visually-impaired__btn:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .main-header .visually-impaired__btn {
@@ -1663,7 +1678,7 @@ select:active {
 .main-header__menu .site-nav .btn__open-sublist:active::before,
 .main-header__menu .site-nav .btn__open-sublist:active::after {
   transition: 0.4s;
-  background-color: #1175D0;
+  background-color: #7B61FF;
 }
 
 .main-header__menu .site-nav__sub-list {
@@ -1856,7 +1871,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .topical-links__item a:hover,
 .topical-links__item a:focus {
-  border-color: #1175D0;
+  border-color: #7B61FF;
 }
 
 .topical-links .swiper-button-next,
@@ -1885,7 +1900,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .topical-links .swiper-button-next use.icon__symbol,
 .topical-links .swiper-button-prev use.icon__symbol {
-  fill: #1175D0;
+  fill: #7B61FF;
 }
 
 .topical-links .swiper-button-prev {
@@ -1912,8 +1927,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   width: 100%;
   min-height: 100px;
   aspect-ratio: 1/1;
-  display: block;
+  display: none;
   overflow: hidden;
+}
+
+.expositions__item:nth-child(-n+3) {
+  display: block;
 }
 
 .expositions__item.exposition--pushkincard::before {
@@ -2125,7 +2144,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .expositions--page .expositions__filters-title--selected span {
-  color: #1175D0;
+  color: #7B61FF;
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -2156,7 +2175,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .expositions--page .expositions__filters-title.active {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .expositions--page .expositions__filters-title.active::before {
@@ -2290,8 +2309,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .expositions--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
-  border-color: #1175D0;
-  background-color: #1175D0;
+  border-color: #7B61FF;
+  background-color: #7B61FF;
   transform: translateX(19px) translateY(-50%);
 }
 
@@ -2326,7 +2345,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   margin: 0;
   padding: 0;
   border: none;
@@ -2375,7 +2394,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   font-style: normal;
   font-size: 20px;
   text-transform: none;
-  color: #1175D0;
+  color: #7B61FF;
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
@@ -2493,12 +2512,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .exposition__price-title a:hover,
 .exposition__price-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__price-title a:hover use.icon__symbol,
 .exposition__price-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__price-title a .icon {
@@ -2530,12 +2549,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .exposition__visiting-rules-title a:hover,
 .exposition__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__visiting-rules-title a:hover use.icon__symbol,
 .exposition__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__visiting-rules-title a .icon {
@@ -2600,12 +2619,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .exposition__visiting-notes p a:hover,
 .exposition__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .exposition__visiting-notes p a:hover use.icon__symbol,
 .exposition__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .exposition__visiting-notes p a .icon {
@@ -2918,7 +2937,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   font-style: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  color: #1175D0;
+  color: #7B61FF;
   margin: 0;
   padding: 0;
   border: none;
@@ -2987,7 +3006,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .events--page .events__filters-title--selected span {
-  color: #1175D0;
+  color: #7B61FF;
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -3018,7 +3037,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .events--page .events__filters-title.active {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .events--page .events__filters-title.active::before {
@@ -3156,8 +3175,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .events--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
-  border-color: #1175D0;
-  background-color: #1175D0;
+  border-color: #7B61FF;
+  background-color: #7B61FF;
   transform: translateX(19px) translateY(-50%);
 }
 
@@ -3177,7 +3196,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   font-style: normal;
   font-size: 20px;
   text-transform: none;
-  color: #1175D0;
+  color: #7B61FF;
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
@@ -3329,12 +3348,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .event__price-title a:hover,
 .event__price-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .event__price-title a:hover use.icon__symbol,
 .event__price-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .event__price-title a .icon {
@@ -3366,12 +3385,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .event__visiting-rules-title a:hover,
 .event__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .event__visiting-rules-title a:hover use.icon__symbol,
 .event__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .event__visiting-rules-title a .icon {
@@ -3436,12 +3455,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .event__visiting-notes p a:hover,
 .event__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .event__visiting-notes p a:hover use.icon__symbol,
 .event__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .event__visiting-notes p a .icon {
@@ -3453,6 +3472,197 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .event__visiting-notes p a use.icon__symbol {
   stroke: #000000;
+}
+
+.excursions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.excursions__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  display: none;
+  overflow: hidden;
+}
+
+.excursions__item:nth-child(-n+3) {
+  display: block;
+}
+
+.excursions__item:hover .excursion__img {
+  transform: scale(1.05);
+}
+
+.excursions__item.excursion--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.excursions__item.excursion--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.excursions__item .excursion {
+  position: relative;
+}
+
+.excursions__item .excursion__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.excursions__item .excursion__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.excursions__item .excursion__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.excursions__item .excursion__pushkincard {
+  display: none;
+}
+
+.excursions__item .excursion__age::after {
+  content: "+";
+}
+
+.excursions__item .excursion__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.excursions__item .excursion__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.excursions__item .excursion__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.excursions__item .excursion__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.excursions__item .excursion__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.excursions__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.excursions__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.excursions__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
 }
 
 .excursions--section .excursions__head {
@@ -3467,6 +3677,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   align-items: center;
   grid-template-columns: calc(100% - 125px) 100px;
   grid-gap: 25px;
+}
+
+.excursions--section .excursions__list {
+  margin-bottom: 30px;
 }
 
 .excursions--section .page__subtitle {
@@ -3522,7 +3736,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .excursions--page .excursions__filters-title--selected span {
-  color: #1175D0;
+  color: #7B61FF;
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -3553,7 +3767,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .excursions--page .excursions__filters-title.active {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .excursions--page .excursions__filters-title.active::before {
@@ -3625,6 +3839,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   display: none;
 }
 
+.excursions--page .excursions__list {
+  margin-bottom: 30px;
+}
+
 .excursions--page .filter--select-age {
   display: none;
   width: 100%;
@@ -3683,291 +3901,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .excursions--page .filter--check-pushkincard input[type=checkbox]:checked + label::before {
-  border-color: #1175D0;
-  background-color: #1175D0;
+  border-color: #7B61FF;
+  background-color: #7B61FF;
   transform: translateX(19px) translateY(-50%);
-}
-
-.excursion .page__cover {
-  background-image: url("../img/exposition/cover.jpg");
-}
-
-.excursion__period {
-  margin: 0 0 10px;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-style: normal;
-  font-size: 20px;
-  text-transform: none;
-  color: #1175D0;
-  display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  letter-spacing: unset;
-}
-
-.excursion__period time:last-child {
-  position: relative;
-}
-
-.excursion__period time:last-child::before {
-  position: absolute;
-  content: " — ";
-  left: -24px;
-}
-
-.excursion__gallery-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.excursion__gallery-list > li > a {
-  position: relative;
-}
-
-.excursion__gallery-list > li > a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.excursion__gallery-list > li > a:hover .img::before,
-.excursion__gallery-list > li > a:focus .img::before {
-  opacity: 1;
-}
-
-.excursion__gallery-list > li > a .img {
-  position: relative;
-}
-
-.excursion__gallery-list > li > a .img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50 50;
-  z-index: 5;
-  transition: 0.4s;
-  opacity: 0;
-}
-
-.excursion__price {
-  margin-bottom: 15px;
-}
-
-.excursion__price ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 30px;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  color: #4E4E4E;
-}
-
-.excursion__price ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  background-image: url("../img/icons/tabler-ticket.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.excursion__price li span {
-  color: #000000;
-}
-
-.excursion__price-title {
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 10px;
-}
-
-.excursion__price-title a {
-  color: inherit;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.excursion__price-title a:hover,
-.excursion__price-title a:focus {
-  color: #1175D0;
-}
-
-.excursion__price-title a:hover use.icon__symbol,
-.excursion__price-title a:focus use.icon__symbol {
-  stroke: #1175D0;
-}
-
-.excursion__price-title a .icon {
-  width: 14px;
-  height: 14px;
-  transform: translateY(2px);
-}
-
-.excursion__price-title a use.icon__symbol {
-  stroke: #000000;
-}
-
-.excursion__label-wrap {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.excursion__label {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  padding: 5px 10px;
-  min-height: 30px;
-  border: 1px solid #4E4E4E;
-  text-align: center;
-  flex-grow: 1;
-  max-width: 255px;
-}
-
-.excursion__visiting-rules-title {
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 10px;
-}
-
-.excursion__visiting-rules-title a {
-  color: inherit;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.excursion__visiting-rules-title a:hover,
-.excursion__visiting-rules-title a:focus {
-  color: #1175D0;
-}
-
-.excursion__visiting-rules-title a:hover use.icon__symbol,
-.excursion__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
-}
-
-.excursion__visiting-rules-title a .icon {
-  width: 14px;
-  height: 14px;
-  transform: translateY(2px);
-}
-
-.excursion__visiting-rules-title a use.icon__symbol {
-  stroke: #000000;
-}
-
-.excursion__visiting-notes {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding-left: 30px;
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  color: #4E4E4E;
-}
-
-.excursion__visiting-notes::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  background-image: url("../img/icons/accessible.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.excursion__visiting-notes p {
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-
-.excursion__visiting-notes p span {
-  display: block;
-}
-
-.excursion__visiting-notes p a {
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-style: normal;
-  color: #000000;
-  display: inline;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.excursion__visiting-notes p a:hover,
-.excursion__visiting-notes p a:focus {
-  color: #1175D0;
-}
-
-.excursion__visiting-notes p a:hover use.icon__symbol,
-.excursion__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
-}
-
-.excursion__visiting-notes p a .icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  transform: translateY(4px);
-}
-
-.excursion__visiting-notes p a use.icon__symbol {
-  stroke: #000000;
 }
 
 .application {
@@ -3996,12 +3932,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   top: -282px;
   left: 50%;
   transform: translateX(-811px);
-  z-index: -1;
+  z-index: 100;
 }
 
 .application .figure--cross-with-triangle use.icon__symbol {
-  stroke: #1175D0;
-  fill: #1175D0;
+  stroke: #7B61FF;
+  fill: #7B61FF;
 }
 
 .application .figure--triangle-big-gray {
@@ -4048,6 +3984,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
+.excursions__item .excursion__wrap-content > .application__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
 .excursions--section .excursions__head > .application__title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -4091,12 +4033,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-}
-
-.archmap__area-label li.point-type > .application__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
 }
 
 .application__download-link {
@@ -4177,8 +4113,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 .news__item {
   width: 100%;
   min-height: 20px;
-  display: block;
+  display: none;
   background-color: #ffffff;
+}
+
+.news__item:nth-child(-n+4) {
+  display: block;
 }
 
 .news__item .news__link {
@@ -4260,7 +4200,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .banner__line--blue {
-  background-color: #1175D0;
+  background-color: #7B61FF;
   width: 99%;
   max-width: 1287px;
   transform: translateX(-53%) translateY(33px);
@@ -4692,12 +4632,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .museum-area__visiting-rules-title a:hover,
 .museum-area__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .museum-area__visiting-rules-title a:hover use.icon__symbol,
 .museum-area__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .museum-area__visiting-rules-title a .icon {
@@ -4771,12 +4711,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .museum-area__visiting-notes p a:hover,
 .museum-area__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .museum-area__visiting-notes p a:hover use.icon__symbol,
 .museum-area__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .museum-area__visiting-notes p a .icon {
@@ -4808,12 +4748,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .page__head .museum-area__title a:hover,
 .page__head .museum-area__title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .page__head .museum-area__title a:hover use.icon__symbol,
 .page__head .museum-area__title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .page__head .museum-area__title a .icon {
@@ -4842,7 +4782,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   position: relative;
   display: inline-flex;
   align-items: center;
-  color: #1175D0;
+  color: #7B61FF;
   margin-left: 14px;
   text-decoration: none;
   min-height: 30px;
@@ -4853,7 +4793,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
   bottom: 7px;
   left: 0;
   transition: 0.4s;
@@ -5117,7 +5057,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .breadcrumbs li a:hover,
 .breadcrumbs li a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .modal {
@@ -5156,6 +5096,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .modal__content {
+  max-width: 500px;
   position: relative;
   background-color: #ffffff;
   color: #000000;
@@ -5202,7 +5143,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 .news-detail {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "head" "img" "text" "slider";
+  grid-template-areas: "head" "img" "text";
 }
 
 .news-detail__head {
@@ -5314,12 +5255,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
-.archmap__area-label li.point-type > .news-detail__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-}
-
 .news-detail__text p:first-child {
   margin-top: 0;
 }
@@ -5363,57 +5298,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 .pages-history > .news-detail__img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-}
-
-.news-detail__slider {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: slider;
-}
-
-.news-detail__gallery-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.news-detail__gallery-list > li > a {
-  position: relative;
-}
-
-.news-detail__gallery-list > li > a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.news-detail__gallery-list > li > a:hover .img::before,
-.news-detail__gallery-list > li > a:focus .img::before {
-  opacity: 1;
-}
-
-.news-detail__gallery-list > li > a .img {
-  position: relative;
-}
-
-.news-detail__gallery-list > li > a .img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50 50;
-  z-index: 5;
-  transition: 0.4s;
-  opacity: 0;
 }
 
 .map__wrap {
@@ -5684,7 +5568,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .accessibility__phone-list > li a:hover,
 .accessibility__phone-list > li a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .accessibility__note {
@@ -5786,7 +5670,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .faq__item .question:hover {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .faq__item .question:hover::before {
@@ -5922,8 +5806,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   flex-direction: column;
 }
 
-.price .table--admission-in-museum .trow,
-.price .table--excursion .trow {
+.price .table--admission-in-museum .block__item,
+.price .table--excursion .block__item {
   margin-bottom: 15px;
 }
 
@@ -5934,29 +5818,29 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   gap: 10px;
 }
 
-.price .table--admission-in-museum .trow__title,
-.price .table--excursion .trow__title {
+.price .table--admission-in-museum .block__title,
+.price .table--excursion .block__title {
   text-align: center;
   background-color: #EAEBEC;
   color: #4E4E4E;
   transition: 0.4s;
 }
 
-.price .table--admission-in-museum .trow__title.active,
-.price .table--excursion .trow__title.active {
-  background-color: #1175D0;
+.price .table--admission-in-museum .block__title.active,
+.price .table--excursion .block__title.active {
+  background-color: #7B61FF;
   color: #F9F9F9;
 }
 
-.price .table--admission-in-museum .trow__text,
-.price .table--excursion .trow__text {
+.price .table--admission-in-museum .block__text,
+.price .table--excursion .block__text {
   display: none;
   padding-right: 0;
   padding-left: 0;
 }
 
-.price .table--admission-in-museum .trow__text p,
-.price .table--excursion .trow__text p {
+.price .table--admission-in-museum .block__text p,
+.price .table--excursion .block__text p {
   margin: 0;
   padding: 0;
   display: flex;
@@ -5965,18 +5849,18 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   gap: 10px;
 }
 
-.price .table--admission-in-museum .trow__text p:first-child::before,
-.price .table--excursion .trow__text p:first-child::before {
+.price .table--admission-in-museum .block__text p:first-child::before,
+.price .table--excursion .block__text p:first-child::before {
   content: "Взрослые";
 }
 
-.price .table--admission-in-museum .trow__text p:nth-child(2)::before,
-.price .table--excursion .trow__text p:nth-child(2)::before {
+.price .table--admission-in-museum .block__text p:nth-child(2)::before,
+.price .table--excursion .block__text p:nth-child(2)::before {
   content: "Школьники, пенсионеры, студенты";
 }
 
-.price .table--admission-in-museum .trow__text p:nth-child(3)::before,
-.price .table--excursion .trow__text p:nth-child(3)::before {
+.price .table--admission-in-museum .block__text p:nth-child(3)::before,
+.price .table--excursion .block__text p:nth-child(3)::before {
   content: "Дошкольники (5+)";
 }
 
@@ -6131,12 +6015,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .price .privileges__visiting-rules-title a:hover,
 .price .privileges__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .price .privileges__visiting-rules-title a:hover use.icon__symbol,
 .price .privileges__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .price .privileges__visiting-rules-title a .icon {
@@ -6210,12 +6094,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .price .privileges__visiting-notes p a:hover,
 .price .privileges__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .price .privileges__visiting-notes p a:hover use.icon__symbol,
 .price .privileges__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .price .privileges__visiting-notes p a .icon {
@@ -6351,12 +6235,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .rules__visiting-notes p a:hover,
 .rules__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .rules__visiting-notes p a:hover use.icon__symbol,
 .rules__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .rules__visiting-notes p a .icon {
@@ -6399,6 +6283,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   grid-gap: 25px;
 }
 
+.event-posters--section .event-posters__list {
+  margin-bottom: 30px;
+}
+
 .event-posters--section .page__subtitle {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -6412,6 +6300,197 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: type-filter;
+}
+
+.event-posters__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.event-posters__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  display: none;
+  overflow: hidden;
+}
+
+.event-posters__item:nth-child(-n+3) {
+  display: block;
+}
+
+.event-posters__item:hover .excursion__img {
+  transform: scale(1.05);
+}
+
+.event-posters__item.excursion--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.event-posters__item.excursion--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.event-posters__item .poster {
+  position: relative;
+}
+
+.event-posters__item .poster__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.event-posters__item .poster__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.event-posters__item .poster__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.event-posters__item .poster__pushkincard {
+  display: none;
+}
+
+.event-posters__item .poster__age::after {
+  content: "+";
+}
+
+.event-posters__item .poster__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.event-posters__item .poster__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.event-posters__item .poster__price {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.event-posters__item .poster__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.event-posters__item .poster__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.event-posters__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.event-posters__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.event-posters__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
 }
 
 .programs--section {
@@ -6456,9 +6535,205 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   display: none;
 }
 
+.programs--section .programs__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.programs--section .programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.programs--section .programs__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.programs--section .programs__item:hover .program__img {
+  transform: scale(1.05);
+}
+
+.programs--section .programs__item.program--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.programs--section .programs__item.program--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.programs--section .programs__item .program {
+  position: relative;
+}
+
+.programs--section .programs__item .program__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.programs--section .programs__item .program__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.programs--section .programs__item .program__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.programs--section .programs__item .program__pushkincard {
+  display: none;
+}
+
+.programs--section .programs__item .program__age::after {
+  content: "+";
+}
+
+.programs--section .programs__item .program__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.programs--section .programs__item .program__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.programs--section .programs__item .program__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.programs--section .programs__item .program__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.programs--section .programs__item .program__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.programs--section .programs__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.programs--section .programs__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.programs--section .programs__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
+}
+
 .master-classes--section {
   background-color: #F9F9F9;
   padding-bottom: 30px;
+  position: relative;
+  z-index: -1;
 }
 
 .master-classes--section .master-classes__head {
@@ -6496,6 +6771,200 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .master-classes--section .master-classes__tabs-wrap::-webkit-scrollbar {
   display: none;
+}
+
+.master-classes--section .master-classes__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.master-classes--section .master-classes__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.master-classes--section .master-classes__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.master-classes--section .master-classes__item:hover .master-class__img {
+  transform: scale(1.05);
+}
+
+.master-classes--section .master-classes__item.master-class--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.master-classes--section .master-classes__item.master-class--pushkincard .excursions__pushkincard {
+  display: block;
+}
+
+.master-classes--section .master-classes__item .master-class {
+  position: relative;
+}
+
+.master-classes--section .master-classes__item .master-class__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.master-classes--section .master-classes__item .master-class__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.master-classes--section .master-classes__item .master-class__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.master-classes--section .master-classes__item .master-class__pushkincard {
+  display: none;
+}
+
+.master-classes--section .master-classes__item .master-class__age::after {
+  content: "+";
+}
+
+.master-classes--section .master-classes__item .master-class__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.master-classes--section .master-classes__item .master-class__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.master-classes--section .master-classes__item .master-class__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.master-classes--section .master-classes__item .master-class__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.master-classes--section .master-classes__item .master-class__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.master-classes--section .master-classes__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.master-classes--section .master-classes__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.master-classes--section .master-classes__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
 }
 
 .lectures--section {
@@ -6538,6 +7007,200 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .lectures--section .lectures__tabs-wrap::-webkit-scrollbar {
   display: none;
+}
+
+.lectures--section .lectures__content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1200px;
+}
+
+.lectures--section .lectures__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.lectures--section .lectures__item {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  width: 100%;
+  min-height: 100px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.lectures--section .lectures__item:hover .program__img {
+  transform: scale(1.05);
+}
+
+.lectures--section .lectures__item.lecture--pushkincard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/expositions/pushkin-card.png") no-repeat center;
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #B5B5B5;
+}
+
+.lectures--section .lectures__item.lecture--pushkincard .lecture__pushkincard {
+  display: block;
+}
+
+.lectures--section .lectures__item .lecture {
+  position: relative;
+}
+
+.lectures--section .lectures__item .lecture__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.lectures--section .lectures__item .lecture__wrap-content {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-areas: "title title" "place days" "btn-wrap btn-wrap";
+  grid-template-columns: 1.35fr 1fr;
+  align-content: end;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.lectures--section .lectures__item .lecture__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #B5B5B5;
+  grid-area: title;
+}
+
+.lectures--section .lectures__item .lecture__pushkincard {
+  display: none;
+}
+
+.lectures--section .lectures__item .lecture__age::after {
+  content: "+";
+}
+
+.lectures--section .lectures__item .lecture__place {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding-left: 25px;
+  grid-area: place;
+  min-height: 15px;
+}
+
+.lectures--section .lectures__item .lecture__place::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icons/map-pin-light.svg") no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.lectures--section .lectures__item .lecture__days {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  grid-area: days;
+  text-align: center;
+}
+
+.lectures--section .lectures__item .lecture__btn-wrap {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  gap: 10px;
+  grid-area: btn-wrap;
+}
+
+.lectures--section .lectures__item .lecture__btn-wrap .btn {
+  width: auto;
+  flex-grow: 1;
+}
+
+.lectures--section .lectures__item-type {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FFE69A;
+  margin-top: 15px;
+  width: calc(100% - 50px);
+}
+
+.lectures--section .lectures__item-type span {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.lectures--section .lectures__item-type span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #FFE69A;
+  transform: translateY(-50%);
 }
 
 .season-ticket {
@@ -6714,7 +7377,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .collections--page .collections__filters-title--selected span {
-  color: #1175D0;
+  color: #7B61FF;
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -6745,7 +7408,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 .collections--page .collections__filters-title.active {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .collections--page .collections__filters-title.active::before {
@@ -6846,7 +7509,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .collections--page .filter--search-collection input[type=search]:hover,
 .collections--page .filter--search-collection input[type=search]:focus {
-  border: 1px solid #1175D0;
+  border: 1px solid #7B61FF;
 }
 
 .collections--page .filter--search-collection button[type=submit] {
@@ -6867,7 +7530,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  outline-color: #1175D0;
+  outline-color: #7B61FF;
 }
 
 .collections--page .filter--search-collection button[type=submit] .icon {
@@ -6881,7 +7544,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .collections--page .filter--search-collection button[type=submit]:hover use.icon__symbol,
 .collections--page .filter--search-collection button[type=submit]:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .collections__content {
@@ -7079,12 +7742,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-}
-
-.archmap__area-label li.point-type > .collection-exhibit__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
 }
 
 .collection-exhibit__text p:first-child {
@@ -7548,12 +8205,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .museum-mariel__visiting-rules-title a:hover,
 .museum-mariel__visiting-rules-title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .museum-mariel__visiting-rules-title a:hover use.icon__symbol,
 .museum-mariel__visiting-rules-title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .museum-mariel__visiting-rules-title a .icon {
@@ -7627,12 +8284,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .museum-mariel__visiting-notes p a:hover,
 .museum-mariel__visiting-notes p a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .museum-mariel__visiting-notes p a:hover use.icon__symbol,
 .museum-mariel__visiting-notes p a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .museum-mariel__visiting-notes p a .icon {
@@ -7664,12 +8321,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
 .page__head .museum-mariel__title a:hover,
 .page__head .museum-mariel__title a:focus {
-  color: #1175D0;
+  color: #7B61FF;
 }
 
 .page__head .museum-mariel__title a:hover use.icon__symbol,
 .page__head .museum-mariel__title a:focus use.icon__symbol {
-  stroke: #1175D0;
+  stroke: #7B61FF;
 }
 
 .page__head .museum-mariel__title a .icon {
@@ -7698,7 +8355,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   position: relative;
   display: inline-flex;
   align-items: center;
-  color: #1175D0;
+  color: #7B61FF;
   margin-left: 14px;
   text-decoration: none;
   min-height: 30px;
@@ -7709,7 +8366,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #1175D0;
+  background-color: #7B61FF;
   bottom: 7px;
   left: 0;
   transition: 0.4s;
@@ -7884,7 +8541,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   aspect-ratio: 1/1;
   width: 100%;
   overflow: hidden;
-  z-index: 1;
 }
 
 .posters__item:hover .poster__img {
@@ -8337,12 +8993,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
-.archmap__area-label li.point-type > .history__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-}
-
 .history__text img {
   display: block;
   width: 100%;
@@ -8658,12 +9308,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
 }
 
-.archmap__area-label li.point-type > .pages-history__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-}
-
 .pages-history__text img {
   display: block;
   width: 100%;
@@ -8743,360 +9387,79 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   padding: 10px 0 0 0;
 }
 
-.archmap {
-  margin-bottom: 83px;
-}
-
-.archmap__navigation {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #EAEBEC;
-}
-
-.archmap__prompt {
-  width: 100%;
-  max-width: 230px;
-  position: sticky;
-  top: 30px;
-  left: 30px;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 10px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  text-transform: uppercase;
-  opacity: 0.5;
-}
-
-.archmap__header {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1200px;
+.partners--page .partners__head {
+  background-color: #F9F9F9;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
+  margin-bottom: -22px;
 }
 
-.archmap__title {
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 25px;
-  line-height: 1;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 15px;
+.partners--page .partners__head .page__subtitle {
+  margin-bottom: 0;
 }
 
-.archmap__breadcrumbs {
-  font-size: 12px;
-  line-height: 1.1;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
+.partners--page .partners__head .page__wrap {
+  margin-bottom: 0;
 }
 
-.archmap__breadcrumbs ul {
+.partners--page .partners__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: inline;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
 }
 
-.archmap__breadcrumbs li {
-  position: relative;
-  display: inline;
-  margin-right: 14px;
-}
-
-.archmap__breadcrumbs li::after {
-  position: absolute;
-  content: "/";
-  right: -7px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.archmap__breadcrumbs li:last-child::after {
-  display: none;
-}
-
-.archmap__breadcrumbs li a {
-  display: inline-flex;
-  align-items: center;
-  color: inherit;
-  text-decoration: none;
-  min-height: 30px;
+.partners--page .partners__item .partner__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #B5B5B5;
   transition: 0.4s;
 }
 
-.archmap__breadcrumbs li a:hover,
-.archmap__breadcrumbs li a:focus {
-  color: #1175D0;
+.partners--page .partners__item .partner__link:hover,
+.partners--page .partners__item .partner__link:focus {
+  border: 1px solid #D13726;
+  box-shadow: 0px 10px 50px 0px rgba(181, 181, 181, 0.5);
 }
 
-.archmap__footer {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1200px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.partners--page .partners__item--become-partner .partner__link {
+  aspect-ratio: 1/1;
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-.archmap__footer p {
-  margin: 0;
-  width: 40%;
-  flex-grow: 1;
-}
-
-.archmap__designation {
-  width: 40%;
-  flex-grow: 1;
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid var(--additional-light-gray, #EAEBEC);
-  background: #FFF;
-  padding: 20px;
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-}
-
-.archmap__designation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.archmap__designation .point-type {
-  gap: 20px;
   align-items: center;
-}
-
-.archmap__designation .point-type .icon {
-  width: 24px;
-  height: 24px;
-}
-
-.archmap__area-label {
-  width: 100%;
-  max-width: 400px;
-  display: inline-block;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 25px;
-}
-
-.archmap__area-label h2 {
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-style: normal;
-  text-transform: unset;
-  margin-bottom: 25px;
-}
-
-.archmap__area-label ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
-
-.archmap__area-label li.point-type {
-  border-radius: 4px;
-  background: #FFF;
-  padding: 10px 15px;
-  display: grid;
-  grid-template-columns: 24px auto;
-  grid-template-areas: "icon num" "text text";
-  align-items: center;
-  flex-grow: 1;
-}
-
-.archmap__area-label li.point-type--selishche use.icon__symbol,
-.archmap__area-label li.point-type--stay use.icon__symbol,
-.archmap__area-label li.point-type--cemetery use.icon__symbol {
-  fill: #4E4E4E;
-}
-
-.archmap__area-label li.point-type .icon {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: icon;
-  width: 24px;
-  height: 24px;
-}
-
-.archmap__area-label li.point-type span {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  justify-content: center;
   font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
   font-size: 18px;
   line-height: 1.25;
   font-weight: 700;
   font-style: normal;
-  grid-area: num;
-  text-align: center;
+  color: #000000;
+  text-decoration: none;
 }
 
-.archmap__area-label li.point-type p {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: text;
-}
-
-.archmap__place-popup {
+.partners--page .partners__item--become-partner .partner__link .icon {
   position: relative;
-  width: 100%;
-  max-width: 600px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 30px;
-}
-
-.archmap__place-popup .close-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
   width: 20px;
   height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0.16em;
 }
 
-.archmap__place-popup .close-btn .icon {
-  width: 18px;
-  height: 18px;
-}
-
-.archmap__place-popup .close-btn use.icon__symbol {
+.partners--page .partners__item--become-partner .partner__link .icon use.icon__symbol {
   stroke: #000000;
 }
 
-.archmap__place-popup .place__title {
-  margin: 0;
-  padding: 0;
-  font-family: "EBGaramond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  font-style: normal;
-  margin-bottom: 30px;
+.partners--page .partners__item--become-partner .partner__link:hover,
+.partners--page .partners__item--become-partner .partner__link:focus {
+  color: #D13726;
 }
 
-.archmap__place-popup .place__feature-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 0px 0px 4px 4px;
-  border-right: 1px solid var(--additional-light-gray, #EAEBEC);
-  border-bottom: 1px solid var(--additional-light-gray, #EAEBEC);
-  border-left: 1px solid var(--additional-light-gray, #EAEBEC);
-  margin-bottom: 20px;
-}
-
-.archmap__place-popup .place__feature-item {
-  width: 40%;
-  flex-grow: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
-}
-
-.archmap__place-popup .place__feature-item h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-}
-
-.archmap__place-popup .place__feature-item p {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  line-height: 1.25;
-  font-weight: 400;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  flex-grow: 1;
-  gap: 4px;
-}
-
-.archmap__place-popup .place__feature-item .point-type--selishche use.icon__symbol,
-.archmap__place-popup .place__feature-item .point-type--stay use.icon__symbol,
-.archmap__place-popup .place__feature-item .point-type--cemetery use.icon__symbol {
-  fill: #4E4E4E;
-}
-
-.archmap__place-popup .place__feature-item .point-type .icon {
-  width: 12px;
-  height: 12px;
-}
-
-.archmap__place-popup .place__description {
-  font-size: 12px;
-}
-
-.point-type {
-  display: flex;
-  align-items: center;
-}
-
-.point-type .icon {
-  width: 24px;
-  height: 24px;
-}
-
-.point-type--selishche use.icon__symbol {
-  fill: #EB3E2B;
-}
-
-.point-type--stay use.icon__symbol {
-  fill: #1175D0;
-}
-
-.point-type--cemetery use.icon__symbol {
-  fill: #4E4E4E;
+.partners--page .partners__item--become-partner .partner__link:hover use.icon__symbol,
+.partners--page .partners__item--become-partner .partner__link:focus use.icon__symbol {
+  stroke: #D13726;
 }
 
 @media (min-width: 768px) {
@@ -9156,6 +9519,19 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .btn--link .icon {
     width: 20px;
     height: 20px;
+  }
+
+  .btn--up {
+    border-color: 1px solid #EB3E2B;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .btn--up > .icon {
+    position: relative;
+    margin-top: -29px;
+    margin-right: -6px;
+    margin-bottom: -12px;
   }
 
   .main-header__button-wrap .btn--main {
@@ -9352,6 +9728,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     max-width: 170px;
   }
 
+  .form--become-partner {
+    row-gap: 20px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
   .filter--tabs-status,
   .filter--tabs-museum-tags,
   .filter--tabs-price-block {
@@ -9390,9 +9772,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .main-slider__item-wrap {
-    width: 100%;
-    height: calc(100vh - 155px);
-    aspect-ratio: unset;
+    aspect-ratio: 3/2;
   }
 
   .main-slider__content {
@@ -9471,6 +9851,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
   .expositions__list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .expositions__item:nth-child(-n+4) {
+    display: block;
   }
 
   .expositions__item.exposition--pushkincard::before {
@@ -9856,9 +10240,72 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     transform: translateY(5px);
   }
 
+  .excursions__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .excursions__item:nth-child(-n+4) {
+    display: block;
+  }
+
+  .excursions__item.excursion--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .excursions__item .excursion__title {
+    font-size: 23px;
+  }
+
+  .excursions__item .excursion__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .excursions__item .excursion__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .excursions__item .excursion__days {
+    font-size: 18px;
+  }
+
+  .excursions__item .excursion__btn-wrap {
+    gap: 20px;
+  }
+
+  .excursions__item-type {
+    font-size: 12px;
+  }
+
+  .excursions__item-type {
+    margin-top: 20px;
+  }
+
+  .excursions__item-type span {
+    padding-left: 30px;
+  }
+
+  .excursions__item-type span::before {
+    width: 20px;
+  }
+
   .excursions--section .excursions__head {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .excursions--section .excursions__list {
+    margin-bottom: 50px;
   }
 
   .excursions--page .excursions__head {
@@ -9870,110 +10317,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 15px;
   }
 
-  .excursion__period {
-    font-size: 32px;
-  }
-
-  .excursion__period {
-    font-size: 30px;
-    -moz-column-gap: 45px;
-         column-gap: 45px;
-    margin-bottom: 30px;
-  }
-
-  .excursion__period time:last-child::before {
-    left: -36px;
-  }
-
-  .excursion__price {
-    margin-bottom: 40px;
-  }
-
-  .excursion__price ul {
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 40px;
-  }
-
-  .excursion__price ul::before {
-    width: 24px;
-    height: 24px;
-  }
-
-  .excursion__price-title {
-    font-size: 23px;
-  }
-
-  .excursion__price-title {
-    margin-bottom: 25px;
-  }
-
-  .excursion__price-title a .icon {
-    width: 20px;
-    height: 20px;
-    transform: translateY(5px);
-  }
-
-  .excursion__label-wrap {
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-
-  .excursion__label {
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-  }
-
-  .excursion__visiting-rules-title {
-    font-size: 23px;
-  }
-
-  .excursion__visiting-rules-title {
-    margin-bottom: 25px;
-  }
-
-  .excursion__visiting-rules-title a .icon {
-    width: 20px;
-    height: 20px;
-    transform: translateY(5px);
-  }
-
-  .excursion__visiting-notes {
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-    padding-left: 40px;
-  }
-
-  .excursion__visiting-notes::before {
-    width: 24px;
-    height: 24px;
-  }
-
-  .excursion__visiting-notes p {
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-  }
-
-  .excursion__visiting-notes p a {
-    font-size: 20px;
-  }
-
-  .excursion__visiting-notes p a .icon {
-    width: 20px;
-    height: 20px;
-    transform: translateY(5px);
+  .excursions--page .excursions__list {
+    margin-bottom: 50px;
   }
 
   .application .page__wrap {
@@ -10607,6 +10952,69 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 15px;
   }
 
+  .event-posters--section .event-posters__list {
+    margin-bottom: 50px;
+  }
+
+  .event-posters__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .event-posters__item:nth-child(-n+4) {
+    display: block;
+  }
+
+  .event-posters__item.excursion--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .event-posters__item .poster__title {
+    font-size: 23px;
+  }
+
+  .event-posters__item .poster__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .event-posters__item .poster__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .event-posters__item .poster__price {
+    font-size: 18px;
+  }
+
+  .event-posters__item .poster__btn-wrap {
+    gap: 20px;
+  }
+
+  .event-posters__item-type {
+    font-size: 12px;
+  }
+
+  .event-posters__item-type {
+    margin-top: 20px;
+  }
+
+  .event-posters__item-type span {
+    padding-left: 30px;
+  }
+
+  .event-posters__item-type span::before {
+    width: 20px;
+  }
+
   .programs--section {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -10628,6 +11036,65 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 15px;
   }
 
+  .programs--section .programs__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .programs--section .programs__list {
+    margin-bottom: 40px;
+  }
+
+  .programs--section .programs__item.program--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .programs--section .programs__item .program__title {
+    font-size: 23px;
+  }
+
+  .programs--section .programs__item .program__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .programs--section .programs__item .program__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .programs--section .programs__item .program__days {
+    font-size: 18px;
+  }
+
+  .programs--section .programs__item .program__btn-wrap {
+    gap: 20px;
+  }
+
+  .programs--section .programs__item-type {
+    font-size: 12px;
+  }
+
+  .programs--section .programs__item-type {
+    margin-top: 20px;
+  }
+
+  .programs--section .programs__item-type span {
+    padding-left: 30px;
+  }
+
+  .programs--section .programs__item-type span::before {
+    width: 20px;
+  }
+
   .master-classes--section {
     padding-bottom: 40px;
     padding-top: 40px;
@@ -10642,6 +11109,65 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .master-classes--section .master-classes__type-filter {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .master-classes--section .master-classes__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .master-classes--section .master-classes__list {
+    margin-bottom: 40px;
+  }
+
+  .master-classes--section .master-classes__item.master-class--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__title {
+    font-size: 23px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__days {
+    font-size: 18px;
+  }
+
+  .master-classes--section .master-classes__item .master-class__btn-wrap {
+    gap: 20px;
+  }
+
+  .master-classes--section .master-classes__item-type {
+    font-size: 12px;
+  }
+
+  .master-classes--section .master-classes__item-type {
+    margin-top: 20px;
+  }
+
+  .master-classes--section .master-classes__item-type span {
+    padding-left: 30px;
+  }
+
+  .master-classes--section .master-classes__item-type span::before {
+    width: 20px;
   }
 
   .lectures--section {
@@ -10663,6 +11189,65 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .lectures--section .lectures__type-filter {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .lectures--section .lectures__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lectures--section .lectures__list {
+    margin-bottom: 40px;
+  }
+
+  .lectures--section .lectures__item.lecture--pushkincard::before {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .lectures--section .lectures__item .lecture__title {
+    font-size: 23px;
+  }
+
+  .lectures--section .lectures__item .lecture__place {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    min-height: 20px;
+  }
+
+  .lectures--section .lectures__item .lecture__place::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lectures--section .lectures__item .lecture__days {
+    font-size: 18px;
+  }
+
+  .lectures--section .lectures__item .lecture__btn-wrap {
+    gap: 20px;
+  }
+
+  .lectures--section .lectures__item-type {
+    font-size: 12px;
+  }
+
+  .lectures--section .lectures__item-type {
+    margin-top: 20px;
+  }
+
+  .lectures--section .lectures__item-type span {
+    padding-left: 30px;
+  }
+
+  .lectures--section .lectures__item-type span::before {
+    width: 20px;
   }
 
   .season-ticket__list {
@@ -11149,67 +11734,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     font-size: 23px;
   }
 
-  .archmap__prompt {
-    font-size: 12px;
+  .partners--page .partners__list {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .archmap__header {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .archmap__header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  .archmap__title {
-    font-size: 45px;
-  }
-
-  .archmap__title {
-    margin-bottom: 30px;
-  }
-
-  .archmap__breadcrumbs {
-    font-size: 16px;
-    letter-spacing: 0.64px;
-  }
-
-  .archmap__breadcrumbs li {
-    margin-right: 25px;
-  }
-
-  .archmap__breadcrumbs li::after {
-    right: -14px;
-  }
-
-  .archmap__breadcrumbs li a {
-    min-height: unset;
-  }
-
-  .archmap__footer {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .archmap__area-label {
-    width: 400px;
-  }
-
-  .archmap__area-label h2 {
-    font-size: 32px;
-  }
-
-  .archmap__area-label h2 {
-    margin-bottom: 40px;
-  }
-
-  .archmap__area-label li.point-type span {
-    font-size: 23px;
-  }
-
-  .archmap__place-popup .place__title {
+  .partners--page .partners__item--become-partner .partner__link {
     font-size: 23px;
   }
 
@@ -11319,12 +11848,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
   }
-
-  .archmap__area-label li.point-type p {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-  }
 }
 
 @media (min-width: 768px){
@@ -11394,6 +11917,12 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column-span: 1;
   }
 
+  .excursions__item .excursion__wrap-content > .page__head-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
   .excursions--section .excursions__head > .page__head-title {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -11437,8 +11966,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .page__slider {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
     overflow: unset;
     grid-area: slider;
   }
@@ -11488,11 +12015,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     z-index: 150;
   }
 
-  .main-header--fixed__nav,
-  .main-header--fixed__menu {
-    transition: all 0.3s ease 0s;
-  }
-
   .main-header--fixed .main-header__nav {
     background-color: #ffffff;
   }
@@ -11517,7 +12039,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .main-header__nav {
-    position: static;
     background-color: unset;
     box-shadow: none;
     top: 0;
@@ -11529,8 +12050,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .main-header__menu {
-    position: static;
+    position: absolute;
     transform: unset;
+    top: 115px;
     height: auto;
     padding: 0;
     overflow: unset;
@@ -11651,7 +12173,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .main-header__menu .site-nav__list {
-    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
@@ -11724,8 +12245,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .main-slider__item-wrap {
+    aspect-ratio: 2/1;
     padding: 30px 0 30px;
-    height: calc(100vh - 269px);
   }
 
   .topical-links .swiper-button-prev {
@@ -11928,6 +12449,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     flex-grow: 1;
   }
 
+  .excursions__item .excursion__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
   .excursions--section .excursions__head {
     grid-template-areas: "title title type-filter";
     grid-row-gap: 50px;
@@ -11990,17 +12516,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .excursions--page .filter--select-age {
     width: 180px;
     margin-right: 0;
-  }
-
-  .excursion__price ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .excursion__price li {
-    width: 40%;
-    flex-grow: 1;
   }
 
   .application .figure {
@@ -12137,7 +12652,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     grid-template-columns: 1fr 460px;
     -moz-column-gap: 40px;
          column-gap: 40px;
-    grid-template-areas: "head img" "text img" "slider slider";
+    grid-template-areas: "head img" "text img";
     padding-bottom: 60px;
   }
 
@@ -12274,8 +12789,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .faq--section .figure--cross-with-triangle use.icon__symbol {
-    stroke: #1175D0;
-    fill: #1175D0;
+    stroke: #7B61FF;
+    fill: #7B61FF;
   }
 
   .faq--section .faq__list-wrap {
@@ -12353,35 +12868,35 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     gap: 50px;
   }
 
-  .price .table--admission-in-museum .trow__title,
-  .price .table--excursion .trow__title {
+  .price .table--admission-in-museum .block__title,
+  .price .table--excursion .block__title {
     text-align: left;
     width: 300px;
     background-color: unset;
     color: unset;
   }
 
-  .price .table--admission-in-museum .trow__title.active,
-  .price .table--excursion .trow__title.active {
+  .price .table--admission-in-museum .block__title.active,
+  .price .table--excursion .block__title.active {
     background-color: unset;
     color: unset;
   }
 
-  .price .table--admission-in-museum .trow__text,
-  .price .table--excursion .trow__text {
+  .price .table--admission-in-museum .block__text,
+  .price .table--excursion .block__text {
     display: table-cell;
   }
 
-  .price .table--admission-in-museum .trow__text p,
-  .price .table--excursion .trow__text p {
+  .price .table--admission-in-museum .block__text p,
+  .price .table--excursion .block__text p {
     display: flex;
     justify-content: center;
     width: 10%;
     flex-grow: 1;
   }
 
-  .price .table--admission-in-museum .trow__text p::before,
-  .price .table--excursion .trow__text p::before {
+  .price .table--admission-in-museum .block__text p::before,
+  .price .table--excursion .block__text p::before {
     display: none;
   }
 
@@ -12416,7 +12931,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   }
 
   .price .table thead tr {
-    background-color: #1175D0;
+    background-color: #7B61FF;
     color: #F9F9F9;
   }
 
@@ -12494,6 +13009,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     margin-bottom: 60px;
   }
 
+  .event-posters__item .poster__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
   .programs--section .programs__type-filter {
     flex-direction: row;
     align-items: center;
@@ -12506,6 +13026,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-left: 0;
     overflow: unset;
     flex-grow: 1;
+  }
+
+  .programs--section .programs__item .program__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
   }
 
   .master-classes--section .master-classes__type-filter {
@@ -12522,6 +13047,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     flex-grow: 1;
   }
 
+  .master-classes--section .master-classes__item .master-class__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
+  }
+
   .lectures--section .lectures__type-filter {
     flex-direction: row;
     align-items: center;
@@ -12534,6 +13064,11 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-left: 0;
     overflow: unset;
     flex-grow: 1;
+  }
+
+  .lectures--section .lectures__item .lecture__wrap-content {
+    grid-template-columns: auto 120px;
+    padding: 20px;
   }
 
   .collections--page .collections__head {
@@ -12902,6 +13437,21 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     padding-right: 0;
   }
 
+  .partners--page .partners__head {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .partners--page .partners__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+
+  .partners--page .partners__item .partner__link {
+    padding: 50px;
+  }
+
   .news-detail > .event__img {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -13128,18 +13678,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 3;
-  }
-
-  .page__content .page__wrap > .news-detail__slider {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-
-  .news-detail__slider {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
   }
 
   .collection-exhibit__head {
@@ -13472,56 +14010,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column-span: 1;
   }
 
-  .page__content .page__wrap > p {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .museum-area__info > p {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .news-detail > p {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .collection-exhibit > p {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .museum-mariel__info > p {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .guides__how .page__wrap > p {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .history > p {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .pages-history > p {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
   .faq--page .form--feedback > .form__field--theme {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -13753,16 +14241,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     -ms-grid-column: 2;
   }
 
-  .page__content .page__wrap > .page__slider {
+  .page__slider {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-  }
-
-  .page__slider {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
   }
 
   .guides__how .page__wrap > span {
@@ -13876,12 +14358,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   -ms-grid-column-span: 1;
   }
 
-.archmap__area-label li.point-type > .page__text {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  }
-
 @media (min-width: 1024px) and (min-width: 768px) {
   .museum-areas--section-visitors .museum-areas__head-wrap {
     padding-left: 15px;
@@ -13938,6 +14414,8 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
   .main-slider__item-wrap {
     width: 100%;
+    height: 800px;
+    aspect-ratio: unset;
   }
 
   .topical-links {
@@ -13948,6 +14426,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .expositions__list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
+  }
+
+  .expositions__item:nth-child(-n+6) {
+    display: block;
   }
 
   .expositions--section .expositions__head {
@@ -13988,6 +14470,16 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   .events--holidays .events__head,
   .events--section .events__head {
     grid-column-gap: 50px;
+  }
+
+  .excursions__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .excursions__item:nth-child(-n+6) {
+    display: block;
   }
 
   .excursions--section .excursions__head {
@@ -14060,6 +14552,31 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 
   .event-posters--section .event-posters__head {
     grid-column-gap: 50px;
+  }
+
+  .event-posters__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .event-posters__item:nth-child(-n+6) {
+    display: block;
+  }
+
+  .programs--section .programs__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .master-classes--section .master-classes__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .lectures--section .lectures__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
   }
 
   .season-ticket__list {
@@ -14194,6 +14711,10 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
     margin: 0;
     justify-self: end;
   }
+
+  .partners--page .partners__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -14242,7 +14763,7 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
 }
 
 @media (max-width: 767.98px) {
-  .main-footer__site-developer a > p {
+  .btn--up > span {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -14256,55 +14777,17 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
             clip-path: inset(100%);
   }
 
-  .archmap {
-    margin-bottom: 40px;
-  }
-
-  .archmap__prompt {
-    display: none;
-  }
-
-  .archmap__footer {
-    padding-top: 0;
-    flex-wrap: wrap;
-    gap: 0;
-  }
-
-  .archmap__footer p {
-    padding-top: 0;
-    width: 100%;
-  }
-
-  .archmap__designation {
-    padding: 15px 0;
-    border: none;
-    width: 100%;
-  }
-
-  .archmap__designation .point-type {
-    font-size: 12px;
-    gap: 5px;
-  }
-
-  .archmap__designation .point-type .icon {
-    width: 12px;
-    height: 12px;
-  }
-
-  .archmap__area-label {
-    padding: 15px;
-  }
-
-  .archmap__place-popup {
-    padding: 15px;
-  }
-
-  .archmap__place-popup .close-btn {
-    top: 15px;
-    right: 15px;
-  }
-
-  .archmap__place-popup .place__feature-item {
-    width: 100%;
+  .main-footer__site-developer a > p {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
   }
 }

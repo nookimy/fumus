@@ -64,65 +64,6 @@ new Swiper('.exposition__gallery-wrap.swiper', {
     }
 });
 
-new Swiper('.excursion__gallery-wrap.swiper', {
-    
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-
-        768: {            
-            slidesPerView: 1.5,
-            loop: true,
-            spaceBetween: 30,
-        },
-
-        1024: {            
-            slidesPerView: 3,
-            loop: true,
-            loopedSlides: 3,
-            spaceBetween: 30            
-        },
-    }
-});
-
-new Swiper('.news-detail__gallery-wrap.swiper', {
-    
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-
-        768: {            
-            slidesPerView: 1.5,
-            loop: true,
-            spaceBetween: 30,
-        },
-
-        1024: {         
-            slidesPerView: 3,
-            spaceBetween: 30,
-            initialSlide: 2,
-            loop: true,
-            loopedSlides: 3,
-        },
-    }
-});
-
 new Swiper('.museum-area__gallery-wrap.swiper', {
     slidesPerView: 1,
     navigation: {
@@ -200,3 +141,15 @@ new Swiper('.event__gallery-wrap.swiper', {
         },
     }
 });
+
+$(document).ready(function () {
+    $(".block__title").click(function (event) {
+        if ($(".block").hasClass("block--showoneitem")) {
+            $(".block__title").not($(this)).removeClass("active");
+            $(".block__text").not($(this).next()).slideUp(300);
+        }
+        $(this).toggleClass("active").next().slideToggle(300);
+    });
+});
+
+

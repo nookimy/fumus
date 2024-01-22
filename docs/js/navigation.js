@@ -128,50 +128,19 @@ let scrollChange;
 const mainHeader = document.querySelector(".main-header")
 var prevScrollpos = window.pageYOffset;
 
-/*Положение основного контента страницы в зависимости от высоты хэдера*/
-let navHeight = document.querySelector('.main-header__nav').offsetHeight;
-let menuHeight = document.querySelector('.main-header__menu').offsetHeight;
-let mainHeaderFixed = document.querySelector(".main-header--fixed");
-
-if (windowWidth < 1024) {
-    menu.style.paddingTop = navHeight + "px";
-    search.style.paddingTop = navHeight + "px";
-}
-
 function fixFeader() {
-    if (windowWidth >= 1024) {
-        scrollChange = 500;
-        
-    } else {
+    if (windowWidth < 1024) {
         scrollChange = 150;
-        
+
+    } else {
+        scrollChange = 274;
+
     }
-
     scrollpos = window.scrollY;
-
     if (scrollpos >= scrollChange) {
-
-        mainHeader.classList.add("main-header--fixed");        
-        mainHeader.style.paddingBottom = navHeight + "px";
-        
-
-        if (windowWidth >= 1024) {
-            mainHeader.style.paddingBottom = navHeight + menuHeight + "px";    
-            
-        }
-
-        
-
-    }  else {
+        mainHeader.classList.add("main-header--fixed");
+    } else {
         mainHeader.classList.remove("main-header--fixed");
-
-        if (windowWidth >= 1024) {
-            mainHeader.style.paddingBottom = "0px";  
-            menu.style.paddingTop = "0px";
-            search.style.paddingTop = "0px";
-        }
-        
-        
     }
 }
 
@@ -197,6 +166,26 @@ window.addEventListener('scroll', function() {
     fixFeader();
 });
 
+/*Положение основного контента страницы в зависимости от высоты хэдера*/
+let navHeight = document.querySelector('.main-header__nav').offsetHeight;
+let menuHeight = document.querySelector('.main-header__menu').offsetHeight;
+
+function headerPadding() {
+
+    if (windowWidth < 1024) {
+        mainHeader.style.paddingBottom = navHeight + "px";
+        menu.style.paddingTop = navHeight + "px";
+        search.style.paddingTop = navHeight + "px";
+    } else {
+        mainHeader.style.paddingBottom = navHeight + menuHeight + "px";
+        console.log()
+    }
+
+
+
+};
+
+headerPadding();
 
 // при нажатии на кнопку .btn-up
 document.querySelector('.btn--up').onclick = () => {
