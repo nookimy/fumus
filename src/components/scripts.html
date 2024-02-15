@@ -1,0 +1,79 @@
+<script src="js/jquery-3.7.0.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/sliders.js"></script>
+<script src="js/navigation.js"></script>
+
+<script>
+    $(document).ready(function () {
+        if ($(window).width() < '1024'){
+            $(".expositions__filters-title").click(function (event) {
+                $(".expositions__filters-title").not($(this)).removeClass("active");
+                $(".expositions__filters-block").not($(this).next()).slideUp(300);
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(window).width() < '1024'){
+            $(".collections__filters-title").click(function (event) {
+                $(".collections__filters-title").not($(this)).removeClass("active");
+                $(".collections__filters-block").not($(this).next()).slideUp(300);
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(window).width() < '1024'){
+            $(".excursions__filters-title").click(function (event) {
+                $(".excursions__filters-title").not($(this)).removeClass("active");
+                $(".excursions__filters-block").not($(this).next()).slideUp(300);
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(window).width() < '1024'){
+            $(".events__filters-title").click(function (event) {
+                $(".events__filters-title").not($(this)).removeClass("active");
+                $(".events__filters-block").not($(this).next()).slideUp(300);
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".question").click(function (event) {
+            if ($(".faq__list").hasClass("faq__list--showoneitem")) {
+                $(".question").not($(this)).removeClass("active");
+                $(".answer").not($(this).next()).slideUp(300);
+            }
+            $(this).toggleClass("active").next().slideToggle(300);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        if ($(window).width() < '1024'){
+            $("td.block__title").click(function (event) {
+                if ($("tbody.block").hasClass("block--showoneitem")) {
+                    $("td.block__title").not($(this)).removeClass("active");
+                    $("td.block__text").not($(this).next()).slideUp(300);
+                }
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        }
+    });
+
+</script>
+
+
+
+<script src="js/script.js"></script>
+<script src="js/modal.js"></script>

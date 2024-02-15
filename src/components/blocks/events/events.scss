@@ -1,0 +1,708 @@
+.events {
+
+  &__list {
+    @include list();
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 115px;
+    grid-column-gap: 1px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+      "img info"
+      "cont cont";
+
+    @media (min-width: $md-width) {
+      grid-template-columns: 250px auto 120px;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      grid-template-areas:
+      "img cont info";
+    }
+
+    @media (min-width: $lg-width) {
+      grid-template-columns: 37% auto 18%;
+    }
+
+
+    &.event--pushkincard {
+      & .event__pushkincard {
+        display: block;
+      }
+    }
+
+    & picture {
+      @include mp();
+      line-height: 0;
+    }
+
+    & .event {
+      &__img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit:cover;
+        grid-area: img;
+      }
+
+      &__info {
+        position: relative;
+        display: flex;
+        padding: 15px 25px 30px;
+        grid-area: info;
+        background-color: $light;
+
+        @media (min-width: $md-width) {
+          border-left: 2px dashed $light-gray;
+        }
+
+        @media (min-width: $lg-width) {
+          padding: 40px 50px;
+          align-items: flex-start;
+        }
+
+        @media (min-width: $xl-width) {
+          padding: 40px 60px;
+
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: -1px;
+          width: 15px;
+          height: 15px;
+          background-color: $light-gray;
+          border-radius: 50%;
+
+          @media (min-width: $md-width) {
+            left: 0;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &::before {
+          top: 0;
+          transform: translateY(-50%) translateX(-50%);
+        }
+
+        &::after {
+          bottom: 0;
+          transform: translateY(50%) translateX(-50%);
+        }
+      }
+
+      &__days {
+        width: 100%;
+        @include mp();
+        @include text-accent;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      &__time-start {
+        position: relative;
+
+        &::before {
+          content: "—";
+          position: absolute;
+          top: 0;
+          right: 0;
+          @include h1;
+          font-size: 18px;
+
+          @media (min-width: $md-width) {
+            font-size: 18px;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      &__day-month {
+        display: block;
+        @include h1;
+        margin-bottom: -5px;
+
+        @media (min-width: $md-width) {
+          font-size: 35px;
+        }
+      }
+
+      &__weekday {
+        display: block;
+        margin-top: 1px;
+        @include text-12;
+        color: $gray;
+        text-transform: capitalize;
+
+        @media (min-width: $md-width) {
+          font-size: 16px;
+        }
+      }
+
+      &__age {
+        position: absolute;
+        bottom: 7px;
+        right: 10px;
+        @include mp();
+        @include text-normal-caps;
+        font-size: 20px;
+        color: $main;
+
+        &::after {
+          content: "+";
+        }
+
+        @media (min-width: $lg-width) {
+          font-size: 24px;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      &__wrap-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        background-color: $light;
+        grid-area: cont;
+
+        @media (min-width: $lg-width) {
+          padding: 40px 40px 30px;
+        }
+
+        @media (min-width: $xl-width) {
+          gap: 0;
+        }
+      }
+
+      &__title {
+        @include mp();
+        @include h3;
+
+        @media (min-width: $xl-width) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__pushkincard {
+        display: none;
+        width: 20px;
+        height: 20px;
+        background: url("../events/pushkin-card.png") no-repeat center;
+        background-size: contain;
+        border-radius: 50%;
+        border: 1px solid $gray;
+
+        @media (min-width: $xl-width) {
+          margin-bottom: 20px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &__advt {
+        @include mp();
+        @include text-12;
+        color: $dark-gray;
+
+        @media (min-width: $xl-width) {
+          @include text-normal;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__place {
+        position: relative;
+        @include mp();
+        @include text-10;
+        color: $dark-gray;
+        padding-left: 25px;
+        min-height: 15px;
+
+        @media (min-width: $md-width) {
+          @include text-12;
+          padding-left: 30px;
+          min-height: 20px;
+        }
+
+        @media (min-width: $xl-width) {
+          margin-bottom: 30px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 15px;
+          height: 15px;
+          background: url("../icons/map-pin-gray.svg") no-repeat center;
+          background-size: contain;
+
+          @media (min-width: $md-width) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        & ul {
+          @include list();
+          @include mp();
+          display: flex;
+          flex-direction: column;
+
+          & li {
+            &::after {
+              content: ",";
+            }
+
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &__link-wrap {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $md-width) {
+          justify-content: flex-start;
+          gap: 15px;
+        }
+
+        @media (min-width: $lg-width) {
+          margin-top: auto;
+        }
+      }
+    }
+
+  }
+}
+
+.events--section {
+  background-color: $light-gray;
+
+  & .events__item {
+    & .event {
+      &__info {
+        @media (min-width: $md-width) {
+          border-left: 2px dashed $light-gray;
+        }
+
+        &::before,
+        &::after {
+          background-color: $light-gray;
+        }
+      }
+    }
+  }
+}
+
+.events--holidays {
+  background-color: $superlight;
+
+  & .events__item {
+    & .event {
+      &__info {
+        @media (min-width: $md-width) {
+          border-left: 2px dashed $superlight;
+        }
+
+        &::before,
+        &::after {
+          background-color: $superlight;
+        }
+      }
+    }
+  }
+}
+
+.events--holidays,
+.events--section {
+
+
+  & .events__head {
+    grid-template-areas:
+      "title time-filter"
+      "place-filter place-filter";
+    @include container;
+    margin-bottom: 25px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: calc(100% - 125px) 100px;
+    grid-gap: 25px;
+
+    @media (min-width: $lg-width) {
+      grid-template-areas:
+      "title place-filter time-filter";
+      grid-row-gap: 50px;
+      grid-column-gap: 110px;
+      grid-template-columns: auto 250px 200px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $xl-width) {
+      grid-column-gap: 50px;
+    }
+  }
+
+  & .events__list {
+    margin-bottom: 30px;
+
+    @media (min-width: $md-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+
+
+
+  & .page__subtitle {
+    grid-area: title;
+    margin-bottom: 0;
+  }
+
+  & .filter--select-status {
+    grid-area: time-filter;
+    position: relative;
+    width: 100%;
+
+    & select {
+      width: 100%;
+      @include text-normal-caps;
+      color: $secondary;
+      @include mp();
+      border: none;
+      margin-left: auto;
+      background-image: none;
+      background-color: transparent;
+      text-align: right;
+    }
+
+
+    & legend {
+      @media (max-width: 1023px) {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+      }
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  & .filter--select-place {
+    grid-area: place-filter;
+    width: 100%;
+
+    @media (min-width: $lg-width) {
+      width: 250px;
+    }
+  }
+
+
+}
+
+.events--page {
+  background-color: #EAEBEC;
+  & .events {
+    &__head {
+      background-color: $superlight;
+      padding-top: 15px;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      @media (min-width: $md-width) {
+        margin-bottom: 50px;
+      }
+
+      & .page__subtitle {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__filters {
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+
+      @media (min-width: $lg-width) {
+        border-bottom: none;
+      }
+    }
+
+    &__filters-title {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      @include mp();
+      @include text-normal;
+      min-height: 30px;
+      transition: $transition;
+
+      @media (min-width: $lg-width) {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+      }
+
+      & span {
+        display: none;
+      }
+
+      &--selected {
+        & span {
+          color: $secondary;
+          display: inline-block;
+          margin-left: 0.25em;
+        }
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        content: "";
+        background-color: $dark-gray;
+      }
+
+      &::before {
+        right: 0;
+        width: 18px;
+        height: 2px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-50%) rotate(-90deg);
+        opacity: 1;
+      }
+
+      &::after {
+        right: 8px;
+        width: 2px;
+        height: 18px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-50%) rotate(-90deg);
+      }
+
+
+
+
+      &.active {
+        color: $secondary;
+        &::before {
+          transition: all 0.5s ease-in-out;
+          transform:  translateY(-50%) rotate(90deg);
+          opacity: 0;
+        }
+
+        &::after {
+          transition: all 0.5s ease-in-out;
+          transform:  translateY(-50%) rotate(90deg);
+        }
+      }
+    }
+
+    &__filters-block {
+      padding-top: 10px;
+      display: none;
+
+      @media (min-width: $lg-width) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: space-between;
+      }
+    }
+
+    &__filters-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      @media (min-width: $lg-width) {
+        margin-bottom: 0;
+        width: 740px;
+      }
+    }
+
+    &__filters-btn-wrap {
+      display: flex;
+      gap: 15px;
+
+      & .btn {
+        min-height: 35px;
+        padding: 5px 18px;
+
+        &--main-invert {
+          background-color: transparent;
+
+          &:hover,
+          &:focus {
+            background-color: $main-dark;
+            border-color: $main-dark;
+            color: $light;
+          }
+        }
+
+        @media (min-width: $lg-width) {
+          min-height: 45px;
+          padding: 10px 40px;
+
+          &--main {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__status-filters {
+      @include container;
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (min-width: $lg-width) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 15px;
+      }
+    }
+
+    &__tabs-wrap {
+      position: relative;
+      width: auto;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media (min-width: $lg-width) {
+        overflow: unset;
+        flex-grow: 1;
+      }
+    }
+
+    &__list {
+      margin-bottom: 30px;
+
+      @media (min-width: $md-width) {
+        margin-bottom: 50px;
+      }
+    }
+
+
+  }
+
+  & > .page__wrap {
+    padding-bottom: 25px;
+
+    @media (min-width: $md-width) {
+      padding-bottom: 40px;
+    }
+  }
+
+  & .filter--select-age {
+    display: none;
+    width: 100%;
+    margin-right: 15px;
+
+    @media (min-width: $lg-width) {
+      width: 180px;
+      margin-right: 0;
+    }
+  }
+
+  & .filter--select-place,
+  & .filter--select-audience,
+  & .filter--select-date {
+    flex-grow: 1;
+    width: 200px;
+  }
+
+  & .filter--check-pushkincard {
+    width: 50px;
+
+    & label {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 30px;
+      border-radius: 30px;
+      border: 1px solid #D9D9D9;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        border: 1px solid #C4C4C4;
+        transform: translateX(-1px)translateY(-50%);
+        transition: $transition;
+        background-image: url("../expositions/pushkin-card.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+      }
+    }
+
+    & input[type="checkbox"] {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+
+      &:checked+label::before {
+        border-color: $secondary;
+        background-color: $secondary;
+        transform: translateX(19px)translateY(-50%);
+      }
+    }
+  }
+}

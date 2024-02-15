@@ -1,0 +1,321 @@
+.btn {
+  @include btn-reset;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  transition: $transition;
+  text-align: center;
+
+  & use.icon__symbol {
+    transition: $transition;
+  }
+
+  &--main {
+    @include text-10;
+    padding: 5px 15px;
+    min-height: 25px;
+    background-color: $main;
+    border-color: $main;
+    color: $light;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      padding: 10px 30px;
+      min-height: 45px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $main-dark;
+      border-color: $main-dark;
+    }
+  }
+
+  &--main-invert {
+    @include text-10;
+    padding: 5px 15px;
+    min-height: 25px;
+    background-color: $light;
+    border-color: $main;
+    color: $main;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      padding: 10px 30px;
+      min-height: 45px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $main-dark;
+      border-color: $main-dark;
+      color: $light;
+    }
+
+  }
+
+  &--secondary {
+    @include text-10;
+    padding: 5px 15px;
+    min-height: 25px;
+    background-color: $light;
+    border-color: $light;
+    color: $dark;
+    gap: 6px;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      padding: 10px 30px;
+      min-height: 45px;
+    }
+
+    & .icon {
+      width: 14px;
+      height: 14px;
+
+      @media (min-width: $md-width) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    & use.icon__symbol {
+      stroke: $dark;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba(78, 78, 78, 0.5);
+      color: $light;
+
+      & use.icon__symbol {
+        stroke: $light;
+      }
+    }
+  }
+
+  &--small-btn {
+    @include text-12;
+    padding: 5px 15px;
+    min-height: 30px;
+    background-color: transparent;
+    border-color: $light;
+    color: $light;
+
+    &:hover,
+    &:focus {
+      color: $dark-gray;
+      background-color: $light;
+      border-color: $light;
+    }
+  }
+
+  &--small-red {
+    @include text-12;
+    padding: 5px 15px;
+    min-height: 30px;
+    background-color: $main;
+    border-color: $main;
+    color: $light;
+
+    &:hover,
+    &:focus {
+      background-color: $main-dark;
+      border-color: $main-dark;
+    }
+  }
+
+  &--link {
+    @include text-10;
+    padding: 5px 15px;
+    min-height: 25px;
+    background-color: transparent;
+    border-color: transparent;
+    color: $dark;
+    gap: 6px;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      padding: 10px 30px;
+      min-height: 45px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $dark;
+    }
+
+    & .icon {
+      width: 14px;
+      height: 14px;
+
+      @media (min-width: $md-width) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    & use.icon__symbol {
+      stroke: $dark;
+    }
+  }
+
+  &--up {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: none;
+    transform: translateX(110%);
+
+    @media (min-width: $md-width) {
+      border-color: 1px solid $main;
+      padding: 10px;
+      background-color: white;
+    }
+
+    & > .icon {
+      @media (min-width: $md-width) {
+        position: relative;
+        margin-top: -29px;
+        margin-right: -6px;
+        margin-bottom: -12px;
+      }
+    }
+
+
+    & > span {
+      @include text-normal;
+      color: $main;
+
+      @media (max-width: $mobile-width-only) {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+      }
+
+    }
+  }
+
+}
+
+.main-header__button-wrap .btn {
+  &--main {
+    @include text-12;
+    min-height: 35px;
+    width: 40%;
+    flex-grow: 1;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      height: 45px;
+    }
+
+    @media (min-width: $lg-width) {
+      min-width: 170px;
+      order: 2;
+    }
+  }
+}
+
+.main-slider__btn-wrap .btn {
+  @include text-12;
+  min-height: 35px;
+  min-width: 115px;
+
+  @media (min-width: $md-width) {
+    @include text-normal;
+    min-width: 185px;
+    min-height: 45px;
+  }
+}
+
+.excursion__btn-wrap .btn {
+  @include text-10;
+  padding: 5px;
+  min-height: 27px;
+
+  @media (min-width: $md-width) {
+    @include text-12;
+    padding: 5px 15px;
+    min-height: 30px;
+
+  }
+}
+
+.expositions__list .exposition__wrap-content .btn {
+  @media (min-width: $md-width) {
+    @include text-12;
+    padding: 5px 15px;
+    min-height: 30px;
+  }
+}
+
+.event__link-wrap .btn {
+  &--main-invert {
+    min-width: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: auto;
+
+    @media (min-width: $md-width) {
+      margin-right: 0;
+    }
+
+    @media (min-width: $xl-width) {
+      width: 170px;
+      font-size: 16px;
+      min-height: 45px;
+    }
+  }
+  &--link {
+    gap: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media (min-width: $xl-width) {
+      width: 170px;
+      font-size: 16px;
+      min-height: 45px;
+    }
+  }
+}
+
+.application__text .btn {
+  &--main {
+    @include text-12;
+    min-height: 40px;
+    width: 100%;
+    max-width: 300px;
+
+    @media (min-width: $md-width) {
+      @include text-normal;
+      min-height: 45px;
+      max-width: 255px;
+    }
+  }
+
+}
+
+.museum-area__btn-wrap .btn {
+  width: 40%;
+  flex-grow: 1;
+  min-height: 35px;
+
+  @media (min-width: $md-width) {
+    min-height: 45px;
+  }
+}
+

@@ -1,0 +1,125 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $lg-width) {
+    gap: 23px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    gap: 20px;
+
+    @media (min-width: $lg-width) {
+      gap: 23px;
+    }
+
+
+    &:hover,
+    &:focus {
+      & use.icon__symbol {
+        fill: $secondary;
+      }
+    }
+  }
+
+  & .icon {
+    width: 39px;
+    height: 35px;
+
+    @media (min-width: $lg-width) {
+      width: 78px;
+      height: 70px;
+    }
+  }
+
+  & use.icon__symbol {
+    fill: $dark;
+  }
+}
+
+.main-header .logo {
+  position: relative;
+  z-index: 5;
+  margin-left: 30px;
+
+  @media (min-width: $lg-width) {
+    margin-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -58px;
+    left: -14px;
+    width: 66.47px;
+    height: 66.47px;
+    background: $status;
+    filter: blur(30px);
+    transform-origin: center;
+    transform: rotate(-45deg) translateY(0);
+    z-index: -1;
+
+
+    @media (min-width: $lg-width) {
+      width: 116px;
+      height: 116px;
+      top: -94px;
+      left: -20px;
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 5;
+    @include text-logo;
+    width: 180px;
+  }
+}
+
+.main-header .logo {
+  &__text {
+    display: none;
+
+    @media (min-width: $lg-width) {
+      display: block;
+    }
+  }
+}
+
+.main-header--fixed .logo {
+
+  @media (min-width: $lg-width) {
+    margin-right: auto;
+    margin-left: 39px;
+    order: 3;
+
+    &__text {
+      display: none;
+    }
+  }
+
+}
+
+.main-footer .logo {
+
+
+  &__text {
+    @include text-medium;
+    font-size: 16px;
+    width: 164px;
+  }
+  & .icon {
+    width: 71px;
+    height: 66px;
+  }
+
+  & use.icon__symbol {
+    fill: $light;
+  }
+}

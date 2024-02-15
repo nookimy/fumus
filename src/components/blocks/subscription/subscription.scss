@@ -1,0 +1,21 @@
+.subscription {
+  &__title {
+    @include mp();
+    @include text-medium;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media (min-width: $md-width) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.main-footer .subscription {
+  width: 100%;
+
+  @media (min-width: $md-width) {
+    grid-area: subscription;
+  }
+}

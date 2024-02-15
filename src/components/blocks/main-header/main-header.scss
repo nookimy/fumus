@@ -1,0 +1,187 @@
+/*Три состояния меню:
+1. Мобильное: фиксированное с бургером, скрывается при скролле вниз, показывается при скролле вверх
+2. Десктопное: Статичное полностью раскрытое, показывается до момента своего скрытия из вьюпорта
+3. Десктопное при скролле: с бургером, активно с момента скрытия из вьюпорта статичного меню, скрывается при скролле вниз, показывается при скролле вверх*/
+
+.main-header {
+  position: relative;
+  z-index: 100;
+
+  &__nav,
+  &__menu,
+  &__search {
+    position: fixed;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__menu,
+  &__search {
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    overflow: auto;
+
+
+
+    &--opened {
+      transform: translateY(0);
+    }
+  }
+
+  &--fixed {
+    @media (min-width: $lg-width) {
+      z-index: 150;
+    }
+    & .main-header {
+      &__nav,
+      &__menu,
+      &__search {
+        position: fixed;
+        top: 0;
+
+
+        &--opened {
+          transform: translateY(0);
+        }
+      }
+
+      &__nav {
+        transform: translateY(-100%);
+
+        box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+
+        @media (min-width: $lg-width) {
+          background-color: $light;
+        }
+
+        & .figure__blue-triangle,
+        & .figure__blue-line {
+          display: none;
+        }
+      }
+
+      &__menu,
+      &__search {
+
+        position: fixed;
+      }
+
+      &__menu {
+        @media (min-width: $lg-width) {
+          top: 0;
+          transform: translateY(-200%);
+          background-color: $light;
+
+          & .page__wrap {
+            border-bottom: unset;
+          }
+
+
+          &--opened {
+            top: 115px;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &__button-wrap {
+        @media (min-width: $lg-width) {
+          order: 4;
+        }
+      }
+    }
+
+  }
+
+
+
+  &__nav {
+    width: 100vw;
+    padding: 20px 0 25px;
+    background-color: $light;
+    box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+    z-index: 15;
+
+    @media (min-width: $lg-width) {
+      background-color: unset;
+      box-shadow: none;
+      top: 0;
+      left: 0;
+    }
+
+    & .page__wrap {
+      position: relative;
+    }
+
+
+    & .main-header__button-wrap {
+      display: none;
+
+      @media (min-width: $lg-width) {
+        display: flex;
+      }
+    }
+  }
+
+  &__menu {
+    padding: 0;
+    height: calc(100vh - 80px);
+
+
+    @media (min-width: $lg-width) {
+      position: absolute;
+      transform: unset;
+      top: 115px;
+      height: auto;
+      padding: 0;
+      overflow: unset;
+
+    }
+
+    & .page__wrap {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $light;
+      height: auto;
+
+      @media (min-width: $lg-width) {
+        background-color: unset;
+        border-bottom: 1px solid $light-gray;
+
+      }
+
+    }
+
+    & .main-header__button-wrap {
+      margin-bottom: 8px;
+
+      @media (min-width: $lg-width) {
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    padding: 23px 0;
+    background-color: $light;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+
+    @media (min-width: $lg-width) {
+      padding: 0;
+      display: none;
+    }
+  }
+
+  &__button-wrap {
+    display: flex;
+    gap: 20px;
+
+    @media (min-width: $lg-width) {
+      gap: 30px;
+    }
+  }
+}

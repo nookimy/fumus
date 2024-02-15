@@ -1,0 +1,37 @@
+.visually-impaired {
+  &__btn {
+    @include btn-reset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: $transition;
+
+    & .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    & use.icon__symbol {
+      stroke: $dark-gray;
+    }
+
+    &:hover,
+    &:focus {
+      & use.icon__symbol {
+        stroke: $secondary;
+      }
+    }
+  }
+}
+
+.main-header .visually-impaired__btn {
+  position: relative;
+  z-index: 5;
+
+  @media (min-width: $lg-width) {
+    position: unset;
+    z-index: unset;
+  }
+}
