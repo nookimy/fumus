@@ -1,0 +1,388 @@
+.archmap {
+    @media (max-width: $mobile-width-only) {
+        margin-bottom: 40px;
+    }
+    margin-bottom: 83px;
+
+    &__navigation {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: $light-gray;
+    }
+
+    &__prompt {
+        @media (max-width: $mobile-width-only) {
+            display: none;
+        }
+        width: 100%;
+        max-width: 230px;
+        position: sticky;
+        top: 30px;
+        left: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include text-status;
+        opacity: 0.5;
+    }
+
+    &__header {
+        @include container;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media (min-width: $md-width) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }    
+
+    &__title {
+        @include mp();
+        @include h1;
+        margin-bottom: 15px;
+
+        @media (min-width: $md-width) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__breadcrumbs {
+        @include text-normal-caps;
+        & ul {
+            @include list();
+            display: inline;
+
+        }
+        
+        & li {
+        position: relative;
+        display: inline;
+        margin-right: 14px;
+
+
+        @media (min-width: $md-width) {
+            margin-right: 25px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "/";
+            right: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media (min-width: $md-width) {
+            right: -14px;
+            }
+        }
+
+        &:last-child {
+            &::after {
+            display: none;
+            }
+        }
+
+        }
+
+        & li a {
+        display: inline-flex;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+        min-height: 30px;
+        transition: $transition;
+
+        @media (min-width: $md-width) {
+            min-height: unset;
+        }
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+        }
+        }
+    }
+
+    &__footer {     
+        @media (max-width: $mobile-width-only) {
+            padding-top: 0;
+            flex-wrap: wrap;
+            gap: 0;
+        }  
+        @include container;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        
+        & p {
+            @media (max-width: $mobile-width-only) {
+                padding-top: 0;
+                width: 100%;
+                
+            }
+            margin: 0;
+            width: 40%;
+            flex-grow: 1;
+        }
+    }
+
+    &__designation {
+        @media (max-width: $mobile-width-only) {
+            padding: 15px 0;
+            border: none;
+            width: 100%;
+            
+        }
+        width: 40%;
+        flex-grow: 1;
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid var(--additional-light-gray, #EAEBEC);
+        background: #FFF;
+        padding: 20px;
+        @include text-normal;
+
+        & ul {
+            @include list;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        & .point-type {
+
+            @media (max-width: $mobile-width-only) {
+                font-size: 12px;
+                gap: 5px;
+
+                & .icon {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            gap: 20px;
+            align-items: center;
+
+            & .icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &__area-label {
+        @media (max-width: $mobile-width-only) {
+            padding: 15px;
+        }
+        width: 100%;
+        max-width: 400px;
+        display: inline-block;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.60);
+        box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.50);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+
+        @media (min-width: $md-width) {
+            width: 400px;
+        }
+
+        & h2 {
+            @include mp;
+            @include h2;
+            text-transform: unset;
+            margin-bottom: 25px;
+
+            @media (min-width: $md-width) {
+                margin-bottom: 40px;
+            }
+        }
+
+        & ul {
+            @include list;
+            display: flex;
+            gap: 10px;
+        }
+
+        & li.point-type {
+            border-radius: 4px;
+            background: #FFF;
+            padding: 10px 15px;
+            display: grid;
+            grid-template-columns: 24px auto;
+            grid-template-areas: "icon num" "text text";
+            align-items: center;
+            flex-grow: 1;
+        
+            &--selishche,
+            &--stay,
+            &--cemetery {
+                & use.icon__symbol {
+                    fill: #4E4E4E;
+                }
+            }
+
+            & .icon {
+                grid-area: icon;
+                width: 24px;
+                height: 24px;                
+            }
+
+            & span {
+                @include h3;
+                grid-area: num;
+                text-align: center;
+            }
+
+            & p {
+                grid-area: text;
+            }
+        }
+    }
+
+    &__place-popup {
+        @media (max-width: $mobile-width-only) {
+            padding: 15px;
+        }
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.60);
+        box-shadow: 0px 4px 25px 0px rgba(181, 181, 181, 0.50);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+
+        & .close-btn {
+            @media (max-width: $mobile-width-only) {
+                top: 15px;
+                right: 15px;
+            }
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .icon {
+            width: 18px;
+            height: 18px;
+            }
+
+            & use.icon__symbol {
+            stroke: $dark;
+            }
+        }
+
+        & .place {
+            &__title {
+                @include mp;
+                @include h3;
+                margin-bottom: 30px;
+            }
+
+            
+
+            &__feature-list {
+                @include list; 
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 20px;
+                border-radius: 0px 0px 4px 4px;
+                border-right: 1px solid var(--additional-light-gray, #EAEBEC);
+                border-bottom: 1px solid var(--additional-light-gray, #EAEBEC);
+                border-left: 1px solid var(--additional-light-gray, #EAEBEC); 
+                margin-bottom: 20px;                          
+                
+            }
+
+            &__feature-item {
+                @media (max-width: $mobile-width-only) {
+                    width: 100%;
+                }
+                width: 40%;
+                flex-grow: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                column-gap: 6px;
+
+                & h4 {
+                    @include mp;
+                    font-size: 12px;
+                }
+
+                & p {
+                    @include mp;
+                    @include text-12;
+                    flex-grow: 1;
+                    gap: 4px;
+                }
+
+                & .point-type {
+                    &--selishche,
+                    &--stay,
+                    &--cemetery {
+                        & use.icon__symbol {
+                            fill: #4E4E4E;
+                        }
+                    }
+        
+                    & .icon {
+                        width: 12px;
+                        height: 12px;                
+                    }
+                }
+                
+                
+            }
+
+            &__description {
+                font-size: 12px;
+            }
+        }
+    }
+
+    
+}
+
+.point-type {
+    display: flex;
+    align-items: center;
+    
+
+    & .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &--selishche {
+        & use.icon__symbol {
+            fill: #EB3E2B;
+        }
+    }
+
+    &--stay {
+        & use.icon__symbol {
+            fill: #1175D0;
+        }
+    }
+
+    &--cemetery {
+        & use.icon__symbol {
+            fill: #4E4E4E;
+        }
+    }
+}
