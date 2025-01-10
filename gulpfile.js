@@ -53,7 +53,7 @@ export { svg };
 const fonts = gulp.series( otfToTtf, ttfToWoff, ttfToWoff2, fontsStyle);
 const svg = gulp.series(svgOpt, svgSprive);
 
-const test = gulp.series(imgopt);
+const test = gulp.series(html);
 
 // Тестовая задача
 export { test };

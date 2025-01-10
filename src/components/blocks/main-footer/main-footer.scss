@@ -37,6 +37,7 @@
     width: 100%;
     @include list();
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -48,16 +49,15 @@
     }
 
     & li {
-      width: 100px;
+      width: 100%;
       flex-grow: 1;
       font-family: "EB Garamond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
       font-weight: 400;
-      font-size: 8px;
+      font-size: 12px;
       line-height: 1.1;
 
       @media (min-width: $md-width) {
-        width: 170px;
-        font-size: 10px;
+        width: 250px;
       }
 
 
@@ -73,29 +73,25 @@
           width: 100%;
 
           @media (min-width: $md-width) {
-            width: 170px;
+            width: 250px;
           }
         }
       }
 
       &.mincult-mariel {
         & a {
-          gap: 8px;
-          @media (min-width: $md-width) {
-            gap: 14px;
-          }
+          gap: 20px;
+
         }
+
         & span {
           width: 100px;
           flex-grow: 1;
         }
+        
 
         & img {
-          width: 22px;
-
-          @media (min-width: $md-width) {
-            width: 36px;
-          }
+          width: 58px;
         }
       }
     }
