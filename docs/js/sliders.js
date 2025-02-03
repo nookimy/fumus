@@ -15,6 +15,12 @@ new Swiper('.main-slider.swiper', {
     }
 });
 
+new Swiper('.slider.swiper', {
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});
+
 new Swiper('.topical-links__wrap.swiper', {
     navigation: {
         nextEl: '.swiper-button-next',

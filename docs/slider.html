@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <main>
+        <section class="slider swiper">
+            <ul class="slider__list swiper-wrapper">
+                <li class="slider__item swiper-slide">
+                    <div class="slider__item-wrap">
+                        <picture>
+                            <source type="image/webp" srcset="
+                        ./img/slider/slide1-768@1x.webp 1x,
+                        ./img/slider/slide1-768@2x.webp 2x,
+                        ./img/slider/slide1-768@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+                        ./img/slider/slide1-768@1x.jpg 1x,
+                        ./img/slider/slide1-768@2x.jpg 2x,
+                        ./img/slider/slide1-768@3x.jpg 3x">
+
+                            <img src="/./img/slider/slide1.jpg" alt="">
+                        </picture>
+                    </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                    <div class="slider__item-wrap">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="
+                        ./img/slider/slide2-1280.webp,
+                        ./img/slider/slide2-1280@2x.webp 2x,
+                        ./img/slider/slide2-1280@3x.webp 3x">
+                            <source type="image/webp" srcset="
+                        ./img/slider/slide2-1024@1x.webp 1x,
+                        ./img/slider/slide2-1024@2x.webp 2x,
+                        ./img/slider/slide2-1024@3x.webp 3x">
+                            <source type="image/jpeg" media="(min-width: 1024px)" srcset="
+                        ./img/slider/slide2-1280.jpg 1x,
+                        ./img/slider/slide2-1280@2x.jpg 2x,
+                        ./img/slider/slide2-1280@3x.jpg 3x">
+                            <source type="image/jpeg" srcset="
+                        ./img/slider/slide2-1024@1x.jpg 1x,
+                        ./img/slider/slide2-1024@2x.jpg 2x,
+                        ./img/slider/slide2-1024@3x.jpg 3x">
+                            <img src="/./img/slider/slide2-1280@1x.jpg" alt="">
+                        </picture>
+
+                    </div>
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </section>
+    </main>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/navigation.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".expositions__filters-title").click(function(event) {
+                    $(".expositions__filters-title").not($(this)).removeClass("active");
+                    $(".expositions__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".collections__filters-title").click(function(event) {
+                    $(".collections__filters-title").not($(this)).removeClass("active");
+                    $(".collections__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".excursions__filters-title").click(function(event) {
+                    $(".excursions__filters-title").not($(this)).removeClass("active");
+                    $(".excursions__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $(".events__filters-title").click(function(event) {
+                    $(".events__filters-title").not($(this)).removeClass("active");
+                    $(".events__filters-block").not($(this).next()).slideUp(300);
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".question").click(function(event) {
+                if ($(".faq__list").hasClass("faq__list--showoneitem")) {
+                    $(".question").not($(this)).removeClass("active");
+                    $(".answer").not($(this).next()).slideUp(300);
+                }
+                $(this).toggleClass("active").next().slideToggle(300);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < '1024') {
+                $("td.block__title").click(function(event) {
+                    if ($("tbody.block").hasClass("block--showoneitem")) {
+                        $("td.block__title").not($(this)).removeClass("active");
+                        $("td.block__text").not($(this).next()).slideUp(300);
+                    }
+                    $(this).toggleClass("active").next().slideToggle(300);
+                });
+            }
+        });
+    </script>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+
+</html>
