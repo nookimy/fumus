@@ -15,6 +15,28 @@ new Swiper('.main-slider.swiper', {
     }
 });
 
+new Swiper('.banner__slider.swiper', {
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    breakpoints: {
+        320: {
+            spaceBetween: 15,
+            slidesPerView: 1,
+        },
+
+        768: {
+            spaceBetween: 25,
+            slidesPerView: 3,
+        },
+        1024: {
+            spaceBetween: 47,
+            slidesPerView: 3,
+        },
+    }
+});
+
 new Swiper('.slider.swiper', {
     pagination: {
         el: '.swiper-pagination',
