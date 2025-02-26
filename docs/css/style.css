@@ -5945,19 +5945,9 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   gap: 10px;
 }
 
-.price .table--admission-in-museum .block__text p:first-child::before,
-.price .table--excursion .block__text p:first-child::before {
-  content: "Взрослые";
-}
-
 .price .table--admission-in-museum .block__text p:nth-child(2)::before,
 .price .table--excursion .block__text p:nth-child(2)::before {
   content: "Школьники, пенсионеры, студенты";
-}
-
-.price .table--admission-in-museum .block__text p:nth-child(3)::before,
-.price .table--excursion .block__text p:nth-child(3)::before {
-  content: "Дошкольники (5+)";
 }
 
 .price .table--single thead {
@@ -5998,21 +5988,6 @@ body._touch .site-nav__list > li._active > .site-nav__sub-list {
   justify-content: space-between;
   align-items: flex-end;
   gap: 10px;
-}
-
-.price .table--single th p:first-child::before,
-.price .table--single td p:first-child::before {
-  content: "Взрослые";
-}
-
-.price .table--single th p:nth-child(2)::before,
-.price .table--single td p:nth-child(2)::before {
-  content: "Школьники, пенсионеры, студенты";
-}
-
-.price .table--single th p:nth-child(3)::before,
-.price .table--single td p:nth-child(3)::before {
-  content: "Дошкольники (5+)";
 }
 
 .price .table {
