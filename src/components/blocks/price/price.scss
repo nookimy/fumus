@@ -143,17 +143,10 @@
           }
         }
 
-        &:first-child::before {
-          content: "Взрослые";
-        }
-
         &:nth-child(2)::before {
           content: "Школьники, пенсионеры, студенты";
         }
 
-        &:nth-child(3)::before {
-          content: "Дошкольники (5+)";
-        }
       }
     }
   }
@@ -221,18 +214,6 @@
           @media (min-width: $lg-width) {
             display: none;
           }
-        }
-
-        &:first-child::before {
-          content: "Взрослые";
-        }
-
-        &:nth-child(2)::before {
-          content: "Школьники, пенсионеры, студенты";
-        }
-
-        &:nth-child(3)::before {
-          content: "Дошкольники (5+)";
         }
       }
     }
